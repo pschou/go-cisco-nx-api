@@ -50,9 +50,9 @@ type IpArpResultBody struct {
 					Flags      string `json:"flags" xml:"flags"`
 					IntfOut    string `json:"intf-out" xml:"intf-out"`
 					IPAddrOut  string `json:"ip-addr-out" xml:"ip-addr-out"`
-					Mac        string `json:"mac,omitempty" xml:"mac,omitempty"`
+					MAC        string `json:"mac,omitempty" xml:"mac,omitempty"`
 					TimeStamp  string `json:"time-stamp" xml:"time-stamp"`
-					Incomplete string `json:"incomplete,omitempty" xml:"incomplete,omitempty"`
+					Incomplete bool   `json:"incomplete,omitempty" xml:"incomplete,omitempty"`
 				} `json:"ROW_adj" xml:"ROW_adj"`
 			} `json:"TABLE_adj" xml:"TABLE_adj"`
 			CntTotal   int    `json:"cnt-total" xml:"cnt-total"`
@@ -62,7 +62,10 @@ type IpArpResultBody struct {
 }
 
 func (d *IpArpResponse) Flat() (out []IpArpResultFlat) {
-	for _, Tv := range d.InsAPI.Outputs.Output.Body.TableVrf {
+	return d.InsAPI.Outputs.Output.Flat()
+}
+func (d *IpArpResponseResult) Flat() (out []IpArpResultFlat) {
+	for _, Tv := range d.Body.TableVrf {
 		for _, Rv := range Tv.RowVrf {
 			for _, Ta := range Rv.TableAdj {
 				for _, Ra := range Ta.RowAdj {
@@ -70,10 +73,10 @@ func (d *IpArpResponse) Flat() (out []IpArpResultFlat) {
 						Flags:      Ra.Flags,
 						IntfOut:    Ra.IntfOut,
 						IPAddrOut:  Ra.IPAddrOut,
-						Mac:        Ra.Mac,
+						MAC:        Ra.MAC,
 						TimeStamp:  ParseDuration(Ra.TimeStamp),
 						Incomplete: Ra.Incomplete,
-						CntTotal:   Rv.CntTotal,
+						//CntTotal:   Rv.CntTotal,
 						VrfNameOut: Rv.VrfNameOut,
 					})
 				}
@@ -87,11 +90,11 @@ type IpArpResultFlat struct {
 	Flags      string        `json:"flags" xml:"flags"`
 	IntfOut    string        `json:"intf-out" xml:"intf-out"`
 	IPAddrOut  string        `json:"ip-addr-out" xml:"ip-addr-out"`
-	Mac        string        `json:"mac,omitempty" xml:"mac,omitempty"`
+	MAC        string        `json:"mac,omitempty" xml:"mac,omitempty"`
 	TimeStamp  time.Duration `json:"time-stamp" xml:"time-stamp"`
-	Incomplete string        `json:"incomplete,omitempty" xml:"incomplete,omitempty"`
-	CntTotal   int           `json:"cnt-total" xml:"cnt-total"`
-	VrfNameOut string        `json:"vrf-name-out" xml:"vrf-name-out"`
+	Incomplete bool          `json:"incomplete,omitempty" xml:"incomplete,omitempty"`
+	//CntTotal   int           `json:"cnt-total" xml:"cnt-total"`
+	VrfNameOut string `json:"vrf-name-out" xml:"vrf-name-out"`
 }
 
 // NewIpArpFromString returns instance from an input string.

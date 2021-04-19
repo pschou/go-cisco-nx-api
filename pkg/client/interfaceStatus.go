@@ -46,7 +46,7 @@ type InterfaceStatusResultBody struct {
 		RowInterface []struct {
 			Interface string `json:"interface" xml:"interface"`
 			State     string `json:"state" xml:"state"`
-			Vlan      string `json:"vlan" xml:"vlan"`
+			VLAN      string `json:"vlan" xml:"vlan"`
 			Duplex    string `json:"duplex" xml:"duplex"`
 			Speed     string `json:"speed" xml:"speed"`
 			Type      string `json:"type,omitempty" xml:"type,omitempty"`
@@ -55,17 +55,35 @@ type InterfaceStatusResultBody struct {
 }
 
 func (d *InterfaceStatusResponse) Flat() (out []InterfaceStatusResultFlat) {
-	return d.InsAPI.Outputs.Output.Body.Flat()
+	return d.InsAPI.Outputs.Output.Flat()
 }
-func (d *InterfaceStatusResultBody) Flat() (out []InterfaceStatusResultFlat) {
-	for _, Ti := range d.TableInterface {
+func (d *InterfaceStatusResponseResult) Flat() (out []InterfaceStatusResultFlat) {
+	for _, Ti := range d.Body.TableInterface {
 		for _, Ri := range Ti.RowInterface {
+			auto := false
+			if strings.HasPrefix(Ri.Speed, "a") {
+				auto = true
+			}
+			speed := strings.TrimPrefix(Ri.Speed, "a-")
+			speedVal := 0
+			if len(speed) > 0 {
+				switch speed[len(speed)-1] {
+				case 'K', 'k':
+					speedVal = StrInt(speed[:len(speed)-1]) * 1e3
+				case 'M', 'm':
+					speedVal = StrInt(speed[:len(speed)-1]) * 1e6
+				case 'G', 'g':
+					speedVal = StrInt(speed[:len(speed)-1]) * 1e9
+				}
+			}
 			out = append(out, InterfaceStatusResultFlat{
 				Interface: Ri.Interface,
 				State:     Ri.State,
-				Vlan:      Ri.Vlan,
+				VLAN:      Ri.VLAN,
 				Duplex:    Ri.Duplex,
 				Speed:     Ri.Speed,
+				SpeedVal:  speedVal,
+				SpeedAuto: auto,
 				Type:      Ri.Type,
 			})
 		}
@@ -76,9 +94,11 @@ func (d *InterfaceStatusResultBody) Flat() (out []InterfaceStatusResultFlat) {
 type InterfaceStatusResultFlat struct {
 	Interface string `json:"interface" xml:"interface"`
 	State     string `json:"state" xml:"state"`
-	Vlan      string `json:"vlan" xml:"vlan"`
+	VLAN      string `json:"vlan" xml:"vlan"`
 	Duplex    string `json:"duplex" xml:"duplex"`
 	Speed     string `json:"speed" xml:"speed"`
+	SpeedVal  int    `json:"speed" xml:"speed"`
+	SpeedAuto bool   `json:"speed" xml:"speed"`
 	Type      string `json:"type,omitempty" xml:"type,omitempty"`
 }
 

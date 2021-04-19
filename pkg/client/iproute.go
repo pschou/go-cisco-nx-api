@@ -51,8 +51,8 @@ type IpRouteResultBody struct {
 						RowPrefix []struct {
 							TablePath []struct {
 								RowPath []struct {
-									Clientname string `json:"clientname" xml:"clientname"`
-									Ifname     string `json:"ifname" xml:"ifname"`
+									ClientName string `json:"clientname" xml:"clientname"`
+									IfName     string `json:"ifname" xml:"ifname"`
 									Metric     int    `json:"metric" xml:"metric"`
 									Pref       int    `json:"pref" xml:"pref"`
 									UBest      bool   `json:"ubest" xml:"ubest"`
@@ -61,8 +61,8 @@ type IpRouteResultBody struct {
 							} `json:"TABLE_path" xml:"TABLE_path"`
 							Attached   bool   `json:"attached" xml:"attached"`
 							IPPrefix   string `json:"ipprefix" xml:"ipprefix"`
-							McastNhops int    `json:"mcast-nhops" xml:"mcast-nhops"`
-							UcastNhops int    `json:"ucast-nhops" xml:"ucast-nhops"`
+							MCastNHops int    `json:"mcast-nhops" xml:"mcast-nhops"`
+							UCastNHops int    `json:"ucast-nhops" xml:"ucast-nhops"`
 						} `json:"ROW_prefix" xml:"ROW_prefix"`
 					} `json:"TABLE_prefix" xml:"TABLE_prefix"`
 					AddRf string `json:"addrf" xml:"addrf"`
@@ -74,16 +74,16 @@ type IpRouteResultBody struct {
 }
 
 type IpRouteResultFlat struct {
-	Clientname string        `json:"clientname" xml:"clientname"`
-	Ifname     string        `json:"ifname" xml:"ifname"`
+	ClientName string        `json:"clientname" xml:"clientname"`
+	IfName     string        `json:"ifname" xml:"ifname"`
 	Metric     int           `json:"metric" xml:"metric"`
 	Pref       int           `json:"pref" xml:"pref"`
 	UBest      bool          `json:"ubest" xml:"ubest"`
 	UpTime     time.Duration `json:"uptime" xml:"uptime"`
 	Attached   bool          `json:"attached" xml:"attached"`
 	IPPrefix   string        `json:"ipprefix" xml:"ipprefix"`
-	McastNhops int           `json:"mcast-nhops" xml:"mcast-nhops"`
-	UcastNhops int           `json:"ucast-nhops" xml:"ucast-nhops"`
+	MCastNHops int           `json:"mcast-nhops" xml:"mcast-nhops"`
+	UCastNHops int           `json:"ucast-nhops" xml:"ucast-nhops"`
 	AddRf      string        `json:"addrf" xml:"addrf"`
 	VrfNameOut string        `json:"vrf-name-out" xml:"vrf-name-out"`
 }
@@ -101,16 +101,16 @@ func (d *IpRouteResponseResult) Flat() (out []IpRouteResultFlat) {
 							for _, Tp := range Rpre.TablePath {
 								for _, Rp := range Tp.RowPath {
 									out = append(out, IpRouteResultFlat{
-										Clientname: Rp.Clientname,
-										Ifname:     Rp.Ifname,
+										ClientName: Rp.ClientName,
+										IfName:     Rp.IfName,
 										Metric:     Rp.Metric,
 										Pref:       Rp.Pref,
 										UBest:      Rp.UBest,
 										UpTime:     ParseDuration(Rp.UpTime),
 										Attached:   Rpre.Attached,
 										IPPrefix:   Rpre.IPPrefix,
-										McastNhops: Rpre.McastNhops,
-										UcastNhops: Rpre.UcastNhops,
+										MCastNHops: Rpre.MCastNHops,
+										UCastNHops: Rpre.UCastNHops,
 										AddRf:      Ra.AddRf,
 										VrfNameOut: Rv.VrfNameOut,
 									})

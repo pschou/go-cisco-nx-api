@@ -21,7 +21,6 @@ import (
 	"github.com/pschou/go-json"
 	"io"
 	"strings"
-	"time"
 )
 
 type VersionResponse struct {
@@ -60,7 +59,6 @@ type VersionResultBody struct {
 	KernUptmHrs     int    `json:"kern_uptm_hrs" xml:"kern_uptm_hrs"`
 	KernUptmMins    int    `json:"kern_uptm_mins" xml:"kern_uptm_mins"`
 	KernUptmSecs    int    `json:"kern_uptm_secs" xml:"kern_uptm_secs"`
-	KernUpTime      time.Duration
 	KickCmplTime    string `json:"kick_cmpl_time" xml:"kick_cmpl_time"`
 	KickFileName    string `json:"kick_file_name" xml:"kick_file_name"`
 	KickTmstmp      string `json:"kick_tmstmp" xml:"kick_tmstmp"`
@@ -70,7 +68,7 @@ type VersionResultBody struct {
 	Memory          int    `json:"memory" xml:"memory"`
 	ModuleID        string `json:"module_id" xml:"module_id"`
 	ProcBoardID     string `json:"proc_board_id" xml:"proc_board_id"`
-	RrCtime         string `json:"rr_ctime" xml:"rr_ctime"`
+	RrCTime         string `json:"rr_ctime" xml:"rr_ctime"`
 	RrReason        string `json:"rr_reason" xml:"rr_reason"`
 	RrService       string `json:"rr_service" xml:"rr_service"`
 	RrSysVer        string `json:"rr_sys_ver" xml:"rr_sys_ver"`
