@@ -1,0 +1,272 @@
+{
+
+    "ins_api": {
+        "outputs": {
+            "output": {
+                "body": {
+                    "TABLE_moddiaginfo": {
+                        "ROW_moddiaginfo": [
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 1
+                            }, 
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 2
+                            }, 
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 3
+                            }, 
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 4
+                            }, 
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 22
+                            }, 
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 24
+                            }, 
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 26
+                            }, 
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 27
+                            }, 
+                            {
+                                "diagstatus": "Fail", 
+                                "mod": 29
+                            }, 
+                            {
+                                "diagstatus": "Pass", 
+                                "mod": 30
+                            }
+                        ]
+                    }, 
+                    "TABLE_modinfo": {
+                        "ROW_modinfo": [
+                            {
+                                "model": "N9K-X9732C-EX", 
+                                "modinf": 1, 
+                                "modtype": "32x100G Ethernet Module", 
+                                "ports": 32, 
+                                "status": "ok"
+                            }, 
+                            {
+                                "model": "N9K-X9732C-EXM", 
+                                "modinf": 2, 
+                                "modtype": "32x100G Ethernet Module", 
+                                "ports": 32, 
+                                "status": "ok"
+                            }, 
+                            {
+                                "model": "N9K-X9788TC-FX", 
+                                "modinf": 3, 
+                                "modtype": "48x10G + 4x40/100G Ethernet Module", 
+                                "ports": 52, 
+                                "status": "ok"
+                            }, 
+                            {
+                                "model": "N9K-X9736C-FX", 
+                                "modinf": 4, 
+                                "modtype": "36x40/100G Ethernet Module", 
+                                "ports": 36, 
+                                "status": "ok"
+                            }, 
+                            {
+                                "model": "N9K-C9508-FM-E", 
+                                "modinf": 22, 
+                                "modtype": "8-slot Fabric Module", 
+                                "ports": 0, 
+                                "status": "ok"
+                            }, 
+                            {
+                                "model": "N9K-C9508-FM-E", 
+                                "modinf": 23, 
+                                "modtype": "8-slot Fabric Module", 
+                                "ports": 0, 
+                                "status": "powered-dn"
+                            }, 
+                            {
+                                "model": "N9K-C9508-FM-E", 
+                                "modinf": 24, 
+                                "modtype": "8-slot Fabric Module", 
+                                "ports": 0, 
+                                "status": "ok"
+                            }, 
+                            {
+                                "model": "N9K-C9508-FM-E", 
+                                "modinf": 26, 
+                                "modtype": "8-slot Fabric Module", 
+                                "ports": 0, 
+                                "status": "ok"
+                            }, 
+                            {
+                                "model": "N9K-SUP-A", 
+                                "modinf": 27, 
+                                "modtype": "Supervisor Module", 
+                                "ports": 0, 
+                                "status": "active *"
+                            }, 
+                            {
+                                "model": "N9K-SC-A", 
+                                "modinf": 29, 
+                                "modtype": "System Controller", 
+                                "ports": 0, 
+                                "status": "standby"
+                            }, 
+                            {
+                                "model": "N9K-SC-A", 
+                                "modinf": 30, 
+                                "modtype": "System Controller", 
+                                "ports": 0, 
+                                "status": "active"
+                            }
+                        ]
+                    }, 
+                    "TABLE_modmacinfo": {
+                        "ROW_modmacinfo": [
+                            {
+                                "mac": " 00-a2-ee-31-b2-b4 to 00-a2-ee-31-b3-37  ", 
+                                "modmac": 1, 
+                                "serialnum": "SAL2039VA2U"
+                            }, 
+                            {
+                                "mac": " 00-6b-f1-bf-0d-f0 to 00-6b-f1-bf-0e-73  ", 
+                                "modmac": 2, 
+                                "serialnum": "FOC20444YD2"
+                            }, 
+                            {
+                                "mac": " a0-23-9f-0c-8f-28 to a0-23-9f-0c-8f-6b  ", 
+                                "modmac": 3, 
+                                "serialnum": "FOC21240U8B"
+                            }, 
+                            {
+                                "mac": " 2c-d0-2d-3e-a5-08 to 2c-d0-2d-3e-a5-9b  ", 
+                                "modmac": 4, 
+                                "serialnum": "FOC210707HG"
+                            }, 
+                            {
+                                "mac": " NA ", 
+                                "modmac": 22, 
+                                "serialnum": "SAL2035URFY"
+                            }, 
+                            {
+                                "mac": " NA ", 
+                                "modmac": 23, 
+                                "serialnum": "SAL2035UUN3"
+                            }, 
+                            {
+                                "mac": " NA ", 
+                                "modmac": 24, 
+                                "serialnum": "SAL2035URF2"
+                            }, 
+                            {
+                                "mac": " NA ", 
+                                "modmac": 26, 
+                                "serialnum": "SAL2035URFP"
+                            }, 
+                            {
+                                "mac": " cc-46-d6-9e-d2-e4 to cc-46-d6-9e-d2-f5  ", 
+                                "modmac": 27, 
+                                "serialnum": "SAL2015NQ3H"
+                            }, 
+                            {
+                                "mac": " NA ", 
+                                "modmac": 29, 
+                                "serialnum": "SAL2035UTLL"
+                            }, 
+                            {
+                                "mac": " NA ", 
+                                "modmac": 30, 
+                                "serialnum": "SAL2035UTK8"
+                            }
+                        ]
+                    }, 
+                    "TABLE_modpwrinfo": {
+                        "ROW_modpwrinfo": {
+                            "modpwr": 23, 
+                            "pwrstat": "powered-dn", 
+                            "reason": "Configured Power down"
+                        }
+                    }, 
+                    "TABLE_modwwninfo": {
+                        "ROW_modwwninfo": [
+                            {
+                                "hw": "1.1", 
+                                "modwwn": 1, 
+                                "slottype": "LC1", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "0.1220", 
+                                "modwwn": 2, 
+                                "slottype": "LC2", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "0.1110", 
+                                "modwwn": 3, 
+                                "slottype": "LC3", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "0.1120", 
+                                "modwwn": 4, 
+                                "slottype": "LC4", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "1.1", 
+                                "modwwn": 22, 
+                                "slottype": "FM2", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "1.1", 
+                                "modwwn": 24, 
+                                "slottype": "FM4", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "1.1", 
+                                "modwwn": 26, 
+                                "slottype": "FM6", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "1.0", 
+                                "modwwn": 27, 
+                                "slottype": "SUP1", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "1.6", 
+                                "modwwn": 29, 
+                                "slottype": "SC1", 
+                                "sw": "7.0(3)I7(4)"
+                            }, 
+                            {
+                                "hw": "1.6", 
+                                "modwwn": 30, 
+                                "slottype": "SC2", 
+                                "sw": "7.0(3)I7(4)"
+                            }
+                        ]
+                    }
+                }, 
+                "code": "200", 
+                "input": "show module", 
+                "msg": "Success"
+            }
+        }, 
+        "sid": "eoc", 
+        "type": "cli_show", 
+        "version": "1.0"
+    }
+}

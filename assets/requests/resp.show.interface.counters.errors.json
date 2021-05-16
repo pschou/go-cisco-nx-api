@@ -1,0 +1,21 @@
+{
+  "ins_api": {
+    "type": "cli_show",
+    "version": "1.0",
+    "sid": "eoc",
+    "outputs": {
+      "output": {
+        "input": "show interface eth1/22 status err-vlans",
+        "msg": "Success",
+        "code": "200",
+        "body": {
+        "TABLE_interface": {
+            "ROW_interface": {
+                "interface": "Ethernet1/22",
+                "eth_align_err": 0,
+                "eth_fcs_err": 0,
+                "eth_xmit_err": 0,
+                "eth_rcv_err": 0,
+                "eth_undersize": 0,
+                "eth_outdisc": 0
+}}}}}}}

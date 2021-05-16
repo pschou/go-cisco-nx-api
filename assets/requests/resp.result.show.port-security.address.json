@@ -1,0 +1,80 @@
+{
+  "total_addr": "5",
+  "max_sys_limit": "8187",
+  "TABLE_eth_port_sec_mac_addrs": {
+    "ROW_eth_port_sec_mac_addrs": [
+      {
+        "if_index": "Ethernet1/2",
+        "vlan_id": "1",
+        "type": "Static_Mac",
+        "mac_addr": "0000.1111.1115",
+        "remain_age": "0",
+        "remote_learnt": "0",
+        "remote_aged": "0",
+        "num_elems": "6",
+        "cmd_addr_index": "0"
+      },
+      {
+        "if_index": "Ethernet1/2",
+        "vlan_id": "1",
+        "type": "Static_Mac",
+        "mac_addr": "0000.1111.1111",
+        "remain_age": "0",
+        "remote_learnt": "0",
+        "remote_aged": "0",
+        "num_elems": "6",
+        "cmd_addr_index": "1"
+      },
+      {
+        "if_index": "Ethernet1/2",
+        "vlan_id": "1",
+        "type": "Static_Mac",
+        "mac_addr": "0000.1111.1112",
+        "remain_age": "0",
+        "remote_learnt": "0",
+        "remote_aged": "0",
+        "num_elems": "6",
+        "cmd_addr_index": "2"
+      },
+      {
+        "if_index": "Ethernet1/2",
+        "vlan_id": "1",
+        "type": "Static_Mac",
+        "mac_addr": "0000.1111.1113",
+        "remain_age": "0",
+        "remote_learnt": "0",
+        "remote_aged": "0",
+        "num_elems": "6",
+        "cmd_addr_index": "3"
+      },
+      {
+        "if_index": "Ethernet1/2",
+        "vlan_id": "1",
+        "type": "Static_Mac",
+        "mac_addr": "0000.1111.1114",
+        "remain_age": "0",
+        "remote_learnt": "0",
+        "remote_aged": "0",
+        "num_elems": "6",
+        "cmd_addr_index": "4"
+      },
+      {
+        "if_index": "Ethernet1/2",
+        "vlan_id": "1",
+        "type": "Sticky_Mac",
+        "mac_addr": "88F0.31F9.A341",
+        "remain_age": "0",
+        "remote_learnt": "0",
+        "remote_aged": "0",
+        "num_elems": [
+          "6",
+          "6"
+        ],
+        "cmd_addr_index": [
+          "5",
+          "6"
+        ]
+      }
+    ]
+  }
+}

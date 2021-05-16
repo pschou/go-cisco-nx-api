@@ -1,0 +1,19 @@
+{
+  "neigh_count": 1,
+  "TABLE_cdp_neighbor_brief_info": {
+    "ROW_cdp_neighbor_brief_info": {
+      "ifindex": 439353856,
+      "device_id": "EOR-2(FGE18330EZZ)",
+      "intf_id": "Ethernet7/2",
+      "ttl": 171,
+      "capability": [
+        "router",
+        "switch",
+        "IGMP_cnd_filtering",
+        "Supports-STP-Dispute"
+      ],
+      "platform_id": "N9K-C9508",
+      "port_id": "Ethernet1/36"
+    }
+  }
+}

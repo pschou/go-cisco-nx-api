@@ -1,0 +1,42 @@
+{
+  "load_avg_1min": "0.80",
+  "load_avg_5min": "0.68",
+  "load_avg_15min": "0.67",
+  "processes_total": 827,
+  "processes_running": 2,
+  "cpu_state_user": "7.36",
+  "cpu_state_kernel": "8.62",
+  "cpu_state_idle": "84.01",
+  "memory_usage_total": 16400304,
+  "memory_usage_used": 7069080,
+  "memory_usage_free": 9331224,
+  "current_memory_status": "OK",
+  "TABLE_cpu_usage": {
+    "ROW_cpu_usage": [
+      {
+        "cpuid": 0,
+        "user": "13.13",
+        "kernel": "12.12",
+        "idle": "74.74"
+      },
+      {
+        "cpuid": 1,
+        "user": "5.10",
+        "kernel": "13.26",
+        "idle": "81.63"
+      },
+      {
+        "cpuid": 2,
+        "user": "10.20",
+        "kernel": "4.08",
+        "idle": "85.71"
+      },
+      {
+        "cpuid": 3,
+        "user": "1.01",
+        "kernel": "5.05",
+        "idle": "93.93"
+      }
+    ]
+  }
+}

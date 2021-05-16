@@ -1,0 +1,102 @@
+{  
+    "ins_api": {
+    "type": "cli_show",
+    "version": "1.0",
+    "sid": "eoc",
+    "outputs": {
+      "output": {
+        "input": "show hsrp",
+        "msg": "Success",
+        "code": "200",
+        "body": {
+  "TABLE_grp_detail": {
+    "ROW_grp_detail": [
+      {
+        "sh_if_index": "Ethernet4/1",
+        "sh_group_num": 1,
+        "sh_group_type": "v4",
+        "sh_group_version": "v2",
+        "sh_group_state": "Active",
+        "sh_prio": 100,
+        "sh_cfg_prio": 100,
+        "sh_fwd_lower_threshold": 90,
+        "sh_fwd_upper_threshold": 100,
+        "sh_can_forward": "enabled",
+        "sh_preempt": "enabled",
+        "sh_cur_hello": 1,
+        "sh_cur_hello_attr": "sec",
+        "sh_cfg_hello": 1,
+        "sh_cfg_hello_attr": "sec",
+        "sh_active_hello": "0.544000",
+        "sh_cur_hold": 3,
+        "sh_cur_hold_attr": "sec",
+        "sh_cfg_hold": 3,
+        "sh_cfg_hold_attr": "sec",
+        "sh_vip": "4.4.4.100",
+        "sh_vip_attr": "config",
+        "sh_active_router_addr": "4.4.4.2",
+        "sh_active_router_prio": 100,
+        "sh_active_router_timer": "0.000000",
+        "sh_standby_router_addr": "4.4.4.1",
+        "sh_standby_router_prio": 50,
+        "sh_authentication_type": "md5",
+        "sh_authentication_data": "hsrp",
+        "sh_vmac": "1234.1234.1234",
+        "sh_vmac_attr": "Configured MAC",
+        "sh_num_of_state_changes": 5,
+        "sh_last_state_change": 114,
+        "sh_num_of_total_state_changes": 7,
+        "sh_last_total_state_change": 114,
+        "sh_num_track_obj": 0,
+        "sh_ip_redund_name": "hsrp-Eth4/1-1",
+        "sh_ip_redund_name_attr": "Default"
+      },
+      {
+        "sh_if_index": "Ethernet4/1",
+        "sh_group_num": 1,
+        "sh_group_type": "v6",
+        "sh_group_version": "v2",
+        "sh_group_state": "Active",
+        "sh_prio": 101,
+        "sh_cfg_prio": 101,
+        "sh_fwd_lower_threshold": 1,
+        "sh_fwd_upper_threshold": 101,
+        "sh_can_forward": "enabled",
+        "sh_preempt": "enabled",
+        "sh_cur_hello": 1,
+        "sh_cur_hello_attr": "sec",
+        "sh_cfg_hello": 1,
+        "sh_cfg_hello_attr": "sec",
+        "sh_active_hello": "0.950000",
+        "sh_cur_hold": 3,
+        "sh_cur_hold_attr": "sec",
+        "sh_cfg_hold": 3,
+        "sh_cfg_hold_attr": "sec",
+        "sh_vip_v6": "fe80::5:73ff:fea0:1",
+        "sh_vip_attr": "config",
+        "TABLE_grp_vip_sec": {
+          "ROW_grp_vip_sec": {
+            "sh_vip_sec": "0.0.0.64"
+          }
+        },
+        "sh_active_router_addr_v6": "fe80::da67:d9ff:fe0d:cc1",
+        "sh_active_router_prio": 101,
+        "sh_active_router_timer": "0.000000",
+        "sh_standby_router_addr_v6": "fe80::da67:d9ff:fe0d:a6c1",
+        "sh_standby_router_prio": 50,
+        "sh_authentication_type": "md5",
+        "sh_authentication_data": "hsrp",
+        "sh_vmac": "0005.73a0.0001",
+        "sh_vmac_attr": "Default MAC",
+        "sh_num_of_state_changes": 2,
+        "sh_last_state_change": 106,
+        "sh_num_of_total_state_changes": 9,
+        "sh_last_total_state_change": 106,
+        "sh_num_track_obj": 0,
+        "sh_ip_redund_name": "hsrp-Eth4/1-1-V6",
+        "sh_ip_redund_name_attr": "Default"
+      }
+    ]
+}
+    }
+}}}}

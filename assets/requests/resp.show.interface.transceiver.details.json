@@ -1,0 +1,991 @@
+{
+    "ins_api": {
+        "outputs": {
+            "output": {
+                "body": 
+{
+    "TABLE_interface_trans": {
+        "ROW_interface_trans": [
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "current": "7.23 mA",
+                                                    "current_alrm_hi": "11.80 mA",
+                                                    "current_alrm_lo": "4.00 mA",
+                                                    "current_warn_hi": "10.80 mA",
+                                                    "current_warn_lo": "5.00 mA",
+                                                    "rx_pwr": "-26.02 dBm",
+                                                    "rx_pwr_alrm_hi": "3.00 dBm",
+                                                    "rx_pwr_alrm_lo": "-17.30 dBm",
+                                                    "rx_pwr_flag": "--",
+                                                    "rx_pwr_warn_hi": "0.00 dBm",
+                                                    "rx_pwr_warn_lo": "-13.30 dBm",
+                                                    "temp_alrm_hi": "75.00 C",
+                                                    "temp_alrm_lo": "-5.00 C",
+                                                    "temp_warn_hi": "70.00 C",
+                                                    "temp_warn_lo": "0.00 C",
+                                                    "temperature": "33.55 C",
+                                                    "tx_faults": 0,
+                                                    "tx_pwr": "-3.20 dBm",
+                                                    "tx_pwr_alrm_hi": "1.70 dBm",
+                                                    "tx_pwr_alrm_lo": "-14.00 dBm",
+                                                    "tx_pwr_warn_hi": "-1.30 dBm",
+                                                    "tx_pwr_warn_lo": "-10.00 dBm",
+                                                    "volt_alrm_hi": "3.63 V",
+                                                    "volt_alrm_lo": "2.97 V",
+                                                    "volt_warn_hi": "3.46 V",
+                                                    "volt_warn_lo": "3.13 V",
+                                                    "voltage": "3.31 V"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2418-01",
+                            "cisco_product_id": "DS-SFP-FC8G-SW",
+                            "ciscoid": "unknown (0x0)",
+                            "len_50": 50,
+                            "len_50_OM3": 150,
+                            "len_625": 21,
+                            "name": "CISCO-FINISAR",
+                            "nominal_bitrate": 8500,
+                            "partnum": "FTLF8528P3BCV-CS",
+                            "rev": "A",
+                            "serialnum": "FNS18030VFC",
+                            "sfp": "sfp is present",
+                            "supported_speeds": "Min speed: 2000 Mb/s, Max speed: 8000 Mb/s",
+                            "tx_length": "short distance",
+                            "tx_medium": "multimode laser with 62.5 um aperture (M6)",
+                            "txcvr_type": "short wave laser w/o OFC (SN)"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/1"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "current": "6.97 mA",
+                                                    "current_alrm_hi": "11.80 mA",
+                                                    "current_alrm_lo": "4.00 mA",
+                                                    "current_warn_hi": "10.80 mA",
+                                                    "current_warn_lo": "5.00 mA",
+                                                    "rx_pwr": "-3.28 dBm",
+                                                    "rx_pwr_alrm_hi": "3.00 dBm",
+                                                    "rx_pwr_alrm_lo": "-17.30 dBm",
+                                                    "rx_pwr_warn_hi": "0.00 dBm",
+                                                    "rx_pwr_warn_lo": "-13.30 dBm",
+                                                    "temp_alrm_hi": "75.00 C",
+                                                    "temp_alrm_lo": "-5.00 C",
+                                                    "temp_warn_hi": "70.00 C",
+                                                    "temp_warn_lo": "0.00 C",
+                                                    "temperature": "34.25 C",
+                                                    "tx_faults": 0,
+                                                    "tx_pwr": "-3.22 dBm",
+                                                    "tx_pwr_alrm_hi": "1.70 dBm",
+                                                    "tx_pwr_alrm_lo": "-14.00 dBm",
+                                                    "tx_pwr_warn_hi": "-1.30 dBm",
+                                                    "tx_pwr_warn_lo": "-10.00 dBm",
+                                                    "volt_alrm_hi": "3.63 V",
+                                                    "volt_alrm_lo": "2.97 V",
+                                                    "volt_warn_hi": "3.46 V",
+                                                    "volt_warn_lo": "3.13 V",
+                                                    "voltage": "3.31 V"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2418-01",
+                            "cisco_product_id": "DS-SFP-FC8G-SW",
+                            "ciscoid": "unknown (0x0)",
+                            "len_50": 50,
+                            "len_50_OM3": 150,
+                            "len_625": 21,
+                            "name": "CISCO-FINISAR",
+                            "nominal_bitrate": 8500,
+                            "partnum": "FTLF8528P3BCV-CS",
+                            "rev": "A",
+                            "serialnum": "FNS18030VQV",
+                            "sfp": "sfp is present",
+                            "supported_speeds": "Min speed: 2000 Mb/s, Max speed: 8000 Mb/s",
+                            "tx_length": "short distance",
+                            "tx_medium": "multimode laser with 62.5 um aperture (M6)",
+                            "txcvr_type": "short wave laser w/o OFC (SN)"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/2"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "current": "8.13 mA",
+                                                    "current_alrm_hi": "11.80 mA",
+                                                    "current_alrm_lo": "4.00 mA",
+                                                    "current_warn_hi": "10.80 mA",
+                                                    "current_warn_lo": "5.00 mA",
+                                                    "rx_pwr": "-26.02 dBm",
+                                                    "rx_pwr_alrm_hi": "3.00 dBm",
+                                                    "rx_pwr_alrm_lo": "-17.30 dBm",
+                                                    "rx_pwr_flag": "--",
+                                                    "rx_pwr_warn_hi": "0.00 dBm",
+                                                    "rx_pwr_warn_lo": "-13.30 dBm",
+                                                    "temp_alrm_hi": "75.00 C",
+                                                    "temp_alrm_lo": "-5.00 C",
+                                                    "temp_warn_hi": "70.00 C",
+                                                    "temp_warn_lo": "0.00 C",
+                                                    "temperature": "29.16 C",
+                                                    "tx_faults": 0,
+                                                    "tx_pwr": "-3.21 dBm",
+                                                    "tx_pwr_alrm_hi": "1.70 dBm",
+                                                    "tx_pwr_alrm_lo": "-14.00 dBm",
+                                                    "tx_pwr_warn_hi": "-1.30 dBm",
+                                                    "tx_pwr_warn_lo": "-10.00 dBm",
+                                                    "volt_alrm_hi": "3.63 V",
+                                                    "volt_alrm_lo": "2.97 V",
+                                                    "volt_warn_hi": "3.46 V",
+                                                    "volt_warn_lo": "3.13 V",
+                                                    "voltage": "3.30 V"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2418-01",
+                            "cisco_product_id": "DS-SFP-FC8G-SW",
+                            "ciscoid": "unknown (0x0)",
+                            "len_50": 50,
+                            "len_50_OM3": 150,
+                            "len_625": 21,
+                            "name": "CISCO-FINISAR",
+                            "nominal_bitrate": 8500,
+                            "partnum": "FTLF8528P3BCV-CS",
+                            "rev": "A",
+                            "serialnum": "FNS18030VEU",
+                            "sfp": "sfp is present",
+                            "supported_speeds": "Min speed: 2000 Mb/s, Max speed: 8000 Mb/s",
+                            "tx_length": "short distance",
+                            "tx_medium": "multimode laser with 62.5 um aperture (M6)",
+                            "txcvr_type": "short wave laser w/o OFC (SN)"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/3"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "current": "7.63 mA",
+                                                    "current_alrm_hi": "11.80 mA",
+                                                    "current_alrm_lo": "4.00 mA",
+                                                    "current_warn_hi": "10.80 mA",
+                                                    "current_warn_lo": "5.00 mA",
+                                                    "rx_pwr": "-26.20 dBm",
+                                                    "rx_pwr_alrm_hi": "3.00 dBm",
+                                                    "rx_pwr_alrm_lo": "-17.30 dBm",
+                                                    "rx_pwr_flag": "--",
+                                                    "rx_pwr_warn_hi": "0.00 dBm",
+                                                    "rx_pwr_warn_lo": "-13.30 dBm",
+                                                    "temp_alrm_hi": "75.00 C",
+                                                    "temp_alrm_lo": "-5.00 C",
+                                                    "temp_warn_hi": "70.00 C",
+                                                    "temp_warn_lo": "0.00 C",
+                                                    "temperature": "31.98 C",
+                                                    "tx_faults": 0,
+                                                    "tx_pwr": "-3.24 dBm",
+                                                    "tx_pwr_alrm_hi": "1.70 dBm",
+                                                    "tx_pwr_alrm_lo": "-14.00 dBm",
+                                                    "tx_pwr_warn_hi": "-1.30 dBm",
+                                                    "tx_pwr_warn_lo": "-10.00 dBm",
+                                                    "volt_alrm_hi": "3.63 V",
+                                                    "volt_alrm_lo": "2.97 V",
+                                                    "volt_warn_hi": "3.46 V",
+                                                    "volt_warn_lo": "3.13 V",
+                                                    "voltage": "3.30 V"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2418-01",
+                            "cisco_product_id": "DS-SFP-FC8G-SW",
+                            "ciscoid": "unknown (0x0)",
+                            "len_50": 50,
+                            "len_50_OM3": 150,
+                            "len_625": 21,
+                            "name": "CISCO-FINISAR",
+                            "nominal_bitrate": 8500,
+                            "partnum": "FTLF8528P3BCV-CS",
+                            "rev": "A",
+                            "serialnum": "FNS18030VRK",
+                            "sfp": "sfp is present",
+                            "supported_speeds": "Min speed: 2000 Mb/s, Max speed: 8000 Mb/s",
+                            "tx_length": "short distance",
+                            "tx_medium": "multimode laser with 62.5 um aperture (M6)",
+                            "txcvr_type": "short wave laser w/o OFC (SN)"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/4"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "current": "7.05 mA",
+                                                    "current_alrm_hi": "11.80 mA",
+                                                    "current_alrm_lo": "4.00 mA",
+                                                    "current_warn_hi": "10.80 mA",
+                                                    "current_warn_lo": "5.00 mA",
+                                                    "rx_pwr": "-25.69 dBm",
+                                                    "rx_pwr_alrm_hi": "3.00 dBm",
+                                                    "rx_pwr_alrm_lo": "-17.30 dBm",
+                                                    "rx_pwr_flag": "--",
+                                                    "rx_pwr_warn_hi": "0.00 dBm",
+                                                    "rx_pwr_warn_lo": "-13.30 dBm",
+                                                    "temp_alrm_hi": "75.00 C",
+                                                    "temp_alrm_lo": "-5.00 C",
+                                                    "temp_warn_hi": "70.00 C",
+                                                    "temp_warn_lo": "0.00 C",
+                                                    "temperature": "28.69 C",
+                                                    "tx_faults": 0,
+                                                    "tx_pwr": "-3.21 dBm",
+                                                    "tx_pwr_alrm_hi": "1.70 dBm",
+                                                    "tx_pwr_alrm_lo": "-14.00 dBm",
+                                                    "tx_pwr_warn_hi": "-1.30 dBm",
+                                                    "tx_pwr_warn_lo": "-10.00 dBm",
+                                                    "volt_alrm_hi": "3.63 V",
+                                                    "volt_alrm_lo": "2.97 V",
+                                                    "volt_warn_hi": "3.46 V",
+                                                    "volt_warn_lo": "3.13 V",
+                                                    "voltage": "3.31 V"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2418-01",
+                            "cisco_product_id": "DS-SFP-FC8G-SW",
+                            "ciscoid": "unknown (0x0)",
+                            "len_50": 50,
+                            "len_50_OM3": 150,
+                            "len_625": 21,
+                            "name": "CISCO-FINISAR",
+                            "nominal_bitrate": 8500,
+                            "partnum": "FTLF8528P3BCV-CS",
+                            "rev": "A",
+                            "serialnum": "FNS18030VRB",
+                            "sfp": "sfp is present",
+                            "supported_speeds": "Min speed: 2000 Mb/s, Max speed: 8000 Mb/s",
+                            "tx_length": "short distance",
+                            "tx_medium": "multimode laser with 62.5 um aperture (M6)",
+                            "txcvr_type": "short wave laser w/o OFC (SN)"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/5"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "current": "0.00 mA",
+                                                    "current_alrm_hi": "11.80 mA",
+                                                    "current_alrm_lo": "4.00 mA",
+                                                    "current_flag": "--",
+                                                    "current_warn_hi": "10.80 mA",
+                                                    "current_warn_lo": "5.00 mA",
+                                                    "rx_pwr": "-26.38 dBm",
+                                                    "rx_pwr_alrm_hi": "3.00 dBm",
+                                                    "rx_pwr_alrm_lo": "-17.30 dBm",
+                                                    "rx_pwr_flag": "--",
+                                                    "rx_pwr_warn_hi": "0.00 dBm",
+                                                    "rx_pwr_warn_lo": "-13.30 dBm",
+                                                    "temp_alrm_hi": "75.00 C",
+                                                    "temp_alrm_lo": "-5.00 C",
+                                                    "temp_warn_hi": "70.00 C",
+                                                    "temp_warn_lo": "0.00 C",
+                                                    "temperature": "25.93 C",
+                                                    "tx_faults": 0,
+                                                    "tx_pwr": "-18.12 dBm",
+                                                    "tx_pwr_alrm_hi": "1.70 dBm",
+                                                    "tx_pwr_alrm_lo": "-14.00 dBm",
+                                                    "tx_pwr_flag": "--",
+                                                    "tx_pwr_warn_hi": "-1.30 dBm",
+                                                    "tx_pwr_warn_lo": "-10.00 dBm",
+                                                    "volt_alrm_hi": "3.63 V",
+                                                    "volt_alrm_lo": "2.97 V",
+                                                    "volt_warn_hi": "3.46 V",
+                                                    "volt_warn_lo": "3.13 V",
+                                                    "voltage": "3.31 V"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2418-01",
+                            "cisco_product_id": "DS-SFP-FC8G-SW",
+                            "ciscoid": "unknown (0x0)",
+                            "len_50": 50,
+                            "len_50_OM3": 150,
+                            "len_625": 21,
+                            "name": "CISCO-FINISAR",
+                            "nominal_bitrate": 8500,
+                            "partnum": "FTLF8528P3BCV-CS",
+                            "rev": "A",
+                            "serialnum": "FNS17512C3M",
+                            "sfp": "sfp is present",
+                            "supported_speeds": "Min speed: 2000 Mb/s, Max speed: 8000 Mb/s",
+                            "tx_length": "short distance",
+                            "tx_medium": "multimode laser with 62.5 um aperture (M6)",
+                            "txcvr_type": "short wave laser w/o OFC (SN)"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/6"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "sfp not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/7"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "sfp not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/8"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "sfp not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/9"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "sfp not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/10"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "sfp not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/11"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "sfp not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/12"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "sfp not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "fc1/13"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "current": "0.00 mA",
+                                                    "current_alrm_hi": "10.00 mA",
+                                                    "current_alrm_lo": "2.60 mA",
+                                                    "current_warn_hi": "8.50 mA",
+                                                    "current_warn_lo": "3.00 mA",
+                                                    "rx_pwr": "-23.57 dBm",
+                                                    "rx_pwr_alrm_hi": "2.00 dBm",
+                                                    "rx_pwr_alrm_lo": "-13.90 dBm",
+                                                    "rx_pwr_flag": "--",
+                                                    "rx_pwr_warn_hi": "-1.00 dBm",
+                                                    "rx_pwr_warn_lo": "-9.90 dBm",
+                                                    "temp_alrm_hi": "75.00 C",
+                                                    "temp_alrm_lo": "-5.00 C",
+                                                    "temp_warn_hi": "70.00 C",
+                                                    "temp_warn_lo": "0.00 C",
+                                                    "temperature": "33.07 C",
+                                                    "tx_pwr": "N/A",
+                                                    "tx_pwr_alrm_hi": "1.70 dBm",
+                                                    "tx_pwr_alrm_lo": "-11.30 dBm",
+                                                    "tx_pwr_warn_hi": "-1.30 dBm",
+                                                    "tx_pwr_warn_lo": "-7.30 dBm",
+                                                    "volt_alrm_hi": "3.63 V",
+                                                    "volt_alrm_lo": "2.97 V",
+                                                    "volt_warn_hi": "3.46 V",
+                                                    "volt_warn_lo": "3.13 V",
+                                                    "voltage": "3.30 V"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2415-03",
+                            "cisco_product_id": "SFP-10G-SR",
+                            "ciscoid": "unknown",
+                            "len_50": 82,
+                            "len_50_OM3": 300,
+                            "len_625": 26,
+                            "name": "CISCO-JDSU",
+                            "nominal_bitrate": 10300,
+                            "partnum": "PLRXPL-SC-S43-CS",
+                            "rev": "1",
+                            "serialnum": "JUR19100Z1L",
+                            "sfp": "sfp is present"
+                        }
+                    ]
+                },
+                "interface_sfp": "IPStorage1/1"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "current": "0.00 mA",
+                                                    "current_alrm_hi": "10.50 mA",
+                                                    "current_alrm_lo": "2.50 mA",
+                                                    "current_warn_hi": "10.50 mA",
+                                                    "current_warn_lo": "2.50 mA",
+                                                    "rx_pwr": "-40.00 dBm",
+                                                    "rx_pwr_alrm_hi": "2.00 dBm",
+                                                    "rx_pwr_alrm_lo": "-13.90 dBm",
+                                                    "rx_pwr_flag": "--",
+                                                    "rx_pwr_warn_hi": "-1.00 dBm",
+                                                    "rx_pwr_warn_lo": "-9.90 dBm",
+                                                    "temp_alrm_hi": "75.00 C",
+                                                    "temp_alrm_lo": "-5.00 C",
+                                                    "temp_warn_hi": "70.00 C",
+                                                    "temp_warn_lo": "0.00 C",
+                                                    "temperature": "30.39 C",
+                                                    "tx_pwr": "-40.00 dBm",
+                                                    "tx_pwr_alrm_hi": "1.70 dBm",
+                                                    "tx_pwr_alrm_lo": "-11.30 dBm",
+                                                    "tx_pwr_warn_hi": "-1.30 dBm",
+                                                    "tx_pwr_warn_lo": "-7.30 dBm",
+                                                    "volt_alrm_hi": "3.63 V",
+                                                    "volt_alrm_lo": "2.97 V",
+                                                    "volt_warn_hi": "3.46 V",
+                                                    "volt_warn_lo": "3.13 V",
+                                                    "voltage": "3.29 V"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2415-03",
+                            "cisco_product_id": "SFP-10G-SR",
+                            "ciscoid": "unknown",
+                            "len_50": 82,
+                            "len_50_OM3": 300,
+                            "len_625": 26,
+                            "name": "CISCO-AVAGO",
+                            "nominal_bitrate": 10300,
+                            "partnum": "SFBR-709SMZ-CS1",
+                            "rev": "G4.1",
+                            "serialnum": "AVD1721A37Y",
+                            "sfp": "sfp is present"
+                        }
+                    ]
+                },
+                "interface_sfp": "IPStorage1/2"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "TABLE_lane": {
+                                                        "ROW_lane": [
+                                                            {
+                                                                "current": 0,
+                                                                "current_alrm_hi": 10.5,
+                                                                "current_alrm_lo": 2,
+                                                                "current_flag": " ",
+                                                                "current_warn_hi": 9,
+                                                                "current_warn_lo": 2.5,
+                                                                "rx_pwr_alrm_hi": 2,
+                                                                "rx_pwr_alrm_lo": -13.9,
+                                                                "rx_pwr_flag": " ",
+                                                                "rx_pwr_warn_hi": -1,
+                                                                "rx_pwr_warn_lo": -9.9,
+                                                                "temp_alrm_hi": 75,
+                                                                "temp_alrm_lo": -5,
+                                                                "temp_flag": " ",
+                                                                "temp_warn_hi": 70,
+                                                                "temp_warn_lo": 0,
+                                                                "temperature": 23.17,
+                                                                "tx_pwr_alrm_hi": 1.69,
+                                                                "tx_pwr_alrm_lo": -11.3,
+                                                                "tx_pwr_flag": " ",
+                                                                "tx_pwr_warn_hi": -1.3,
+                                                                "tx_pwr_warn_lo": -7.3,
+                                                                "volt_alrm_hi": 3.63,
+                                                                "volt_alrm_lo": 2.97,
+                                                                "volt_flag": " ",
+                                                                "volt_warn_hi": 3.46,
+                                                                "volt_warn_lo": 3.13,
+                                                                "voltage": 3.32,
+                                                                "xmit_faults": 0
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2415-02",
+                            "cisco_product_id": "SFP-10G-SR          ",
+                            "cisco_vendor_id": "V02 ",
+                            "ciscoid": "3",
+                            "ciscoid_1": 4,
+                            "len_50": 82,
+                            "len_50_OM3": 300,
+                            "len_625": 26,
+                            "name": "CISCO-SUMITOMO  ",
+                            "nominal_bitrate": 10300,
+                            "number_of_lanes": 1,
+                            "partnum": "SPP5100SR-C1    ",
+                            "rev": "A   ",
+                            "serialnum": "SPC142704MU     ",
+                            "sfp": "present",
+                            "type": "10Gbase-SR"
+                        }
+                    ]
+                },
+                "interface_sfp": "Ethernet1/1"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "Ethernet1/2"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "TABLE_lane": {
+                                                        "ROW_lane": [
+                                                            {
+                                                                "current": 0.01,
+                                                                "current_alrm_hi": 11.8,
+                                                                "current_alrm_lo": 4,
+                                                                "current_flag": "--",
+                                                                "current_warn_hi": 10.8,
+                                                                "current_warn_lo": 5,
+                                                                "rx_pwr": -33.97,
+                                                                "rx_pwr_alrm_hi": 2,
+                                                                "rx_pwr_alrm_lo": -13.9,
+                                                                "rx_pwr_flag": "--",
+                                                                "rx_pwr_warn_hi": -1,
+                                                                "rx_pwr_warn_lo": -9.9,
+                                                                "temp_alrm_hi": 75,
+                                                                "temp_alrm_lo": -5,
+                                                                "temp_flag": " ",
+                                                                "temp_warn_hi": 70,
+                                                                "temp_warn_lo": 0,
+                                                                "temperature": 28.97,
+                                                                "tx_pwr": -14.27,
+                                                                "tx_pwr_alrm_hi": 1.69,
+                                                                "tx_pwr_alrm_lo": -11.3,
+                                                                "tx_pwr_flag": "--",
+                                                                "tx_pwr_warn_hi": -1.3,
+                                                                "tx_pwr_warn_lo": -7.3,
+                                                                "volt_alrm_hi": 3.63,
+                                                                "volt_alrm_lo": 2.97,
+                                                                "volt_flag": " ",
+                                                                "volt_warn_hi": 3.46,
+                                                                "volt_warn_lo": 3.13,
+                                                                "voltage": 3.33,
+                                                                "xmit_faults": 0
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2415-03",
+                            "cisco_product_id": "SFP-10G-SR          ",
+                            "cisco_vendor_id": "V03 ",
+                            "ciscoid": "3",
+                            "ciscoid_1": 4,
+                            "len_50": 82,
+                            "len_50_OM3": 300,
+                            "len_625": 26,
+                            "name": "CISCO-FINISAR   ",
+                            "nominal_bitrate": 10300,
+                            "number_of_lanes": 1,
+                            "partnum": "FTLX8571D3BCL-C2",
+                            "rev": "A   ",
+                            "serialnum": "FNS17421PLT     ",
+                            "sfp": "present",
+                            "type": "10Gbase-SR"
+                        }
+                    ]
+                },
+                "interface_sfp": "Ethernet1/3"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "TABLE_lane": {
+                                                        "ROW_lane": [
+                                                            {
+                                                                "current": 0,
+                                                                "current_alrm_hi": 10,
+                                                                "current_alrm_lo": 2.6,
+                                                                "current_flag": " ",
+                                                                "current_warn_hi": 8.5,
+                                                                "current_warn_lo": 3,
+                                                                "rx_pwr": -32.21,
+                                                                "rx_pwr_alrm_hi": 2,
+                                                                "rx_pwr_alrm_lo": -13.9,
+                                                                "rx_pwr_flag": "--",
+                                                                "rx_pwr_warn_hi": -1,
+                                                                "rx_pwr_warn_lo": -9.9,
+                                                                "temp_alrm_hi": 75,
+                                                                "temp_alrm_lo": -5,
+                                                                "temp_flag": " ",
+                                                                "temp_warn_hi": 70,
+                                                                "temp_warn_lo": 0,
+                                                                "temperature": 28.67,
+                                                                "tx_pwr_alrm_hi": 1.69,
+                                                                "tx_pwr_alrm_lo": -11.3,
+                                                                "tx_pwr_flag": " ",
+                                                                "tx_pwr_warn_hi": -1.3,
+                                                                "tx_pwr_warn_lo": -7.3,
+                                                                "volt_alrm_hi": 3.63,
+                                                                "volt_alrm_lo": 2.97,
+                                                                "volt_flag": " ",
+                                                                "volt_warn_hi": 3.46,
+                                                                "volt_warn_lo": 3.13,
+                                                                "voltage": 3.32,
+                                                                "xmit_faults": 0
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2415-03",
+                            "cisco_product_id": "SFP-10G-SR          ",
+                            "cisco_vendor_id": "V03 ",
+                            "ciscoid": "3",
+                            "ciscoid_1": 4,
+                            "len_50": 82,
+                            "len_50_OM3": 300,
+                            "len_625": 26,
+                            "name": "CISCO-JDSU      ",
+                            "nominal_bitrate": 10300,
+                            "number_of_lanes": 1,
+                            "partnum": "PLRXPL-SC-S43-CS",
+                            "rev": "1   ",
+                            "serialnum": "JUR2028G033     ",
+                            "sfp": "present",
+                            "type": "10Gbase-SR"
+                        }
+                    ]
+                },
+                "interface_sfp": "Ethernet1/4"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "Ethernet1/5"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "sfp": "not present"
+                        }
+                    ]
+                },
+                "interface_sfp": "Ethernet1/6"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "TABLE_lane": {
+                                                        "ROW_lane": [
+                                                            {
+                                                                "current": 0.25,
+                                                                "current_alrm_hi": 11.8,
+                                                                "current_alrm_lo": 4,
+                                                                "current_flag": "--",
+                                                                "current_warn_hi": 10.8,
+                                                                "current_warn_lo": 5,
+                                                                "rx_pwr": -2.23,
+                                                                "rx_pwr_alrm_hi": 2,
+                                                                "rx_pwr_alrm_lo": -13.9,
+                                                                "rx_pwr_flag": " ",
+                                                                "rx_pwr_warn_hi": -1,
+                                                                "rx_pwr_warn_lo": -9.9,
+                                                                "temp_alrm_hi": 75,
+                                                                "temp_alrm_lo": -5,
+                                                                "temp_flag": " ",
+                                                                "temp_warn_hi": 70,
+                                                                "temp_warn_lo": 0,
+                                                                "temperature": 30.03,
+                                                                "tx_pwr": -17.82,
+                                                                "tx_pwr_alrm_hi": 1.69,
+                                                                "tx_pwr_alrm_lo": -11.3,
+                                                                "tx_pwr_flag": "--",
+                                                                "tx_pwr_warn_hi": -1.3,
+                                                                "tx_pwr_warn_lo": -7.3,
+                                                                "volt_alrm_hi": 3.63,
+                                                                "volt_alrm_lo": 2.97,
+                                                                "volt_flag": " ",
+                                                                "volt_warn_hi": 3.46,
+                                                                "volt_warn_lo": 3.13,
+                                                                "voltage": 3.33,
+                                                                "xmit_faults": 0
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2415-03",
+                            "cisco_product_id": "SFP-10G-SR          ",
+                            "cisco_vendor_id": "V03 ",
+                            "ciscoid": "3",
+                            "ciscoid_1": 4,
+                            "len_50": 82,
+                            "len_50_OM3": 300,
+                            "len_625": 26,
+                            "name": "CISCO-FINISAR   ",
+                            "nominal_bitrate": 10300,
+                            "number_of_lanes": 1,
+                            "partnum": "FTLX8571D3BCL-C2",
+                            "rev": "A   ",
+                            "serialnum": "FNS1742199X     ",
+                            "sfp": "present",
+                            "type": "10Gbase-SR"
+                        }
+                    ]
+                },
+                "interface_sfp": "Ethernet1/7"
+            },
+            {
+                "TABLE_calib": {
+                    "ROW_calib": [
+                        {
+                            "TABLE_calibration": {
+                                "ROW_calibration": [
+                                    {
+                                        "TABLE_detail": {
+                                            "ROW_detail": [
+                                                {
+                                                    "TABLE_lane": {
+                                                        "ROW_lane": [
+                                                            {
+                                                                "current": 0,
+                                                                "current_alrm_hi": 11.8,
+                                                                "current_alrm_lo": 4,
+                                                                "current_flag": "--",
+                                                                "current_warn_hi": 10.8,
+                                                                "current_warn_lo": 5,
+                                                                "rx_pwr": -2.5,
+                                                                "rx_pwr_alrm_hi": 2,
+                                                                "rx_pwr_alrm_lo": -13.9,
+                                                                "rx_pwr_flag": " ",
+                                                                "rx_pwr_warn_hi": -1,
+                                                                "rx_pwr_warn_lo": -9.9,
+                                                                "temp_alrm_hi": 75,
+                                                                "temp_alrm_lo": -5,
+                                                                "temp_flag": " ",
+                                                                "temp_warn_hi": 70,
+                                                                "temp_warn_lo": 0,
+                                                                "temperature": 28.28,
+                                                                "tx_pwr": -18.32,
+                                                                "tx_pwr_alrm_hi": 1.69,
+                                                                "tx_pwr_alrm_lo": -11.3,
+                                                                "tx_pwr_flag": "--",
+                                                                "tx_pwr_warn_hi": -1.3,
+                                                                "tx_pwr_warn_lo": -7.3,
+                                                                "volt_alrm_hi": 3.63,
+                                                                "volt_alrm_lo": 2.97,
+                                                                "volt_flag": " ",
+                                                                "volt_warn_hi": 3.46,
+                                                                "volt_warn_lo": 3.13,
+                                                                "voltage": 3.32,
+                                                                "xmit_faults": 0
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "cisco_part_number": "10-2415-03",
+                            "cisco_product_id": "SFP-10G-SR          ",
+                            "cisco_vendor_id": "V03 ",
+                            "ciscoid": "3",
+                            "ciscoid_1": 4,
+                            "len_50": 82,
+                            "len_50_OM3": 300,
+                            "len_625": 26,
+                            "name": "CISCO-FINISAR   ",
+                            "nominal_bitrate": 10300,
+                            "number_of_lanes": 1,
+                            "partnum": "FTLX8571D3BCL-C2",
+                            "rev": "A   ",
+                            "serialnum": "FNS174216YS     ",
+                            "sfp": "present",
+                            "type": "10Gbase-SR"
+                        }
+                    ]
+                },
+                "interface_sfp": "Ethernet1/8"
+            }
+        ]
+    }
+},
+                "code": "200", 
+                "input": "show ip route ", 
+                "msg": "Success"
+            }
+        }, 
+        "sid": "eoc", 
+        "type": "cli_show", 
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "TABLE_vrf": {
+    "ROW_vrf": {
+      "vrf-name-out": "management",
+      "cnt-total": 2,
+      "TABLE_adj": {
+        "ROW_adj": [
+          {
+            "intf-out": "mgmt0",
+            "ip-addr-out": "10.77.143.1",
+            "time-stamp": "00:00:10",
+            "mac": "0000.0c9f.f0d3",
+            "phy-intf": "mgmt0"
+          },
+          {
+            "intf-out": "mgmt0",
+            "ip-addr-out": "10.77.143.3",
+            "time-stamp": "00:00:23",
+            "mac": "5087.894c.abc1",
+            "phy-intf": "mgmt0"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,733 @@
+{
+
+    "ins_api": {
+        "outputs": {
+            "output": {
+                "body": {
+                    "TABLE_tempinfo": {
+                        "ROW_tempinfo": [
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "34", 
+                                "majthres": "85  ", 
+                                "minthres": "75  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "50", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "SUG0", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "65", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "SUG1", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "49", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "SUG2", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "61", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "SUG3", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "50", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM1", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "55", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM2", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "45", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM3", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "51", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM4", 
+                                "tempmod": "1        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "34", 
+                                "majthres": "85  ", 
+                                "minthres": "75  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "59", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "SUG0", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "77", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "SUG1", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "59", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "SUG2", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "76", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "SUG3", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "52", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM1", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "53", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM2", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "54", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM3", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "55", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM4", 
+                                "tempmod": "2        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "37", 
+                                "majthres": "85  ", 
+                                "minthres": "75  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "3        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "51", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "HOM0", 
+                                "tempmod": "3        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "53", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "HOM1", 
+                                "tempmod": "3        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "46", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM1", 
+                                "tempmod": "3        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "47", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM2", 
+                                "tempmod": "3        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "35", 
+                                "majthres": "85  ", 
+                                "minthres": "75  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "53", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "HOM0", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "63", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "HOM1", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "63", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "HOM2", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "63", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "HOM3", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "45", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM1", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "48", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM2", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "46", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM3", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "46", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM4", 
+                                "tempmod": "4        "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "31", 
+                                "majthres": "85  ", 
+                                "minthres": "75  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "22       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "56", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "LAC0", 
+                                "tempmod": "22       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "42", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "LAC1", 
+                                "tempmod": "22       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "56", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM1", 
+                                "tempmod": "22       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "56", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM2", 
+                                "tempmod": "22       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "28", 
+                                "majthres": "85  ", 
+                                "minthres": "75  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "24       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "57", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "LAC0", 
+                                "tempmod": "24       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "42", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "LAC1", 
+                                "tempmod": "24       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "57", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM1", 
+                                "tempmod": "24       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "57", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM2", 
+                                "tempmod": "24       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "28", 
+                                "majthres": "85  ", 
+                                "minthres": "75  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "26       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "51", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "LAC0", 
+                                "tempmod": "26       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "43", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "LAC1", 
+                                "tempmod": "26       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "52", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM1", 
+                                "tempmod": "26       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "52", 
+                                "majthres": "110 ", 
+                                "minthres": "100 ", 
+                                "sensor": "VRM2", 
+                                "tempmod": "26       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "33", 
+                                "majthres": "75  ", 
+                                "minthres": "55  ", 
+                                "sensor": "OUTLET", 
+                                "tempmod": "27       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "24", 
+                                "majthres": "60  ", 
+                                "minthres": "42  ", 
+                                "sensor": "INLET", 
+                                "tempmod": "27       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "35", 
+                                "majthres": "90  ", 
+                                "minthres": "80  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "27       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "44", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "29       "
+                            }, 
+                            {
+                                "alarmstatus": "Ok", 
+                                "curtemp": "53", 
+                                "majthres": "105 ", 
+                                "minthres": "95  ", 
+                                "sensor": "CPU", 
+                                "tempmod": "30       "
+                            }
+                        ]
+                    }, 
+                    "fandetails": {
+                        "TABLE_fan_zone_speed": {
+                            "ROW_fan_zone_speed": {
+                                "zone": "1", 
+                                "zonespeed": "0x0"
+                            }
+                        }, 
+                        "TABLE_faninfo": {
+                            "ROW_faninfo": [
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "1.0", 
+                                    "fanmodel": "N9K-C9508-FAN", 
+                                    "fanname": "Fan1(sys_fan1)", 
+                                    "fanstatus": "Ok"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "1.0", 
+                                    "fanmodel": "N9K-C9508-FAN", 
+                                    "fanname": "Fan2(sys_fan2)", 
+                                    "fanstatus": "Ok"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "1.0", 
+                                    "fanmodel": "N9K-C9508-FAN", 
+                                    "fanname": "Fan3(sys_fan3)", 
+                                    "fanstatus": "Ok"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "--", 
+                                    "fanmodel": "", 
+                                    "fanname": "Fan_in_PS1", 
+                                    "fanstatus": "Ok"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "--", 
+                                    "fanmodel": "", 
+                                    "fanname": "Fan_in_PS2", 
+                                    "fanstatus": "Ok"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "--", 
+                                    "fanmodel": "", 
+                                    "fanname": "Fan_in_PS3", 
+                                    "fanstatus": "Ok"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "--", 
+                                    "fanmodel": "", 
+                                    "fanname": "Fan_in_PS4", 
+                                    "fanstatus": "None"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "--", 
+                                    "fanmodel": "", 
+                                    "fanname": "Fan_in_PS5", 
+                                    "fanstatus": "None"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "--", 
+                                    "fanmodel": "", 
+                                    "fanname": "Fan_in_PS6", 
+                                    "fanstatus": "None"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "--", 
+                                    "fanmodel": "", 
+                                    "fanname": "Fan_in_PS7", 
+                                    "fanstatus": "None"
+                                }, 
+                                {
+                                    "fandir": "front-to-back", 
+                                    "fanhwver": "--", 
+                                    "fanmodel": "", 
+                                    "fanname": "Fan_in_PS8", 
+                                    "fanstatus": "None"
+                                }
+                            ]
+                        }, 
+                        "fan_filter_status": "NotSupported"
+                    }, 
+                    "powersup": {
+                        "TABLE_mod_pow_info": {
+                            "ROW_mod_pow_info": [
+                                {
+                                    "actual_draw": "356.00 W", 
+                                    "allocated": "720.00 W", 
+                                    "mod_model": "N9K-X9732C-EX       ", 
+                                    "modnum": "1    ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": "573.00 W", 
+                                    "allocated": "816.00 W", 
+                                    "mod_model": "N9K-X9732C-EXM      ", 
+                                    "modnum": "2    ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": "226.00 W", 
+                                    "allocated": "684.00 W", 
+                                    "mod_model": "N9K-X9788TC-FX      ", 
+                                    "modnum": "3    ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": "379.00 W", 
+                                    "allocated": "756.00 W", 
+                                    "mod_model": "N9K-X9736C-FX       ", 
+                                    "modnum": "4    ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": "  N/A   ", 
+                                    "allocated": "  0.00 W", 
+                                    "mod_model": "xbar                ", 
+                                    "modnum": "Xb21 ", 
+                                    "modstatus": "Absent"
+                                }, 
+                                {
+                                    "actual_draw": "109.00 W", 
+                                    "allocated": "564.00 W", 
+                                    "mod_model": "N9K-C9508-FM-E      ", 
+                                    "modnum": "Xb22 ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": "  N/A   ", 
+                                    "allocated": "  0.00 W", 
+                                    "mod_model": "N9K-C9508-FM-E      ", 
+                                    "modnum": "Xb23 ", 
+                                    "modstatus": "Powered-Dn"
+                                }, 
+                                {
+                                    "actual_draw": "108.00 W", 
+                                    "allocated": "564.00 W", 
+                                    "mod_model": "N9K-C9508-FM-E      ", 
+                                    "modnum": "Xb24 ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": "  N/A   ", 
+                                    "allocated": "  0.00 W", 
+                                    "mod_model": "xbar                ", 
+                                    "modnum": "Xb25 ", 
+                                    "modstatus": "Absent"
+                                }, 
+                                {
+                                    "actual_draw": "104.00 W", 
+                                    "allocated": "564.00 W", 
+                                    "mod_model": "N9K-C9508-FM-E      ", 
+                                    "modnum": "Xb26 ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": " 63.00 W", 
+                                    "allocated": " 90.00 W", 
+                                    "mod_model": "N9K-SUP-A           ", 
+                                    "modnum": "27   ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": "  N/A   ", 
+                                    "allocated": "  0.00 W", 
+                                    "mod_model": "supervisor          ", 
+                                    "modnum": "28   ", 
+                                    "modstatus": "Absent"
+                                }, 
+                                {
+                                    "actual_draw": " 14.00 W", 
+                                    "allocated": " 25.20 W", 
+                                    "mod_model": "N9K-SC-A            ", 
+                                    "modnum": "29   ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": " 14.00 W", 
+                                    "allocated": " 25.20 W", 
+                                    "mod_model": "N9K-SC-A            ", 
+                                    "modnum": "30   ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": " 38.00 W", 
+                                    "allocated": "249.00 W", 
+                                    "mod_model": "N9K-C9508-FAN       ", 
+                                    "modnum": "fan1 ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": " 39.00 W", 
+                                    "allocated": "249.00 W", 
+                                    "mod_model": "N9K-C9508-FAN       ", 
+                                    "modnum": "fan2 ", 
+                                    "modstatus": "Powered-Up"
+                                }, 
+                                {
+                                    "actual_draw": " 36.00 W", 
+                                    "allocated": "249.00 W", 
+                                    "mod_model": "N9K-C9508-FAN       ", 
+                                    "modnum": "fan3 ", 
+                                    "modstatus": "Powered-Up"
+                                }
+                            ]
+                        }, 
+                        "TABLE_psinfo": {
+                            "ROW_psinfo": [
+                                {
+                                    "actual_input": "  837 W", 
+                                    "actual_out": "  805 W", 
+                                    "ps_status": "Ok", 
+                                    "psmodel": "N9K-PAC-3000W-B", 
+                                    "psnum": 1, 
+                                    "tot_capa": " 3000 W"
+                                }, 
+                                {
+                                    "actual_input": "  844 W", 
+                                    "actual_out": "  781 W", 
+                                    "ps_status": "Ok", 
+                                    "psmodel": "N9K-PAC-3000W-B", 
+                                    "psnum": 2, 
+                                    "tot_capa": " 3000 W"
+                                }, 
+                                {
+                                    "actual_input": "  841 W", 
+                                    "actual_out": "  781 W", 
+                                    "ps_status": "Ok", 
+                                    "psmodel": "N9K-PAC-3000W-B", 
+                                    "psnum": 3, 
+                                    "tot_capa": " 3000 W"
+                                }, 
+                                {
+                                    "actual_input": "    0 W", 
+                                    "actual_out": "    0 W", 
+                                    "ps_status": "Absent", 
+                                    "psmodel": "------------", 
+                                    "psnum": 4, 
+                                    "tot_capa": "    0 W"
+                                }, 
+                                {
+                                    "actual_input": "    0 W", 
+                                    "actual_out": "    0 W", 
+                                    "ps_status": "Absent", 
+                                    "psmodel": "------------", 
+                                    "psnum": 5, 
+                                    "tot_capa": "    0 W"
+                                }, 
+                                {
+                                    "actual_input": "    0 W", 
+                                    "actual_out": "    0 W", 
+                                    "ps_status": "Absent", 
+                                    "psmodel": "------------", 
+                                    "psnum": 6, 
+                                    "tot_capa": "    0 W"
+                                }, 
+                                {
+                                    "actual_input": "    0 W", 
+                                    "actual_out": "    0 W", 
+                                    "ps_status": "Absent", 
+                                    "psmodel": "------------", 
+                                    "psnum": 7, 
+                                    "tot_capa": "    0 W"
+                                }, 
+                                {
+                                    "actual_input": "    0 W", 
+                                    "actual_out": "    0 W", 
+                                    "ps_status": "Absent", 
+                                    "psmodel": "------------", 
+                                    "psnum": 8, 
+                                    "tot_capa": "    0 W"
+                                }
+                            ]
+                        }, 
+                        "power_summary": {
+                            "available_pow": "3353.00 W", 
+                            "cumulative_power": "9000.00 W", 
+                            "ps_oper_mode": "Non-Redundant(combined)", 
+                            "ps_redun_mode": "Non-Redundant(combined)", 
+                            "tot_gridA_capacity": "9000.00 W", 
+                            "tot_gridB_capacity": "   0.00 W", 
+                            "tot_pow_alloc_budgeted": "5647.00 W", 
+                            "tot_pow_capacity": "9000.00 W", 
+                            "tot_pow_input_actual_draw": "2523.00 W", 
+                            "tot_pow_out_actual_draw": "2368.00 W"
+                        }, 
+                        "voltage_level": 12
+                    }
+                }, 
+                "code": "200", 
+                "input": "show environment", 
+                "msg": "Success"
+            }
+        }, 
+        "sid": "eoc", 
+        "type": "cli_show", 
+        "version": "1.0"
+    }
+}

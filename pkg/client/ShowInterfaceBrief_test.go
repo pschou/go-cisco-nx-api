@@ -22,19 +22,19 @@ import (
 	"testing"
 )
 
-func TestParseShowInterfaceBriefJsonOutput(t *testing.T) {
+func TestParseShowShowInterfaceBriefJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 
 	for i, test := range []struct {
 		input      string
-		exp        *InterfaceBriefResponse
+		exp        *ShowInterfaceBriefResponse
 		shouldFail bool
 		shouldErr  bool
 	}{
 		{
 			input: "show.interface.brief",
-			exp: &InterfaceBriefResponse{
+			exp: &ShowInterfaceBriefResponse{
 				TableInterface: struct {
 					RowInterface []struct {
 						Interface    string "json:\"interface\""
@@ -424,7 +424,7 @@ func TestParseShowInterfaceBriefJsonOutput(t *testing.T) {
 			testFailed++
 			continue
 		}
-		dat, err := NewInterfaceBriefFromBytes(content)
+		dat, err := NewShowInterfaceBriefFromBytes(content)
 		//fmt.Printf("%#v\n", dat) //DEBUG
 		if err != nil {
 			if !test.shouldErr {

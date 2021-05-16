@@ -1,0 +1,41 @@
+{
+  "ins_api": {
+    "type": "cli_show",
+    "version": "1.0",
+    "sid": "eoc",
+    "outputs": {
+      "output": {
+        "input": "show ip eigrp neighbors vrf all",
+        "msg": "Success",
+        "code": "200",
+        "body": 
+{
+    "TABLE_asn": {
+        "ROW_asn": {
+            "asn": "1",
+            "TABLE_vrf": {
+                "ROW_vrf": {
+                    "vrf": "default",
+                    "TABLE_peer": {
+                        "ROW_peer": {
+                            "peer_handle": "0",
+                            "peer_ipaddr": "10.1.0.1",
+                            "peer_ifname": "Eth1/1",
+                            "peer_holdtime": "13",
+                            "peer_srtt": "6",
+                            "peer_rto": "50",
+                            "peer_xmitq_count": "0",
+                            "peer_last_seqno": "4",
+                            "peer_uptime": "PT46M49S"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+      }
+    }
+  }
+}

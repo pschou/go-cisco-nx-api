@@ -23,7 +23,7 @@ import (
 	"strings"
 )
 
-type InterfaceBriefResponse struct {
+type ShowInterfaceBriefResponse struct {
 	TableInterface struct {
 		RowInterface []struct {
 			Interface    string `json:"interface"`
@@ -44,26 +44,26 @@ type InterfaceBriefResponse struct {
 	} `json:"TABLE_interface"`
 }
 
-// NewInterfaceBriefFromString returns instance from an input string.
-func NewInterfaceBriefFromString(s string) (*InterfaceBriefResponse, error) {
-	return NewInterfaceBriefFromReader(strings.NewReader(s))
+// NewShowInterfaceBriefFromString returns instance from an input string.
+func NewShowInterfaceBriefFromString(s string) (*ShowInterfaceBriefResponse, error) {
+	return NewShowInterfaceBriefFromReader(strings.NewReader(s))
 }
 
-// NewInterfaceBriefFromBytes returns instance from an input byte array.
-func NewInterfaceBriefFromBytes(s []byte) (*InterfaceBriefResponse, error) {
-	return NewInterfaceBriefFromReader(bytes.NewReader(s))
+// NewShowInterfaceBriefFromBytes returns instance from an input byte array.
+func NewShowInterfaceBriefFromBytes(s []byte) (*ShowInterfaceBriefResponse, error) {
+	return NewShowInterfaceBriefFromReader(bytes.NewReader(s))
 }
 
-// NewInterfaceBriefFromReader returns instance from an input reader.
-func NewInterfaceBriefFromReader(s io.Reader) (*InterfaceBriefResponse, error) {
-	//si := &InterfaceBrief{}
-	InterfaceBriefResponseDat := &InterfaceBriefResponse{}
+// NewShowInterfaceBriefFromReader returns instance from an input reader.
+func NewShowInterfaceBriefFromReader(s io.Reader) (*ShowInterfaceBriefResponse, error) {
+	//si := &ShowInterfaceBrief{}
+	ShowInterfaceBriefResponseDat := &ShowInterfaceBriefResponse{}
 	jsonDec := json.NewDecoder(s)
 	jsonDec.UseAutoConvert()
 	jsonDec.UseSlice()
-	err := jsonDec.Decode(InterfaceBriefResponseDat)
+	err := jsonDec.Decode(ShowInterfaceBriefResponseDat)
 	if err != nil {
 		return nil, fmt.Errorf("parsing error: %s", err)
 	}
-	return InterfaceBriefResponseDat, nil
+	return ShowInterfaceBriefResponseDat, nil
 }
