@@ -22,7 +22,7 @@ import (
 	"testing"
 )
 
-func TestParseShowShowInterfaceQuickJsonOutput(t *testing.T) {
+func TestParseShowInterfaceQuickJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 
@@ -277,7 +277,7 @@ func TestParseShowShowInterfaceQuickJsonOutput(t *testing.T) {
 		t.Fatalf("Failed %d tests", testFailed)
 	}
 }
-func TestParseShowShowInterfaceQuickResultJsonOutput(t *testing.T) {
+func TestParseShowInterfaceQuickResultJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 

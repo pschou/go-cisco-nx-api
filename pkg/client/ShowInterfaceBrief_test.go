@@ -22,7 +22,7 @@ import (
 	"testing"
 )
 
-func TestParseShowShowInterfaceBriefJsonOutput(t *testing.T) {
+func TestParseShowInterfaceBriefJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 

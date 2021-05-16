@@ -22,7 +22,7 @@ import (
 	"testing"
 )
 
-func TestParseShowShowVersionResponseJsonOutput(t *testing.T) {
+func TestParseShowVersionResponseJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 
@@ -102,7 +102,7 @@ func TestParseShowShowVersionResponseJsonOutput(t *testing.T) {
 	}
 }
 
-func TestParseShowShowVersionResponseResultJsonOutput(t *testing.T) {
+func TestParseShowVersionResponseResultJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 

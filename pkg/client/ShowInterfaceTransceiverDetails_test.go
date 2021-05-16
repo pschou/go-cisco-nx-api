@@ -22,7 +22,7 @@ import (
 	"testing"
 )
 
-func TestParseShowShowInterfaceTransceiverDetailsJsonOutput(t *testing.T) {
+func TestParseShowInterfaceTransceiverDetailsJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 
@@ -142,7 +142,7 @@ func TestParseShowShowInterfaceTransceiverDetailsJsonOutput(t *testing.T) {
 		t.Fatalf("Failed %d tests", testFailed)
 	}
 }
-func TestParseShowShowInterfaceTransceiverDetailsResultJsonOutput(t *testing.T) {
+func TestParseShowInterfaceTransceiverDetailsResultJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 

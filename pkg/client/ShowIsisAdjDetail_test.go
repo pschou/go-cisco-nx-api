@@ -22,7 +22,7 @@ import (
 	"testing"
 )
 
-func TestParseShowShowIsisAdjDetailJsonOutput(t *testing.T) {
+func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 
@@ -730,7 +730,7 @@ func TestParseShowShowIsisAdjDetailJsonOutput(t *testing.T) {
 	}
 }
 
-func TestParseShowShowIsisAdjDetailResultJsonOutput(t *testing.T) {
+func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 
