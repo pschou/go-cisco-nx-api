@@ -23,10 +23,10 @@ import (
 	"strings"
 )
 
-type PortSecurityAddressResponse struct {
+type ShowPortSecurityAddressResponse struct {
 	InsAPI struct {
 		Outputs struct {
-			Output PortSecurityAddressResponseResult `json:"output" xml:"output"`
+			Output ShowPortSecurityAddressResponseResult `json:"output" xml:"output"`
 		} `json:"outputs" xml:"outputs"`
 		Sid     string `json:"sid" xml:"sid"`
 		Type    string `json:"type" xml:"type"`
@@ -34,14 +34,14 @@ type PortSecurityAddressResponse struct {
 	} `json:"ins_api" xml:"ins_api"`
 }
 
-type PortSecurityAddressResponseResult struct {
-	Body  PortSecurityAddressResultBody `json:"body" xml:"body"`
-	Code  string                        `json:"code" xml:"code"`
-	Input string                        `json:"input" xml:"input"`
-	Msg   string                        `json:"msg" xml:"msg"`
+type ShowPortSecurityAddressResponseResult struct {
+	Body  ShowPortSecurityAddressResultBody `json:"body" xml:"body"`
+	Code  string                            `json:"code" xml:"code"`
+	Input string                            `json:"input" xml:"input"`
+	Msg   string                            `json:"msg" xml:"msg"`
 }
 
-type PortSecurityAddressResultBody struct {
+type ShowPortSecurityAddressResultBody struct {
 	TotalAddr               int `json:"total_addr" xml:"total_addr"`
 	MaxSysLimit             int `json:"max_sys_limit" xml:"max_sys_limit"`
 	TableEthPortSecMacAddrs []struct {
@@ -59,13 +59,13 @@ type PortSecurityAddressResultBody struct {
 	} `json:"TABLE_eth_port_sec_mac_addrs" xml:"TABLE_eth_port_sec_mac_addrs"`
 }
 
-func (d *PortSecurityAddressResponse) Flat() (out []PortSecurityAddressResultFlat) {
+func (d *ShowPortSecurityAddressResponse) Flat() (out []ShowPortSecurityAddressResultFlat) {
 	return d.InsAPI.Outputs.Output.Flat()
 }
-func (d *PortSecurityAddressResponseResult) Flat() (out []PortSecurityAddressResultFlat) {
+func (d *ShowPortSecurityAddressResponseResult) Flat() (out []ShowPortSecurityAddressResultFlat) {
 	for _, Tv := range d.Body.TableEthPortSecMacAddrs {
 		for _, Rv := range Tv.RowEthPortSecMacAddrs {
-			out = append(out, PortSecurityAddressResultFlat{
+			out = append(out, ShowPortSecurityAddressResultFlat{
 				IfIndex:      Rv.IfIndex,
 				VlanID:       Rv.VlanID,
 				Type:         Rv.Type,
@@ -81,7 +81,7 @@ func (d *PortSecurityAddressResponseResult) Flat() (out []PortSecurityAddressRes
 	return
 }
 
-type PortSecurityAddressResultFlat struct {
+type ShowPortSecurityAddressResultFlat struct {
 	IfIndex      string `json:"if_index" xml:"if_index"`
 	VlanID       int    `json:"vlan_id" xml:"vlan_id"`
 	Type         string `json:"type" xml:"type"`
@@ -93,50 +93,50 @@ type PortSecurityAddressResultFlat struct {
 	CmdAddrIndex []int  `json:"cmd_addr_index" xml:"cmd_addr_index"`
 }
 
-// NewPortSecurityAddressFromString returns instance from an input string.
-func NewPortSecurityAddressFromString(s string) (*PortSecurityAddressResponse, error) {
-	return NewPortSecurityAddressFromReader(strings.NewReader(s))
+// NewShowPortSecurityAddressFromString returns instance from an input string.
+func NewShowPortSecurityAddressFromString(s string) (*ShowPortSecurityAddressResponse, error) {
+	return NewShowPortSecurityAddressFromReader(strings.NewReader(s))
 }
 
-// NewPortSecurityAddressFromBytes returns instance from an input byte array.
-func NewPortSecurityAddressFromBytes(s []byte) (*PortSecurityAddressResponse, error) {
-	return NewPortSecurityAddressFromReader(bytes.NewReader(s))
+// NewShowPortSecurityAddressFromBytes returns instance from an input byte array.
+func NewShowPortSecurityAddressFromBytes(s []byte) (*ShowPortSecurityAddressResponse, error) {
+	return NewShowPortSecurityAddressFromReader(bytes.NewReader(s))
 }
 
-// NewPortSecurityAddressFromReader returns instance from an input reader.
-func NewPortSecurityAddressFromReader(s io.Reader) (*PortSecurityAddressResponse, error) {
-	//si := &PortSecurityAddress{}
-	PortSecurityAddressResponseDat := &PortSecurityAddressResponse{}
+// NewShowPortSecurityAddressFromReader returns instance from an input reader.
+func NewShowPortSecurityAddressFromReader(s io.Reader) (*ShowPortSecurityAddressResponse, error) {
+	//si := &ShowPortSecurityAddress{}
+	ShowPortSecurityAddressResponseDat := &ShowPortSecurityAddressResponse{}
 	jsonDec := json.NewDecoder(s)
 	jsonDec.UseAutoConvert()
 	jsonDec.UseSlice()
-	err := jsonDec.Decode(PortSecurityAddressResponseDat)
+	err := jsonDec.Decode(ShowPortSecurityAddressResponseDat)
 	if err != nil {
 		return nil, fmt.Errorf("parsing error: %s", err)
 	}
-	return PortSecurityAddressResponseDat, nil
+	return ShowPortSecurityAddressResponseDat, nil
 }
 
-// NewPortSecurityAddressResultFromString returns instance from an input string.
-func NewPortSecurityAddressResultFromString(s string) (*PortSecurityAddressResponseResult, error) {
-	return NewPortSecurityAddressResultFromReader(strings.NewReader(s))
+// NewShowPortSecurityAddressResultFromString returns instance from an input string.
+func NewShowPortSecurityAddressResultFromString(s string) (*ShowPortSecurityAddressResponseResult, error) {
+	return NewShowPortSecurityAddressResultFromReader(strings.NewReader(s))
 }
 
-// NewPortSecurityAddressResultFromBytes returns instance from an input byte array.
-func NewPortSecurityAddressResultFromBytes(s []byte) (*PortSecurityAddressResponseResult, error) {
-	return NewPortSecurityAddressResultFromReader(bytes.NewReader(s))
+// NewShowPortSecurityAddressResultFromBytes returns instance from an input byte array.
+func NewShowPortSecurityAddressResultFromBytes(s []byte) (*ShowPortSecurityAddressResponseResult, error) {
+	return NewShowPortSecurityAddressResultFromReader(bytes.NewReader(s))
 }
 
-// NewPortSecurityAddressResultFromReader returns instance from an input reader.
-func NewPortSecurityAddressResultFromReader(s io.Reader) (*PortSecurityAddressResponseResult, error) {
-	//si := &PortSecurityAddressResponseResult{}
-	PortSecurityAddressResponseResultDat := &PortSecurityAddressResponseResult{}
+// NewShowPortSecurityAddressResultFromReader returns instance from an input reader.
+func NewShowPortSecurityAddressResultFromReader(s io.Reader) (*ShowPortSecurityAddressResponseResult, error) {
+	//si := &ShowPortSecurityAddressResponseResult{}
+	ShowPortSecurityAddressResponseResultDat := &ShowPortSecurityAddressResponseResult{}
 	jsonDec := json.NewDecoder(s)
 	jsonDec.UseAutoConvert()
 	jsonDec.UseSlice()
-	err := jsonDec.Decode(PortSecurityAddressResponseResultDat)
+	err := jsonDec.Decode(ShowPortSecurityAddressResponseResultDat)
 	if err != nil {
 		return nil, fmt.Errorf("parsing error: %s", err)
 	}
-	return PortSecurityAddressResponseResultDat, nil
+	return ShowPortSecurityAddressResponseResultDat, nil
 }

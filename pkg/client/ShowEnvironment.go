@@ -23,10 +23,10 @@ import (
 	"strings"
 )
 
-type EnvironmentResponse struct {
+type ShowEnvironmentResponse struct {
 	InsAPI struct {
 		Outputs struct {
-			Output EnvironmentResponseResult `json:"output" xml:"output"`
+			Output ShowEnvironmentResponseResult `json:"output" xml:"output"`
 		} `json:"outputs" xml:"outputs"`
 		Sid     string `json:"sid" xml:"sid"`
 		Type    string `json:"type" xml:"type"`
@@ -34,122 +34,124 @@ type EnvironmentResponse struct {
 	} `json:"ins_api" xml:"ins_api"`
 }
 
-type EnvironmentResponseResult struct {
-	Body  EnvironmentResultBody `json:"body" xml:"body"`
-	Code  string                `json:"code" xml:"code"`
-	Input string                `json:"input" xml:"input"`
-	Msg   string                `json:"msg" xml:"msg"`
+type ShowEnvironmentResponseResult struct {
+	Body  ShowEnvironmentResultBody `json:"body" xml:"body"`
+	Code  string                    `json:"code" xml:"code"`
+	Input string                    `json:"input" xml:"input"`
+	Msg   string                    `json:"msg" xml:"msg"`
 }
 
-type EnvironmentResultBody struct {
-	TableTempinfo struct {
+type ShowEnvironmentResultBody struct {
+	TableTempinfo []struct {
 		RowTempinfo []struct {
-			AlarmStatus string `json:"alarmstatus"`
-			CurTemp     string `json:"curtemp"`
-			MajThres    string `json:"majthres"`
-			MinThres    string `json:"minthres"`
-			Sensor      string `json:"sensor"`
-			Tempmod     string `json:"tempmod"`
-		} `json:"ROW_tempinfo"`
-	} `json:"TABLE_tempinfo"`
+			AlarmStatus string  `json:"alarmstatus" xml:"alarmstatus"`
+			CurTemp     float32 `json:"curtemp" xml:"curtemp"`
+			MajThres    float32 `json:"majthres" xml:"majthres"`
+			MinThres    float32 `json:"minthres" xml:"minthres"`
+			Sensor      string  `json:"sensor" xml:"sensor"`
+			Tempmod     int     `json:"tempmod" xml:"tempmod"`
+		} `json:"ROW_tempinfo" xml:"ROW_tempinfo"`
+	} `json:"TABLE_tempinfo" xml:"TABLE_tempinfo"`
 	FanDetails struct {
-		TableFanZoneSpeed struct {
-			RowFanZoneSpeed struct {
-				Zone      string `json:"zone"`
-				ZoneSpeed string `json:"zonespeed"`
-			} `json:"ROW_fan_zone_speed"`
-		} `json:"TABLE_fan_zone_speed"`
-		TableFaninfo struct {
+		TableFanZoneSpeed []struct {
+			RowFanZoneSpeed []struct {
+				Zone      int    `json:"zone" xml:"zone"`
+				ZoneSpeed string `json:"zonespeed" xml:"zonespeed"`
+			} `json:"ROW_fan_zone_speed" xml:"ROW_fan_zone_speed"`
+		} `json:"TABLE_fan_zone_speed" xml:"TABLE_fan_zone_speed"`
+		TableFaninfo []struct {
 			RowFaninfo []struct {
-				FanDir    string `json:"fandir"`
-				FanHwVer  string `json:"fanhwver"`
-				FanModel  string `json:"fanmodel"`
-				FanName   string `json:"fanname"`
-				FanStatus string `json:"fanstatus"`
-			} `json:"ROW_faninfo"`
-		} `json:"TABLE_faninfo"`
-		FanFilterStatus string `json:"fan_filter_status"`
-	} `json:"fandetails"`
+				FanDir    string `json:"fandir" xml:"fandir"`
+				FanHwVer  string `json:"fanhwver" xml:"fanhwver"`
+				FanModel  string `json:"fanmodel" xml:"fanmodel"`
+				FanName   string `json:"fanname" xml:"fanname"`
+				FanStatus string `json:"fanstatus" xml:"fanstatus"`
+			} `json:"ROW_faninfo" xml:"ROW_faninfo"`
+		} `json:"TABLE_faninfo" xml:"TABLE_faninfo"`
+		FanFilterStatus string `json:"fan_filter_status" xml:"fan_filter_status"`
+	} `json:"fandetails" xml:"fandetails"`
 	Powersup struct {
-		TableModPowInfo struct {
+		TableModPowInfo []struct {
 			RowModPowInfo []struct {
-				ActualDraw string `json:"actual_draw"`
-				Allocated  string `json:"allocated"`
-				ModModel   string `json:"mod_model"`
-				Modnum     string `json:"modnum"`
-				Modstatus  string `json:"modstatus"`
-			} `json:"ROW_mod_pow_info"`
-		} `json:"TABLE_mod_pow_info"`
-		TablePsinfo struct {
+				ActualDraw Watts  `json:"actual_draw" xml:"actual_draw"`
+				Allocated  Watts  `json:"allocated" xml:"allocated"`
+				ModModel   string `json:"mod_model" xml:"mod_model"`
+				Modnum     string `json:"modnum" xml:"modnum"`
+				Modstatus  string `json:"modstatus" xml:"modstatus"`
+			} `json:"ROW_mod_pow_info" xml:"ROW_mod_pow_info"`
+		} `json:"TABLE_mod_pow_info" xml:"TABLE_mod_pow_info"`
+		TablePsinfo []struct {
 			RowPsinfo []struct {
-				ActualInput string `json:"actual_input"`
-				ActualOut   string `json:"actual_out"`
-				PsStatus    string `json:"ps_status"`
-				PsModel     string `json:"psmodel"`
-				PsNum       int    `json:"psnum"`
-				TotCapa     string `json:"tot_capa"`
-			} `json:"ROW_psinfo"`
-		} `json:"TABLE_psinfo"`
+				ActualInput Watts  `json:"actual_input" xml:"actual_input"`
+				ActualOut   Watts  `json:"actual_out" xml:"actual_out"`
+				PsStatus    string `json:"ps_status" xml:"ps_status"`
+				PsModel     string `json:"psmodel" xml:"psmodel"`
+				PsNum       int    `json:"psnum" xml:"psnum"`
+				TotCapa     Watts  `json:"tot_capa" xml:"tot_capa"`
+			} `json:"ROW_psinfo" xml:"ROW_psinfo"`
+		} `json:"TABLE_psinfo" xml:"TABLE_psinfo"`
 		PowerSummary struct {
-			AvailablePow          string `json:"available_pow"`
-			CumulativePower       string `json:"cumulative_power"`
-			PsOperMode            string `json:"ps_oper_mode"`
-			PsRedunMode           string `json:"ps_redun_mode"`
-			TotGridaCapacity      string `json:"tot_gridA_capacity"`
-			TotGridbCapacity      string `json:"tot_gridB_capacity"`
-			TotPowAllocBudgeted   string `json:"tot_pow_alloc_budgeted"`
-			TotPowCapacity        string `json:"tot_pow_capacity"`
-			TotPowInputActualDraw string `json:"tot_pow_input_actual_draw"`
-			TotPowOutActualDraw   string `json:"tot_pow_out_actual_draw"`
-		} `json:"power_summary"`
-		VoltageLevel int `json:"voltage_level"`
-	} `json:"powersup"`
+			AvailablePow          Watts  `json:"available_pow" xml:"available_pow"`
+			CumulativePower       Watts  `json:"cumulative_power" xml:"cumulative_power"`
+			PsOperMode            string `json:"ps_oper_mode" xml:"ps_oper_mode"`
+			PsRedunMode           string `json:"ps_redun_mode" xml:"ps_redun_mode"`
+			TotGridaCapacity      Watts  `json:"tot_gridA_capacity" xml:"tot_gridA_capacity"`
+			TotGridbCapacity      Watts  `json:"tot_gridB_capacity" xml:"tot_gridB_capacity"`
+			TotPowAllocBudgeted   Watts  `json:"tot_pow_alloc_budgeted" xml:"tot_pow_alloc_budgeted"`
+			TotPowCapacity        Watts  `json:"tot_pow_capacity" xml:"tot_pow_capacity"`
+			TotPowInputActualDraw Watts  `json:"tot_pow_input_actual_draw" xml:"tot_pow_input_actual_draw"`
+			TotPowOutActualDraw   Watts  `json:"tot_pow_out_actual_draw" xml:"tot_pow_out_actual_draw"`
+		} `json:"power_summary" xml:"power_summary"`
+		VoltageLevel int `json:"voltage_level" xml:"voltage_level"`
+	} `json:"powersup" xml:"powersup"`
 }
 
-// NewEnvironmentFromString returns instance from an input string.
-func NewEnvironmentFromString(s string) (*EnvironmentResponse, error) {
-	return NewEnvironmentFromReader(strings.NewReader(s))
+// NewShowEnvironmentFromString returns instance from an input string.
+func NewShowEnvironmentFromString(s string) (*ShowEnvironmentResponse, error) {
+	return NewShowEnvironmentFromReader(strings.NewReader(s))
 }
 
-// NewEnvironmentFromBytes returns instance from an input byte array.
-func NewEnvironmentFromBytes(s []byte) (*EnvironmentResponse, error) {
-	return NewEnvironmentFromReader(bytes.NewReader(s))
+// NewShowEnvironmentFromBytes returns instance from an input byte array.
+func NewShowEnvironmentFromBytes(s []byte) (*ShowEnvironmentResponse, error) {
+	return NewShowEnvironmentFromReader(bytes.NewReader(s))
 }
 
-// NewEnvironmentFromReader returns instance from an input reader.
-func NewEnvironmentFromReader(s io.Reader) (*EnvironmentResponse, error) {
-	//si := &Environment{}
-	EnvironmentResponseDat := &EnvironmentResponse{}
+// NewShowEnvironmentFromReader returns instance from an input reader.
+func NewShowEnvironmentFromReader(s io.Reader) (*ShowEnvironmentResponse, error) {
+	//si := &ShowEnvironment{}
+	ShowEnvironmentResponseDat := &ShowEnvironmentResponse{}
 	jsonDec := json.NewDecoder(s)
-	jsonDec.UseAutoConvert()
+	jsonDec.UseAutoConvertWithTrimSpace()
+	jsonDec.UseAutoTrimSpace()
 	jsonDec.UseSlice()
-	err := jsonDec.Decode(EnvironmentResponseDat)
+	err := jsonDec.Decode(ShowEnvironmentResponseDat)
 	if err != nil {
 		return nil, fmt.Errorf("parsing error: %s", err)
 	}
-	return EnvironmentResponseDat, nil
+	return ShowEnvironmentResponseDat, nil
 }
 
-// NewEnvironmentResultFromString returns instance from an input string.
-func NewEnvironmentResultFromString(s string) (*EnvironmentResponseResult, error) {
-	return NewEnvironmentResultFromReader(strings.NewReader(s))
+// NewShowEnvironmentResultFromString returns instance from an input string.
+func NewShowEnvironmentResultFromString(s string) (*ShowEnvironmentResponseResult, error) {
+	return NewShowEnvironmentResultFromReader(strings.NewReader(s))
 }
 
-// NewEnvironmentResultFromBytes returns instance from an input byte array.
-func NewEnvironmentResultFromBytes(s []byte) (*EnvironmentResponseResult, error) {
-	return NewEnvironmentResultFromReader(bytes.NewReader(s))
+// NewShowEnvironmentResultFromBytes returns instance from an input byte array.
+func NewShowEnvironmentResultFromBytes(s []byte) (*ShowEnvironmentResponseResult, error) {
+	return NewShowEnvironmentResultFromReader(bytes.NewReader(s))
 }
 
-// NewEnvironmentResultFromReader returns instance from an input reader.
-func NewEnvironmentResultFromReader(s io.Reader) (*EnvironmentResponseResult, error) {
-	//si := &EnvironmentResponseResult{}
-	EnvironmentResponseResultDat := &EnvironmentResponseResult{}
+// NewShowEnvironmentResultFromReader returns instance from an input reader.
+func NewShowEnvironmentResultFromReader(s io.Reader) (*ShowEnvironmentResponseResult, error) {
+	//si := &ShowEnvironmentResponseResult{}
+	ShowEnvironmentResponseResultDat := &ShowEnvironmentResponseResult{}
 	jsonDec := json.NewDecoder(s)
-	jsonDec.UseAutoConvert()
+	jsonDec.UseAutoConvertWithTrimSpace()
+	jsonDec.UseAutoTrimSpace()
 	jsonDec.UseSlice()
-	err := jsonDec.Decode(EnvironmentResponseResultDat)
+	err := jsonDec.Decode(ShowEnvironmentResponseResultDat)
 	if err != nil {
 		return nil, fmt.Errorf("parsing error: %s", err)
 	}
-	return EnvironmentResponseResultDat, nil
+	return ShowEnvironmentResponseResultDat, nil
 }

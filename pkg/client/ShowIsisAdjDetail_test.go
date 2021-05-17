@@ -78,7 +78,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 									AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 									AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 									AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-									TableAdjSid                struct {
+									TableAdjSid                []struct {
 										RowAdjSid []struct {
 											AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 											AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -130,7 +130,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 									AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 									AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 									AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-									TableAdjSid                struct {
+									TableAdjSid                []struct {
 										RowAdjSid []struct {
 											AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 											AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -181,7 +181,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 								AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 								AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 								AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-								TableAdjSid                struct {
+								TableAdjSid                []struct {
 									RowAdjSid []struct {
 										AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 										AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -231,7 +231,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 								AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 								AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 								AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-								TableAdjSid                struct {
+								TableAdjSid                []struct {
 									RowAdjSid []struct {
 										AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 										AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -279,7 +279,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 							AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 							AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 							AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-							TableAdjSid                struct {
+							TableAdjSid                []struct {
 								RowAdjSid []struct {
 									AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 									AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -326,7 +326,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 							AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 							AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 							AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-							TableAdjSid                struct {
+							TableAdjSid                []struct {
 								RowAdjSid []struct {
 									AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 									AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -372,7 +372,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 						AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 						AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 						AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-						TableAdjSid                struct {
+						TableAdjSid                []struct {
 							RowAdjSid []struct {
 								AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 								AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -417,7 +417,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 						AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 						AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 						AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-						TableAdjSid                struct {
+						TableAdjSid                []struct {
 							RowAdjSid []struct {
 								AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 								AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -458,7 +458,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 					AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 					AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 					AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-					TableAdjSid                struct {
+					TableAdjSid                []struct {
 						RowAdjSid []struct {
 							AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 							AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -498,7 +498,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 					AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 					AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 					AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-					TableAdjSid                struct {
+					TableAdjSid                []struct {
 						RowAdjSid []struct {
 							AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 							AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -537,7 +537,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 				AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 				AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 				AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-				TableAdjSid                struct {
+				TableAdjSid                []struct {
 					RowAdjSid []struct {
 						AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 						AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -575,7 +575,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 				AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 				AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 				AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-				TableAdjSid                struct {
+				TableAdjSid                []struct {
 					RowAdjSid []struct {
 						AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 						AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -587,7 +587,18 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 						AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
 					} "json:\"ROW_adj_sid\" xml:\"ROW_adj_sid\""
 				} "json:\"TABLE_adj_sid\" xml:\"TABLE_adj_sid\""
-			}{AdjSysNameOut: "n9k-reg-4", AdjSysIDOut: "N/A", AdjUsageOut: "2", AdjStateOut: "UP", AdjHoldTimeOut: 0x6c088e200, AdjIntfNameOut: "Ethernet1/21", AdjDetailSetOut: true, AdjTransitionsOut: 1, AdjFlapOut: true, AdjFlapTimeOut: 0x51b1c79cc00, AdjCktTypeOut: "L2", AdjIpv4AddrOut: "45.1.1.1", AdjIpv6AddrOut: "0::", AdjBcastOut: false, AdjBfdIpv4EstablishOut: false, AdjBfdIpv6EstablishOut: false, AdjResurrectOut: false, AdjRestartCapableOut: true, AdjRestartAckOut: false, AdjRestartModeOut: false, AdjRestartAdjSeenRaOut: false, AdjRestartAdjSeenCsnpOut: false, AdjRestartAdjSeenL1CsnpOut: false, AdjRestartAdjSeenL2CsnpOut: false, AdjRestartSuppressAdjOut: false, TableAdjSid: struct {
+			}{AdjSysNameOut: "n9k-reg-4", AdjSysIDOut: "N/A", AdjUsageOut: "2", AdjStateOut: "UP", AdjHoldTimeOut: 0x6c088e200, AdjIntfNameOut: "Ethernet1/21", AdjDetailSetOut: true, AdjTransitionsOut: 1, AdjFlapOut: true, AdjFlapTimeOut: 0x51b1c79cc00, AdjCktTypeOut: "L2", AdjIpv4AddrOut: "45.1.1.1", AdjIpv6AddrOut: "0::", AdjBcastOut: false, AdjBfdIpv4EstablishOut: false, AdjBfdIpv6EstablishOut: false, AdjResurrectOut: false, AdjRestartCapableOut: true, AdjRestartAckOut: false, AdjRestartModeOut: false, AdjRestartAdjSeenRaOut: false, AdjRestartAdjSeenCsnpOut: false, AdjRestartAdjSeenL1CsnpOut: false, AdjRestartAdjSeenL2CsnpOut: false, AdjRestartSuppressAdjOut: false, TableAdjSid: []struct {
+				RowAdjSid []struct {
+					AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
+					AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
+					AdjSidBFlag  bool "json:\"adj-sid-b-flag\" xml:\"adj-sid-b-flag\""
+					AdjSidVFlag  bool "json:\"adj-sid-v-flag\" xml:\"adj-sid-v-flag\""
+					AdjSidLFlag  bool "json:\"adj-sid-l-flag\" xml:\"adj-sid-l-flag\""
+					AdjSidSFlag  bool "json:\"adj-sid-s-flag\" xml:\"adj-sid-s-flag\""
+					AdjSidPFlag  bool "json:\"adj-sid-p-flag\" xml:\"adj-sid-p-flag\""
+					AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
+				} "json:\"ROW_adj_sid\" xml:\"ROW_adj_sid\""
+			}{struct {
 				RowAdjSid []struct {
 					AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 					AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -616,7 +627,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 				AdjSidSFlag  bool "json:\"adj-sid-s-flag\" xml:\"adj-sid-s-flag\""
 				AdjSidPFlag  bool "json:\"adj-sid-p-flag\" xml:\"adj-sid-p-flag\""
 				AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
-			}{AdjSidValue: 16, AdjSidFFlag: false, AdjSidBFlag: false, AdjSidVFlag: true, AdjSidLFlag: true, AdjSidSFlag: false, AdjSidPFlag: false, AdjSidWeight: 1}}}}, struct {
+			}{AdjSidValue: 16, AdjSidFFlag: false, AdjSidBFlag: false, AdjSidVFlag: true, AdjSidLFlag: true, AdjSidSFlag: false, AdjSidPFlag: false, AdjSidWeight: 1}}}}}, struct {
 				AdjSysNameOut              string   "json:\"adj-sys-name-out\" xml:\"adj-sys-name-out\""
 				AdjSysIDOut                string   "json:\"adj-sys-id-out\" xml:\"adj-sys-id-out\""
 				AdjUsageOut                string   "json:\"adj-usage-out\" xml:\"adj-usage-out\""
@@ -642,7 +653,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 				AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 				AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 				AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-				TableAdjSid                struct {
+				TableAdjSid                []struct {
 					RowAdjSid []struct {
 						AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 						AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -654,7 +665,18 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 						AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
 					} "json:\"ROW_adj_sid\" xml:\"ROW_adj_sid\""
 				} "json:\"TABLE_adj_sid\" xml:\"TABLE_adj_sid\""
-			}{AdjSysNameOut: "n9k-reg-2", AdjSysIDOut: "N/A", AdjUsageOut: "2", AdjStateOut: "UP", AdjHoldTimeOut: 0x684ee1800, AdjIntfNameOut: "Ethernet1/31", AdjDetailSetOut: true, AdjTransitionsOut: 1, AdjFlapOut: true, AdjFlapTimeOut: 0x51a2e0ea400, AdjCktTypeOut: "L2", AdjIpv4AddrOut: "25.1.1.1", AdjIpv6AddrOut: "0::", AdjBcastOut: false, AdjBfdIpv4EstablishOut: false, AdjBfdIpv6EstablishOut: false, AdjResurrectOut: false, AdjRestartCapableOut: true, AdjRestartAckOut: false, AdjRestartModeOut: false, AdjRestartAdjSeenRaOut: false, AdjRestartAdjSeenCsnpOut: false, AdjRestartAdjSeenL1CsnpOut: false, AdjRestartAdjSeenL2CsnpOut: false, AdjRestartSuppressAdjOut: false, TableAdjSid: struct {
+			}{AdjSysNameOut: "n9k-reg-2", AdjSysIDOut: "N/A", AdjUsageOut: "2", AdjStateOut: "UP", AdjHoldTimeOut: 0x684ee1800, AdjIntfNameOut: "Ethernet1/31", AdjDetailSetOut: true, AdjTransitionsOut: 1, AdjFlapOut: true, AdjFlapTimeOut: 0x51a2e0ea400, AdjCktTypeOut: "L2", AdjIpv4AddrOut: "25.1.1.1", AdjIpv6AddrOut: "0::", AdjBcastOut: false, AdjBfdIpv4EstablishOut: false, AdjBfdIpv6EstablishOut: false, AdjResurrectOut: false, AdjRestartCapableOut: true, AdjRestartAckOut: false, AdjRestartModeOut: false, AdjRestartAdjSeenRaOut: false, AdjRestartAdjSeenCsnpOut: false, AdjRestartAdjSeenL1CsnpOut: false, AdjRestartAdjSeenL2CsnpOut: false, AdjRestartSuppressAdjOut: false, TableAdjSid: []struct {
+				RowAdjSid []struct {
+					AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
+					AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
+					AdjSidBFlag  bool "json:\"adj-sid-b-flag\" xml:\"adj-sid-b-flag\""
+					AdjSidVFlag  bool "json:\"adj-sid-v-flag\" xml:\"adj-sid-v-flag\""
+					AdjSidLFlag  bool "json:\"adj-sid-l-flag\" xml:\"adj-sid-l-flag\""
+					AdjSidSFlag  bool "json:\"adj-sid-s-flag\" xml:\"adj-sid-s-flag\""
+					AdjSidPFlag  bool "json:\"adj-sid-p-flag\" xml:\"adj-sid-p-flag\""
+					AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
+				} "json:\"ROW_adj_sid\" xml:\"ROW_adj_sid\""
+			}{struct {
 				RowAdjSid []struct {
 					AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 					AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -683,7 +705,7 @@ func TestParseShowIsisAdjDetailJsonOutput(t *testing.T) {
 				AdjSidSFlag  bool "json:\"adj-sid-s-flag\" xml:\"adj-sid-s-flag\""
 				AdjSidPFlag  bool "json:\"adj-sid-p-flag\" xml:\"adj-sid-p-flag\""
 				AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
-			}{AdjSidValue: 17, AdjSidFFlag: false, AdjSidBFlag: false, AdjSidVFlag: true, AdjSidLFlag: true, AdjSidSFlag: false, AdjSidPFlag: false, AdjSidWeight: 1}}}}}}}}}}}}}}}}, Code: "200", Input: "show isis 2 adj det", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+			}{AdjSidValue: 17, AdjSidFFlag: false, AdjSidBFlag: false, AdjSidVFlag: true, AdjSidLFlag: true, AdjSidSFlag: false, AdjSidPFlag: false, AdjSidWeight: 1}}}}}}}}}}}}}}}}}, Code: "200", Input: "show isis 2 adj det", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},
@@ -777,7 +799,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 									AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 									AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 									AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-									TableAdjSid                struct {
+									TableAdjSid                []struct {
 										RowAdjSid []struct {
 											AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 											AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -829,7 +851,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 									AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 									AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 									AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-									TableAdjSid                struct {
+									TableAdjSid                []struct {
 										RowAdjSid []struct {
 											AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 											AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -880,7 +902,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 								AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 								AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 								AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-								TableAdjSid                struct {
+								TableAdjSid                []struct {
 									RowAdjSid []struct {
 										AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 										AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -930,7 +952,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 								AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 								AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 								AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-								TableAdjSid                struct {
+								TableAdjSid                []struct {
 									RowAdjSid []struct {
 										AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 										AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -978,7 +1000,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 							AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 							AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 							AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-							TableAdjSid                struct {
+							TableAdjSid                []struct {
 								RowAdjSid []struct {
 									AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 									AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1025,7 +1047,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 							AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 							AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 							AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-							TableAdjSid                struct {
+							TableAdjSid                []struct {
 								RowAdjSid []struct {
 									AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 									AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1071,7 +1093,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 						AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 						AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 						AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-						TableAdjSid                struct {
+						TableAdjSid                []struct {
 							RowAdjSid []struct {
 								AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 								AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1116,7 +1138,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 						AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 						AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 						AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-						TableAdjSid                struct {
+						TableAdjSid                []struct {
 							RowAdjSid []struct {
 								AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 								AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1157,7 +1179,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 					AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 					AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 					AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-					TableAdjSid                struct {
+					TableAdjSid                []struct {
 						RowAdjSid []struct {
 							AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 							AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1197,7 +1219,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 					AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 					AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 					AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-					TableAdjSid                struct {
+					TableAdjSid                []struct {
 						RowAdjSid []struct {
 							AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 							AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1236,7 +1258,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 				AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 				AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 				AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-				TableAdjSid                struct {
+				TableAdjSid                []struct {
 					RowAdjSid []struct {
 						AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 						AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1274,7 +1296,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 				AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 				AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 				AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-				TableAdjSid                struct {
+				TableAdjSid                []struct {
 					RowAdjSid []struct {
 						AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 						AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1286,7 +1308,18 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 						AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
 					} "json:\"ROW_adj_sid\" xml:\"ROW_adj_sid\""
 				} "json:\"TABLE_adj_sid\" xml:\"TABLE_adj_sid\""
-			}{AdjSysNameOut: "n9k-reg-4", AdjSysIDOut: "N/A", AdjUsageOut: "2", AdjStateOut: "UP", AdjHoldTimeOut: 0x6c088e200, AdjIntfNameOut: "Ethernet1/21", AdjDetailSetOut: true, AdjTransitionsOut: 1, AdjFlapOut: true, AdjFlapTimeOut: 0x51b1c79cc00, AdjCktTypeOut: "L2", AdjIpv4AddrOut: "45.1.1.1", AdjIpv6AddrOut: "0::", AdjBcastOut: false, AdjBfdIpv4EstablishOut: false, AdjBfdIpv6EstablishOut: false, AdjResurrectOut: false, AdjRestartCapableOut: true, AdjRestartAckOut: false, AdjRestartModeOut: false, AdjRestartAdjSeenRaOut: false, AdjRestartAdjSeenCsnpOut: false, AdjRestartAdjSeenL1CsnpOut: false, AdjRestartAdjSeenL2CsnpOut: false, AdjRestartSuppressAdjOut: false, TableAdjSid: struct {
+			}{AdjSysNameOut: "n9k-reg-4", AdjSysIDOut: "N/A", AdjUsageOut: "2", AdjStateOut: "UP", AdjHoldTimeOut: 0x6c088e200, AdjIntfNameOut: "Ethernet1/21", AdjDetailSetOut: true, AdjTransitionsOut: 1, AdjFlapOut: true, AdjFlapTimeOut: 0x51b1c79cc00, AdjCktTypeOut: "L2", AdjIpv4AddrOut: "45.1.1.1", AdjIpv6AddrOut: "0::", AdjBcastOut: false, AdjBfdIpv4EstablishOut: false, AdjBfdIpv6EstablishOut: false, AdjResurrectOut: false, AdjRestartCapableOut: true, AdjRestartAckOut: false, AdjRestartModeOut: false, AdjRestartAdjSeenRaOut: false, AdjRestartAdjSeenCsnpOut: false, AdjRestartAdjSeenL1CsnpOut: false, AdjRestartAdjSeenL2CsnpOut: false, AdjRestartSuppressAdjOut: false, TableAdjSid: []struct {
+				RowAdjSid []struct {
+					AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
+					AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
+					AdjSidBFlag  bool "json:\"adj-sid-b-flag\" xml:\"adj-sid-b-flag\""
+					AdjSidVFlag  bool "json:\"adj-sid-v-flag\" xml:\"adj-sid-v-flag\""
+					AdjSidLFlag  bool "json:\"adj-sid-l-flag\" xml:\"adj-sid-l-flag\""
+					AdjSidSFlag  bool "json:\"adj-sid-s-flag\" xml:\"adj-sid-s-flag\""
+					AdjSidPFlag  bool "json:\"adj-sid-p-flag\" xml:\"adj-sid-p-flag\""
+					AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
+				} "json:\"ROW_adj_sid\" xml:\"ROW_adj_sid\""
+			}{struct {
 				RowAdjSid []struct {
 					AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 					AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1315,7 +1348,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 				AdjSidSFlag  bool "json:\"adj-sid-s-flag\" xml:\"adj-sid-s-flag\""
 				AdjSidPFlag  bool "json:\"adj-sid-p-flag\" xml:\"adj-sid-p-flag\""
 				AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
-			}{AdjSidValue: 16, AdjSidFFlag: false, AdjSidBFlag: false, AdjSidVFlag: true, AdjSidLFlag: true, AdjSidSFlag: false, AdjSidPFlag: false, AdjSidWeight: 1}}}}, struct {
+			}{AdjSidValue: 16, AdjSidFFlag: false, AdjSidBFlag: false, AdjSidVFlag: true, AdjSidLFlag: true, AdjSidSFlag: false, AdjSidPFlag: false, AdjSidWeight: 1}}}}}, struct {
 				AdjSysNameOut              string   "json:\"adj-sys-name-out\" xml:\"adj-sys-name-out\""
 				AdjSysIDOut                string   "json:\"adj-sys-id-out\" xml:\"adj-sys-id-out\""
 				AdjUsageOut                string   "json:\"adj-usage-out\" xml:\"adj-usage-out\""
@@ -1341,7 +1374,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 				AdjRestartAdjSeenL1CsnpOut bool     "json:\"adj-restart-adj-seen-l1-csnp-out\" xml:\"adj-restart-adj-seen-l1-csnp-out\""
 				AdjRestartAdjSeenL2CsnpOut bool     "json:\"adj-restart-adj-seen-l2-csnp-out\" xml:\"adj-restart-adj-seen-l2-csnp-out\""
 				AdjRestartSuppressAdjOut   bool     "json:\"adj-restart-suppress-adj-out\" xml:\"adj-restart-suppress-adj-out\""
-				TableAdjSid                struct {
+				TableAdjSid                []struct {
 					RowAdjSid []struct {
 						AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 						AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1353,7 +1386,18 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 						AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
 					} "json:\"ROW_adj_sid\" xml:\"ROW_adj_sid\""
 				} "json:\"TABLE_adj_sid\" xml:\"TABLE_adj_sid\""
-			}{AdjSysNameOut: "n9k-reg-2", AdjSysIDOut: "N/A", AdjUsageOut: "2", AdjStateOut: "UP", AdjHoldTimeOut: 0x684ee1800, AdjIntfNameOut: "Ethernet1/31", AdjDetailSetOut: true, AdjTransitionsOut: 1, AdjFlapOut: true, AdjFlapTimeOut: 0x51a2e0ea400, AdjCktTypeOut: "L2", AdjIpv4AddrOut: "25.1.1.1", AdjIpv6AddrOut: "0::", AdjBcastOut: false, AdjBfdIpv4EstablishOut: false, AdjBfdIpv6EstablishOut: false, AdjResurrectOut: false, AdjRestartCapableOut: true, AdjRestartAckOut: false, AdjRestartModeOut: false, AdjRestartAdjSeenRaOut: false, AdjRestartAdjSeenCsnpOut: false, AdjRestartAdjSeenL1CsnpOut: false, AdjRestartAdjSeenL2CsnpOut: false, AdjRestartSuppressAdjOut: false, TableAdjSid: struct {
+			}{AdjSysNameOut: "n9k-reg-2", AdjSysIDOut: "N/A", AdjUsageOut: "2", AdjStateOut: "UP", AdjHoldTimeOut: 0x684ee1800, AdjIntfNameOut: "Ethernet1/31", AdjDetailSetOut: true, AdjTransitionsOut: 1, AdjFlapOut: true, AdjFlapTimeOut: 0x51a2e0ea400, AdjCktTypeOut: "L2", AdjIpv4AddrOut: "25.1.1.1", AdjIpv6AddrOut: "0::", AdjBcastOut: false, AdjBfdIpv4EstablishOut: false, AdjBfdIpv6EstablishOut: false, AdjResurrectOut: false, AdjRestartCapableOut: true, AdjRestartAckOut: false, AdjRestartModeOut: false, AdjRestartAdjSeenRaOut: false, AdjRestartAdjSeenCsnpOut: false, AdjRestartAdjSeenL1CsnpOut: false, AdjRestartAdjSeenL2CsnpOut: false, AdjRestartSuppressAdjOut: false, TableAdjSid: []struct {
+				RowAdjSid []struct {
+					AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
+					AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
+					AdjSidBFlag  bool "json:\"adj-sid-b-flag\" xml:\"adj-sid-b-flag\""
+					AdjSidVFlag  bool "json:\"adj-sid-v-flag\" xml:\"adj-sid-v-flag\""
+					AdjSidLFlag  bool "json:\"adj-sid-l-flag\" xml:\"adj-sid-l-flag\""
+					AdjSidSFlag  bool "json:\"adj-sid-s-flag\" xml:\"adj-sid-s-flag\""
+					AdjSidPFlag  bool "json:\"adj-sid-p-flag\" xml:\"adj-sid-p-flag\""
+					AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
+				} "json:\"ROW_adj_sid\" xml:\"ROW_adj_sid\""
+			}{struct {
 				RowAdjSid []struct {
 					AdjSidValue  int  "json:\"adj-sid-value\" xml:\"adj-sid-value\""
 					AdjSidFFlag  bool "json:\"adj-sid-f-flag\" xml:\"adj-sid-f-flag\""
@@ -1382,7 +1426,7 @@ func TestParseShowIsisAdjDetailResultJsonOutput(t *testing.T) {
 				AdjSidSFlag  bool "json:\"adj-sid-s-flag\" xml:\"adj-sid-s-flag\""
 				AdjSidPFlag  bool "json:\"adj-sid-p-flag\" xml:\"adj-sid-p-flag\""
 				AdjSidWeight int  "json:\"adj-sid-weight\" xml:\"adj-sid-weight\""
-			}{AdjSidValue: 17, AdjSidFFlag: false, AdjSidBFlag: false, AdjSidVFlag: true, AdjSidLFlag: true, AdjSidSFlag: false, AdjSidPFlag: false, AdjSidWeight: 1}}}}}}}}}}}}}}}}, Code: "", Input: "", Msg: ""},
+			}{AdjSidValue: 17, AdjSidFFlag: false, AdjSidBFlag: false, AdjSidVFlag: true, AdjSidLFlag: true, AdjSidSFlag: false, AdjSidPFlag: false, AdjSidWeight: 1}}}}}}}}}}}}}}}}}, Code: "", Input: "", Msg: ""},
 			shouldFail: false,
 			shouldErr:  false,
 		},

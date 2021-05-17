@@ -78,7 +78,7 @@ type ShowIsisAdjDetailResultBody struct {
 							AdjRestartAdjSeenL1CsnpOut bool     `json:"adj-restart-adj-seen-l1-csnp-out" xml:"adj-restart-adj-seen-l1-csnp-out"`
 							AdjRestartAdjSeenL2CsnpOut bool     `json:"adj-restart-adj-seen-l2-csnp-out" xml:"adj-restart-adj-seen-l2-csnp-out"`
 							AdjRestartSuppressAdjOut   bool     `json:"adj-restart-suppress-adj-out" xml:"adj-restart-suppress-adj-out"`
-							TableAdjSid                struct {
+							TableAdjSid                []struct {
 								RowAdjSid []struct {
 									AdjSidValue  int  `json:"adj-sid-value" xml:"adj-sid-value"`
 									AdjSidFFlag  bool `json:"adj-sid-f-flag" xml:"adj-sid-f-flag"`

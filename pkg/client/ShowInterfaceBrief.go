@@ -24,24 +24,24 @@ import (
 )
 
 type ShowInterfaceBriefResponse struct {
-	TableInterface struct {
+	TableInterface []struct {
 		RowInterface []struct {
-			Interface    string `json:"interface"`
-			State        string `json:"state,omitempty"`
-			IPAddr       string `json:"ip_addr,omitempty"`
-			Speed        string `json:"speed,omitempty"`
-			MTU          int    `json:"mtu,omitempty"`
-			Vlan         string `json:"vlan,omitempty"`
-			Type         string `json:"type,omitempty"`
-			PortMode     string `json:"portmode,omitempty"`
-			StateRsnDesc string `json:"state_rsn_desc,omitempty"`
-			RateMode     string `json:"ratemode,omitempty"`
-			PortChan     int    `json:"portchan,omitempty"`
-			Proto        string `json:"proto,omitempty"`
-			OperState    string `json:"oper_state,omitempty"`
-			SviRsnDesc   string `json:"svi_rsn_desc,omitempty"`
-		} `json:"ROW_interface"`
-	} `json:"TABLE_interface"`
+			Interface    string `json:"interface" xml:"interface"`
+			State        string `json:"state,omitempty" xml:"state,omitempty"`
+			IPAddr       string `json:"ip_addr,omitempty" xml:"ip_addr,omitempty"`
+			Speed        string `json:"speed,omitempty" xml:"speed,omitempty"`
+			MTU          int    `json:"mtu,omitempty" xml:"mtu,omitempty"`
+			Vlan         string `json:"vlan,omitempty" xml:"vlan,omitempty"`
+			Type         string `json:"type,omitempty" xml:"type,omitempty"`
+			PortMode     string `json:"portmode,omitempty" xml:"portmode,omitempty"`
+			StateRsnDesc string `json:"state_rsn_desc,omitempty" xml:"state_rsn_desc,omitempty"`
+			RateMode     string `json:"ratemode,omitempty" xml:"ratemode,omitempty"`
+			PortChan     int    `json:"portchan,omitempty" xml:"portchan,omitempty"`
+			Proto        string `json:"proto,omitempty" xml:"proto,omitempty"`
+			OperState    string `json:"oper_state,omitempty" xml:"oper_state,omitempty"`
+			SviRsnDesc   string `json:"svi_rsn_desc,omitempty" xml:"svi_rsn_desc,omitempty"`
+		} `json:"ROW_interface" xml:"ROW_interface"`
+	} `json:"TABLE_interface" xml:"TABLE_interface"`
 }
 
 // NewShowInterfaceBriefFromString returns instance from an input string.

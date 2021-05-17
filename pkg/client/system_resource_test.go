@@ -20,7 +20,7 @@ import (
 	"testing"
 )
 
-func TestParseShowSystemResourcesJsonOutput(t *testing.T) {
+func TestParseShowSystemResourcesJsonOutputOrig(t *testing.T) {
 	testFailed := 0
 	outputDir := "../../assets/requests"
 	for i, test := range []struct {
