@@ -4,6 +4,8 @@
 
 Cisco NX-OS API client library written in Go.
 
+PKG Documentation: https://pkg.go.dev/github.com/pschou/go-cisco-nx-api/pkg/client
+
 ## Table of Contents
 
 * [Getting Started](#getting-started)
