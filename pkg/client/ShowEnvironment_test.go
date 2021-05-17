@@ -52,387 +52,120 @@ func TestParseShowEnvironmentJsonOutput(t *testing.T) {
 					Sensor      string  "json:\"sensor\" xml:\"sensor\""
 					Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
 				} "json:\"ROW_tempinfo\" xml:\"ROW_tempinfo\""
-			}{struct {
-				RowTempinfo []struct {
+			}{
+
+				{RowTempinfo: []struct {
 					AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
 					CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
 					MajThres    float32 "json:\"majthres\" xml:\"majthres\""
 					MinThres    float32 "json:\"minthres\" xml:\"minthres\""
 					Sensor      string  "json:\"sensor\" xml:\"sensor\""
 					Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-				} "json:\"ROW_tempinfo\" xml:\"ROW_tempinfo\""
-			}{RowTempinfo: []struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 34, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 50, MajThres: 105, MinThres: 95, Sensor: "SUG0", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 65, MajThres: 105, MinThres: 95, Sensor: "SUG1", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 49, MajThres: 105, MinThres: 95, Sensor: "SUG2", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 61, MajThres: 105, MinThres: 95, Sensor: "SUG3", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 50, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 55, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 45, MajThres: 110, MinThres: 100, Sensor: "VRM3", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 51, MajThres: 110, MinThres: 100, Sensor: "VRM4", Tempmod: 1}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 34, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 59, MajThres: 105, MinThres: 95, Sensor: "SUG0", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 77, MajThres: 105, MinThres: 95, Sensor: "SUG1", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 59, MajThres: 105, MinThres: 95, Sensor: "SUG2", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 76, MajThres: 105, MinThres: 95, Sensor: "SUG3", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 52, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 53, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 54, MajThres: 110, MinThres: 100, Sensor: "VRM3", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 55, MajThres: 110, MinThres: 100, Sensor: "VRM4", Tempmod: 2}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 37, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 3}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 51, MajThres: 105, MinThres: 95, Sensor: "HOM0", Tempmod: 3}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 53, MajThres: 105, MinThres: 95, Sensor: "HOM1", Tempmod: 3}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 46, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 3}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 47, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 3}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 35, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 53, MajThres: 105, MinThres: 95, Sensor: "HOM0", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 63, MajThres: 105, MinThres: 95, Sensor: "HOM1", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 63, MajThres: 105, MinThres: 95, Sensor: "HOM2", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 63, MajThres: 105, MinThres: 95, Sensor: "HOM3", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 45, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 48, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 46, MajThres: 110, MinThres: 100, Sensor: "VRM3", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 46, MajThres: 110, MinThres: 100, Sensor: "VRM4", Tempmod: 4}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 31, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 22}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 56, MajThres: 105, MinThres: 95, Sensor: "LAC0", Tempmod: 22}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 42, MajThres: 105, MinThres: 95, Sensor: "LAC1", Tempmod: 22}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 56, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 22}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 56, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 22}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 28, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 24}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 57, MajThres: 105, MinThres: 95, Sensor: "LAC0", Tempmod: 24}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 42, MajThres: 105, MinThres: 95, Sensor: "LAC1", Tempmod: 24}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 57, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 24}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 57, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 24}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 28, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 26}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 51, MajThres: 105, MinThres: 95, Sensor: "LAC0", Tempmod: 26}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 43, MajThres: 105, MinThres: 95, Sensor: "LAC1", Tempmod: 26}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 52, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 26}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 52, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 26}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 33, MajThres: 75, MinThres: 55, Sensor: "OUTLET", Tempmod: 27}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 24, MajThres: 60, MinThres: 42, Sensor: "INLET", Tempmod: 27}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 35, MajThres: 90, MinThres: 80, Sensor: "CPU", Tempmod: 27}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 44, MajThres: 105, MinThres: 95, Sensor: "CPU", Tempmod: 29}, struct {
-				AlarmStatus string  "json:\"alarmstatus\" xml:\"alarmstatus\""
-				CurTemp     float32 "json:\"curtemp\" xml:\"curtemp\""
-				MajThres    float32 "json:\"majthres\" xml:\"majthres\""
-				MinThres    float32 "json:\"minthres\" xml:\"minthres\""
-				Sensor      string  "json:\"sensor\" xml:\"sensor\""
-				Tempmod     int     "json:\"tempmod\" xml:\"tempmod\""
-			}{AlarmStatus: "Ok", CurTemp: 53, MajThres: 105, MinThres: 95, Sensor: "CPU", Tempmod: 30}}}}, FanDetails: struct {
+				}{
+
+					{AlarmStatus: "Ok", CurTemp: 34, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 50, MajThres: 105, MinThres: 95, Sensor: "SUG0", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 65, MajThres: 105, MinThres: 95, Sensor: "SUG1", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 49, MajThres: 105, MinThres: 95, Sensor: "SUG2", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 61, MajThres: 105, MinThres: 95, Sensor: "SUG3", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 50, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 55, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 45, MajThres: 110, MinThres: 100, Sensor: "VRM3", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 51, MajThres: 110, MinThres: 100, Sensor: "VRM4", Tempmod: 1},
+
+					{AlarmStatus: "Ok", CurTemp: 34, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 59, MajThres: 105, MinThres: 95, Sensor: "SUG0", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 77, MajThres: 105, MinThres: 95, Sensor: "SUG1", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 59, MajThres: 105, MinThres: 95, Sensor: "SUG2", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 76, MajThres: 105, MinThres: 95, Sensor: "SUG3", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 52, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 53, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 54, MajThres: 110, MinThres: 100, Sensor: "VRM3", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 55, MajThres: 110, MinThres: 100, Sensor: "VRM4", Tempmod: 2},
+
+					{AlarmStatus: "Ok", CurTemp: 37, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 3},
+
+					{AlarmStatus: "Ok", CurTemp: 51, MajThres: 105, MinThres: 95, Sensor: "HOM0", Tempmod: 3},
+
+					{AlarmStatus: "Ok", CurTemp: 53, MajThres: 105, MinThres: 95, Sensor: "HOM1", Tempmod: 3},
+
+					{AlarmStatus: "Ok", CurTemp: 46, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 3},
+
+					{AlarmStatus: "Ok", CurTemp: 47, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 3},
+
+					{AlarmStatus: "Ok", CurTemp: 35, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 53, MajThres: 105, MinThres: 95, Sensor: "HOM0", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 63, MajThres: 105, MinThres: 95, Sensor: "HOM1", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 63, MajThres: 105, MinThres: 95, Sensor: "HOM2", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 63, MajThres: 105, MinThres: 95, Sensor: "HOM3", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 45, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 48, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 46, MajThres: 110, MinThres: 100, Sensor: "VRM3", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 46, MajThres: 110, MinThres: 100, Sensor: "VRM4", Tempmod: 4},
+
+					{AlarmStatus: "Ok", CurTemp: 31, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 22},
+
+					{AlarmStatus: "Ok", CurTemp: 56, MajThres: 105, MinThres: 95, Sensor: "LAC0", Tempmod: 22},
+
+					{AlarmStatus: "Ok", CurTemp: 42, MajThres: 105, MinThres: 95, Sensor: "LAC1", Tempmod: 22},
+
+					{AlarmStatus: "Ok", CurTemp: 56, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 22},
+
+					{AlarmStatus: "Ok", CurTemp: 56, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 22},
+
+					{AlarmStatus: "Ok", CurTemp: 28, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 24},
+
+					{AlarmStatus: "Ok", CurTemp: 57, MajThres: 105, MinThres: 95, Sensor: "LAC0", Tempmod: 24},
+
+					{AlarmStatus: "Ok", CurTemp: 42, MajThres: 105, MinThres: 95, Sensor: "LAC1", Tempmod: 24},
+
+					{AlarmStatus: "Ok", CurTemp: 57, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 24},
+
+					{AlarmStatus: "Ok", CurTemp: 57, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 24},
+
+					{AlarmStatus: "Ok", CurTemp: 28, MajThres: 85, MinThres: 75, Sensor: "CPU", Tempmod: 26},
+
+					{AlarmStatus: "Ok", CurTemp: 51, MajThres: 105, MinThres: 95, Sensor: "LAC0", Tempmod: 26},
+
+					{AlarmStatus: "Ok", CurTemp: 43, MajThres: 105, MinThres: 95, Sensor: "LAC1", Tempmod: 26},
+
+					{AlarmStatus: "Ok", CurTemp: 52, MajThres: 110, MinThres: 100, Sensor: "VRM1", Tempmod: 26},
+
+					{AlarmStatus: "Ok", CurTemp: 52, MajThres: 110, MinThres: 100, Sensor: "VRM2", Tempmod: 26},
+
+					{AlarmStatus: "Ok", CurTemp: 33, MajThres: 75, MinThres: 55, Sensor: "OUTLET", Tempmod: 27},
+
+					{AlarmStatus: "Ok", CurTemp: 24, MajThres: 60, MinThres: 42, Sensor: "INLET", Tempmod: 27},
+
+					{AlarmStatus: "Ok", CurTemp: 35, MajThres: 90, MinThres: 80, Sensor: "CPU", Tempmod: 27},
+
+					{AlarmStatus: "Ok", CurTemp: 44, MajThres: 105, MinThres: 95, Sensor: "CPU", Tempmod: 29},
+
+					{AlarmStatus: "Ok", CurTemp: 53, MajThres: 105, MinThres: 95, Sensor: "CPU", Tempmod: 30}}}}, FanDetails: struct {
 				TableFanZoneSpeed []struct {
 					RowFanZoneSpeed []struct {
 						Zone      int    "json:\"zone\" xml:\"zone\""
@@ -454,18 +187,14 @@ func TestParseShowEnvironmentJsonOutput(t *testing.T) {
 					Zone      int    "json:\"zone\" xml:\"zone\""
 					ZoneSpeed string "json:\"zonespeed\" xml:\"zonespeed\""
 				} "json:\"ROW_fan_zone_speed\" xml:\"ROW_fan_zone_speed\""
-			}{struct {
-				RowFanZoneSpeed []struct {
+			}{
+
+				{RowFanZoneSpeed: []struct {
 					Zone      int    "json:\"zone\" xml:\"zone\""
 					ZoneSpeed string "json:\"zonespeed\" xml:\"zonespeed\""
-				} "json:\"ROW_fan_zone_speed\" xml:\"ROW_fan_zone_speed\""
-			}{RowFanZoneSpeed: []struct {
-				Zone      int    "json:\"zone\" xml:\"zone\""
-				ZoneSpeed string "json:\"zonespeed\" xml:\"zonespeed\""
-			}{struct {
-				Zone      int    "json:\"zone\" xml:\"zone\""
-				ZoneSpeed string "json:\"zonespeed\" xml:\"zonespeed\""
-			}{Zone: 1, ZoneSpeed: "0x0"}}}}, TableFaninfo: []struct {
+				}{
+
+					{Zone: 1, ZoneSpeed: "0x0"}}}}, TableFaninfo: []struct {
 				RowFaninfo []struct {
 					FanDir    string "json:\"fandir\" xml:\"fandir\""
 					FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
@@ -473,87 +202,37 @@ func TestParseShowEnvironmentJsonOutput(t *testing.T) {
 					FanName   string "json:\"fanname\" xml:\"fanname\""
 					FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
 				} "json:\"ROW_faninfo\" xml:\"ROW_faninfo\""
-			}{struct {
-				RowFaninfo []struct {
+			}{
+
+				{RowFaninfo: []struct {
 					FanDir    string "json:\"fandir\" xml:\"fandir\""
 					FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
 					FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
 					FanName   string "json:\"fanname\" xml:\"fanname\""
 					FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-				} "json:\"ROW_faninfo\" xml:\"ROW_faninfo\""
-			}{RowFaninfo: []struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "1.0", FanModel: "N9K-C9508-FAN", FanName: "Fan1(sys_fan1)", FanStatus: "Ok"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "1.0", FanModel: "N9K-C9508-FAN", FanName: "Fan2(sys_fan2)", FanStatus: "Ok"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "1.0", FanModel: "N9K-C9508-FAN", FanName: "Fan3(sys_fan3)", FanStatus: "Ok"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS1", FanStatus: "Ok"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS2", FanStatus: "Ok"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS3", FanStatus: "Ok"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS4", FanStatus: "None"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS5", FanStatus: "None"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS6", FanStatus: "None"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS7", FanStatus: "None"}, struct {
-				FanDir    string "json:\"fandir\" xml:\"fandir\""
-				FanHwVer  string "json:\"fanhwver\" xml:\"fanhwver\""
-				FanModel  string "json:\"fanmodel\" xml:\"fanmodel\""
-				FanName   string "json:\"fanname\" xml:\"fanname\""
-				FanStatus string "json:\"fanstatus\" xml:\"fanstatus\""
-			}{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS8", FanStatus: "None"}}}}, FanFilterStatus: "NotSupported"}, Powersup: struct {
+				}{
+
+					{FanDir: "front-to-back", FanHwVer: "1.0", FanModel: "N9K-C9508-FAN", FanName: "Fan1(sys_fan1)", FanStatus: "Ok"},
+
+					{FanDir: "front-to-back", FanHwVer: "1.0", FanModel: "N9K-C9508-FAN", FanName: "Fan2(sys_fan2)", FanStatus: "Ok"},
+
+					{FanDir: "front-to-back", FanHwVer: "1.0", FanModel: "N9K-C9508-FAN", FanName: "Fan3(sys_fan3)", FanStatus: "Ok"},
+
+					{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS1", FanStatus: "Ok"},
+
+					{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS2", FanStatus: "Ok"},
+
+					{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS3", FanStatus: "Ok"},
+
+					{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS4", FanStatus: "None"},
+
+					{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS5", FanStatus: "None"},
+
+					{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS6", FanStatus: "None"},
+
+					{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS7", FanStatus: "None"},
+
+					{FanDir: "front-to-back", FanHwVer: "--", FanModel: "", FanName: "Fan_in_PS8", FanStatus: "None"}}}}, FanFilterStatus: "NotSupported"}, Powersup: struct {
 				TableModPowInfo []struct {
 					RowModPowInfo []struct {
 						ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
@@ -594,123 +273,49 @@ func TestParseShowEnvironmentJsonOutput(t *testing.T) {
 					Modnum     string "json:\"modnum\" xml:\"modnum\""
 					Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
 				} "json:\"ROW_mod_pow_info\" xml:\"ROW_mod_pow_info\""
-			}{struct {
-				RowModPowInfo []struct {
+			}{
+
+				{RowModPowInfo: []struct {
 					ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
 					Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
 					ModModel   string "json:\"mod_model\" xml:\"mod_model\""
 					Modnum     string "json:\"modnum\" xml:\"modnum\""
 					Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-				} "json:\"ROW_mod_pow_info\" xml:\"ROW_mod_pow_info\""
-			}{RowModPowInfo: []struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 356, Allocated: 720, ModModel: "N9K-X9732C-EX", Modnum: "1", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 573, Allocated: 816, ModModel: "N9K-X9732C-EXM", Modnum: "2", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 226, Allocated: 684, ModModel: "N9K-X9788TC-FX", Modnum: "3", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 379, Allocated: 756, ModModel: "N9K-X9736C-FX", Modnum: "4", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 9999, Allocated: 0, ModModel: "xbar", Modnum: "Xb21", Modstatus: "Absent"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 109, Allocated: 564, ModModel: "N9K-C9508-FM-E", Modnum: "Xb22", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 9999, Allocated: 0, ModModel: "N9K-C9508-FM-E", Modnum: "Xb23", Modstatus: "Powered-Dn"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 108, Allocated: 564, ModModel: "N9K-C9508-FM-E", Modnum: "Xb24", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 9999, Allocated: 0, ModModel: "xbar", Modnum: "Xb25", Modstatus: "Absent"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 104, Allocated: 564, ModModel: "N9K-C9508-FM-E", Modnum: "Xb26", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 63, Allocated: 90, ModModel: "N9K-SUP-A", Modnum: "27", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 9999, Allocated: 0, ModModel: "supervisor", Modnum: "28", Modstatus: "Absent"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 14, Allocated: 25.2, ModModel: "N9K-SC-A", Modnum: "29", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 14, Allocated: 25.2, ModModel: "N9K-SC-A", Modnum: "30", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 38, Allocated: 249, ModModel: "N9K-C9508-FAN", Modnum: "fan1", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 39, Allocated: 249, ModModel: "N9K-C9508-FAN", Modnum: "fan2", Modstatus: "Powered-Up"}, struct {
-				ActualDraw Watts  "json:\"actual_draw\" xml:\"actual_draw\""
-				Allocated  Watts  "json:\"allocated\" xml:\"allocated\""
-				ModModel   string "json:\"mod_model\" xml:\"mod_model\""
-				Modnum     string "json:\"modnum\" xml:\"modnum\""
-				Modstatus  string "json:\"modstatus\" xml:\"modstatus\""
-			}{ActualDraw: 36, Allocated: 249, ModModel: "N9K-C9508-FAN", Modnum: "fan3", Modstatus: "Powered-Up"}}}}, TablePsinfo: []struct {
+				}{
+
+					{ActualDraw: 356, Allocated: 720, ModModel: "N9K-X9732C-EX", Modnum: "1", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 573, Allocated: 816, ModModel: "N9K-X9732C-EXM", Modnum: "2", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 226, Allocated: 684, ModModel: "N9K-X9788TC-FX", Modnum: "3", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 379, Allocated: 756, ModModel: "N9K-X9736C-FX", Modnum: "4", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 9999, Allocated: 0, ModModel: "xbar", Modnum: "Xb21", Modstatus: "Absent"},
+
+					{ActualDraw: 109, Allocated: 564, ModModel: "N9K-C9508-FM-E", Modnum: "Xb22", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 9999, Allocated: 0, ModModel: "N9K-C9508-FM-E", Modnum: "Xb23", Modstatus: "Powered-Dn"},
+
+					{ActualDraw: 108, Allocated: 564, ModModel: "N9K-C9508-FM-E", Modnum: "Xb24", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 9999, Allocated: 0, ModModel: "xbar", Modnum: "Xb25", Modstatus: "Absent"},
+
+					{ActualDraw: 104, Allocated: 564, ModModel: "N9K-C9508-FM-E", Modnum: "Xb26", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 63, Allocated: 90, ModModel: "N9K-SUP-A", Modnum: "27", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 9999, Allocated: 0, ModModel: "supervisor", Modnum: "28", Modstatus: "Absent"},
+
+					{ActualDraw: 14, Allocated: 25.2, ModModel: "N9K-SC-A", Modnum: "29", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 14, Allocated: 25.2, ModModel: "N9K-SC-A", Modnum: "30", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 38, Allocated: 249, ModModel: "N9K-C9508-FAN", Modnum: "fan1", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 39, Allocated: 249, ModModel: "N9K-C9508-FAN", Modnum: "fan2", Modstatus: "Powered-Up"},
+
+					{ActualDraw: 36, Allocated: 249, ModModel: "N9K-C9508-FAN", Modnum: "fan3", Modstatus: "Powered-Up"}}}}, TablePsinfo: []struct {
 				RowPsinfo []struct {
 					ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
 					ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
@@ -719,79 +324,32 @@ func TestParseShowEnvironmentJsonOutput(t *testing.T) {
 					PsNum       int    "json:\"psnum\" xml:\"psnum\""
 					TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
 				} "json:\"ROW_psinfo\" xml:\"ROW_psinfo\""
-			}{struct {
-				RowPsinfo []struct {
+			}{
+
+				{RowPsinfo: []struct {
 					ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
 					ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
 					PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
 					PsModel     string "json:\"psmodel\" xml:\"psmodel\""
 					PsNum       int    "json:\"psnum\" xml:\"psnum\""
 					TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-				} "json:\"ROW_psinfo\" xml:\"ROW_psinfo\""
-			}{RowPsinfo: []struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{ActualInput: 837, ActualOut: 805, PsStatus: "Ok", PsModel: "N9K-PAC-3000W-B", PsNum: 1, TotCapa: 3000}, struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{ActualInput: 844, ActualOut: 781, PsStatus: "Ok", PsModel: "N9K-PAC-3000W-B", PsNum: 2, TotCapa: 3000}, struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{ActualInput: 841, ActualOut: 781, PsStatus: "Ok", PsModel: "N9K-PAC-3000W-B", PsNum: 3, TotCapa: 3000}, struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 4, TotCapa: 0}, struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 5, TotCapa: 0}, struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 6, TotCapa: 0}, struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 7, TotCapa: 0}, struct {
-				ActualInput Watts  "json:\"actual_input\" xml:\"actual_input\""
-				ActualOut   Watts  "json:\"actual_out\" xml:\"actual_out\""
-				PsStatus    string "json:\"ps_status\" xml:\"ps_status\""
-				PsModel     string "json:\"psmodel\" xml:\"psmodel\""
-				PsNum       int    "json:\"psnum\" xml:\"psnum\""
-				TotCapa     Watts  "json:\"tot_capa\" xml:\"tot_capa\""
-			}{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 8, TotCapa: 0}}}}, PowerSummary: struct {
+				}{
+
+					{ActualInput: 837, ActualOut: 805, PsStatus: "Ok", PsModel: "N9K-PAC-3000W-B", PsNum: 1, TotCapa: 3000},
+
+					{ActualInput: 844, ActualOut: 781, PsStatus: "Ok", PsModel: "N9K-PAC-3000W-B", PsNum: 2, TotCapa: 3000},
+
+					{ActualInput: 841, ActualOut: 781, PsStatus: "Ok", PsModel: "N9K-PAC-3000W-B", PsNum: 3, TotCapa: 3000},
+
+					{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 4, TotCapa: 0},
+
+					{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 5, TotCapa: 0},
+
+					{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 6, TotCapa: 0},
+
+					{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 7, TotCapa: 0},
+
+					{ActualInput: 0, ActualOut: 0, PsStatus: "Absent", PsModel: "------------", PsNum: 8, TotCapa: 0}}}}, PowerSummary: struct {
 				AvailablePow          Watts  "json:\"available_pow\" xml:\"available_pow\""
 				CumulativePower       Watts  "json:\"cumulative_power\" xml:\"cumulative_power\""
 				PsOperMode            string "json:\"ps_oper_mode\" xml:\"ps_oper_mode\""

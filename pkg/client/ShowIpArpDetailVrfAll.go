@@ -61,11 +61,17 @@ type ShowIpArpDetailVrfAllResultBody struct {
 
 // NewShowIpArpDetailVrfAllFromString returns instance from an input string.
 func NewShowIpArpDetailVrfAllFromString(s string) (*ShowIpArpDetailVrfAllResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowIpArpDetailVrfAllFromReader(strings.NewReader(s))
 }
 
 // NewShowIpArpDetailVrfAllFromBytes returns instance from an input byte array.
 func NewShowIpArpDetailVrfAllFromBytes(s []byte) (*ShowIpArpDetailVrfAllResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowIpArpDetailVrfAllFromReader(bytes.NewReader(s))
 }
 
@@ -85,11 +91,17 @@ func NewShowIpArpDetailVrfAllFromReader(s io.Reader) (*ShowIpArpDetailVrfAllResp
 
 // NewShowIpArpDetailVrfAllResultFromString returns instance from an input string.
 func NewShowIpArpDetailVrfAllResultFromString(s string) (*ShowIpArpDetailVrfAllResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowIpArpDetailVrfAllResultFromReader(strings.NewReader(s))
 }
 
 // NewShowIpArpDetailVrfAllResultFromBytes returns instance from an input byte array.
 func NewShowIpArpDetailVrfAllResultFromBytes(s []byte) (*ShowIpArpDetailVrfAllResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowIpArpDetailVrfAllResultFromReader(bytes.NewReader(s))
 }
 

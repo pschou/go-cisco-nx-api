@@ -89,11 +89,17 @@ type ShowVpcResultBody struct {
 
 // NewShowVpcFromString returns instance from an input string.
 func NewShowVpcFromString(s string) (*ShowVpcResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowVpcFromReader(strings.NewReader(s))
 }
 
 // NewShowVpcFromBytes returns instance from an input byte array.
 func NewShowVpcFromBytes(s []byte) (*ShowVpcResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowVpcFromReader(bytes.NewReader(s))
 }
 
@@ -113,11 +119,17 @@ func NewShowVpcFromReader(s io.Reader) (*ShowVpcResponse, error) {
 
 // NewShowVpcResultFromString returns instance from an input string.
 func NewShowVpcResultFromString(s string) (*ShowVpcResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowVpcResultFromReader(strings.NewReader(s))
 }
 
 // NewShowVpcResultFromBytes returns instance from an input byte array.
 func NewShowVpcResultFromBytes(s []byte) (*ShowVpcResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowVpcResultFromReader(bytes.NewReader(s))
 }
 

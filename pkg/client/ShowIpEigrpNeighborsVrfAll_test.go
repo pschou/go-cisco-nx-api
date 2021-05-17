@@ -65,8 +65,9 @@ func TestParseShowIpEigrpNeighborsVrfAllJsonOutput(t *testing.T) {
 						} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
 					} "json:\"TABLE_vrf\" xml:\"TABLE_vrf\""
 				} "json:\"ROW_asn\" xml:\"ROW_asn\""
-			}{struct {
-				RowAsn []struct {
+			}{
+
+				{RowAsn: []struct {
 					Asn      string "json:\"asn\" xml:\"asn\""
 					TableVrf []struct {
 						RowVrf []struct {
@@ -86,156 +87,71 @@ func TestParseShowIpEigrpNeighborsVrfAllJsonOutput(t *testing.T) {
 							} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
 						} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
 					} "json:\"TABLE_vrf\" xml:\"TABLE_vrf\""
-				} "json:\"ROW_asn\" xml:\"ROW_asn\""
-			}{RowAsn: []struct {
-				Asn      string "json:\"asn\" xml:\"asn\""
-				TableVrf []struct {
-					RowVrf []struct {
-						Vrf       string "json:\"vrf\" xml:\"vrf\""
-						TablePeer []struct {
-							RowPeer []struct {
-								PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-								PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-								PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-								PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-								PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-								PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-								PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-								PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-								PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-							} "json:\"ROW_peer\" xml:\"ROW_peer\""
-						} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
-					} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-				} "json:\"TABLE_vrf\" xml:\"TABLE_vrf\""
-			}{struct {
-				Asn      string "json:\"asn\" xml:\"asn\""
-				TableVrf []struct {
-					RowVrf []struct {
-						Vrf       string "json:\"vrf\" xml:\"vrf\""
-						TablePeer []struct {
-							RowPeer []struct {
-								PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-								PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-								PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-								PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-								PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-								PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-								PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-								PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-								PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-							} "json:\"ROW_peer\" xml:\"ROW_peer\""
-						} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
-					} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-				} "json:\"TABLE_vrf\" xml:\"TABLE_vrf\""
-			}{Asn: "1", TableVrf: []struct {
-				RowVrf []struct {
-					Vrf       string "json:\"vrf\" xml:\"vrf\""
-					TablePeer []struct {
-						RowPeer []struct {
-							PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-							PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-							PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-							PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-							PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-							PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-							PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-							PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-							PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-						} "json:\"ROW_peer\" xml:\"ROW_peer\""
-					} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
-				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{struct {
-				RowVrf []struct {
-					Vrf       string "json:\"vrf\" xml:\"vrf\""
-					TablePeer []struct {
-						RowPeer []struct {
-							PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-							PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-							PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-							PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-							PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-							PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-							PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-							PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-							PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-						} "json:\"ROW_peer\" xml:\"ROW_peer\""
-					} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
-				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{RowVrf: []struct {
-				Vrf       string "json:\"vrf\" xml:\"vrf\""
-				TablePeer []struct {
-					RowPeer []struct {
-						PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-						PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-						PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-						PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-						PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-						PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-						PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-						PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-						PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-					} "json:\"ROW_peer\" xml:\"ROW_peer\""
-				} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
-			}{struct {
-				Vrf       string "json:\"vrf\" xml:\"vrf\""
-				TablePeer []struct {
-					RowPeer []struct {
-						PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-						PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-						PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-						PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-						PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-						PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-						PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-						PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-						PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-					} "json:\"ROW_peer\" xml:\"ROW_peer\""
-				} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
-			}{Vrf: "default", TablePeer: []struct {
-				RowPeer []struct {
-					PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-					PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-					PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-					PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-					PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-					PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-					PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-					PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-					PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-				} "json:\"ROW_peer\" xml:\"ROW_peer\""
-			}{struct {
-				RowPeer []struct {
-					PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-					PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-					PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-					PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-					PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-					PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-					PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-					PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-					PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-				} "json:\"ROW_peer\" xml:\"ROW_peer\""
-			}{RowPeer: []struct {
-				PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-				PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-				PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-				PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-				PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-				PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-				PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-				PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-				PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-			}{struct {
-				PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
-				PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
-				PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
-				PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
-				PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
-				PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
-				PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
-				PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
-				PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
-			}{PeerHandle: "0", PeerIpaddr: "10.1.0.1", PeerIfname: "Eth1/1", PeerHoldtime: 0xd, PeerSrtt: 0x6, PeerRto: 0x32, PeerXmitqCount: 0x0, PeerLastSeqno: 0x4, PeerUptime: 0x28e05727a00}}}}}}}}}}}}}, Code: "200", Input: "show ip eigrp neighbors vrf all", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{Asn: "1", TableVrf: []struct {
+						RowVrf []struct {
+							Vrf       string "json:\"vrf\" xml:\"vrf\""
+							TablePeer []struct {
+								RowPeer []struct {
+									PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
+									PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
+									PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
+									PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
+									PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
+									PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
+									PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
+									PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
+									PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
+								} "json:\"ROW_peer\" xml:\"ROW_peer\""
+							} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
+						} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
+					}{
+
+						{RowVrf: []struct {
+							Vrf       string "json:\"vrf\" xml:\"vrf\""
+							TablePeer []struct {
+								RowPeer []struct {
+									PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
+									PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
+									PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
+									PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
+									PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
+									PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
+									PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
+									PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
+									PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
+								} "json:\"ROW_peer\" xml:\"ROW_peer\""
+							} "json:\"TABLE_peer\" xml:\"TABLE_peer\""
+						}{
+
+							{Vrf: "default", TablePeer: []struct {
+								RowPeer []struct {
+									PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
+									PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
+									PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
+									PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
+									PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
+									PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
+									PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
+									PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
+									PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
+								} "json:\"ROW_peer\" xml:\"ROW_peer\""
+							}{
+
+								{RowPeer: []struct {
+									PeerHandle     string   "json:\"peer_handle\" xml:\"peer_handle\""
+									PeerIpaddr     string   "json:\"peer_ipaddr\" xml:\"peer_ipaddr\""
+									PeerIfname     string   "json:\"peer_ifname\" xml:\"peer_ifname\""
+									PeerHoldtime   uint     "json:\"peer_holdtime\" xml:\"peer_holdtime\""
+									PeerSrtt       uint     "json:\"peer_srtt\" xml:\"peer_srtt\""
+									PeerRto        uint     "json:\"peer_rto\" xml:\"peer_rto\""
+									PeerXmitqCount uint     "json:\"peer_xmitq_count\" xml:\"peer_xmitq_count\""
+									PeerLastSeqno  uint     "json:\"peer_last_seqno\" xml:\"peer_last_seqno\""
+									PeerUptime     Duration "json:\"peer_uptime\" xml:\"peer_uptime\""
+								}{
+
+									{PeerHandle: "0", PeerIpaddr: "10.1.0.1", PeerIfname: "Eth1/1", PeerHoldtime: 0xd, PeerSrtt: 0x6, PeerRto: 0x32, PeerXmitqCount: 0x0, PeerLastSeqno: 0x4, PeerUptime: 0x28e05727a00}}}}}}}}}}}}}, Code: "200", Input: "show ip eigrp neighbors vrf all", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},

@@ -58,8 +58,9 @@ func TestParseShowIpArpJsonOutput(t *testing.T) {
 					CntTotal   int    "json:\"cnt-total\" xml:\"cnt-total\""
 					VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
 				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{struct {
-				RowVrf []struct {
+			}{
+
+				{RowVrf: []struct {
 					TableAdj []struct {
 						RowAdj []struct {
 							Flags      string   "json:\"flags\" xml:\"flags\""
@@ -72,108 +73,41 @@ func TestParseShowIpArpJsonOutput(t *testing.T) {
 					} "json:\"TABLE_adj\" xml:\"TABLE_adj\""
 					CntTotal   int    "json:\"cnt-total\" xml:\"cnt-total\""
 					VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{RowVrf: []struct {
-				TableAdj []struct {
-					RowAdj []struct {
-						Flags      string   "json:\"flags\" xml:\"flags\""
-						IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-						IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-						MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-						TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-						Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-					} "json:\"ROW_adj\" xml:\"ROW_adj\""
-				} "json:\"TABLE_adj\" xml:\"TABLE_adj\""
-				CntTotal   int    "json:\"cnt-total\" xml:\"cnt-total\""
-				VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-			}{struct {
-				TableAdj []struct {
-					RowAdj []struct {
-						Flags      string   "json:\"flags\" xml:\"flags\""
-						IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-						IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-						MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-						TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-						Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-					} "json:\"ROW_adj\" xml:\"ROW_adj\""
-				} "json:\"TABLE_adj\" xml:\"TABLE_adj\""
-				CntTotal   int    "json:\"cnt-total\" xml:\"cnt-total\""
-				VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-			}{TableAdj: []struct {
-				RowAdj []struct {
-					Flags      string   "json:\"flags\" xml:\"flags\""
-					IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-					IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-					MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-					TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-					Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-				} "json:\"ROW_adj\" xml:\"ROW_adj\""
-			}{struct {
-				RowAdj []struct {
-					Flags      string   "json:\"flags\" xml:\"flags\""
-					IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-					IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-					MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-					TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-					Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-				} "json:\"ROW_adj\" xml:\"ROW_adj\""
-			}{RowAdj: []struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Vlan253", IPAddrOut: "7.57.253.1", MAC: "f44e.0584.7ffc", TimeStamp: 0x10058b6c200, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Vlan50", IPAddrOut: "10.57.50.3", MAC: "f44e.0584.7ffc", TimeStamp: 0x3f18dbd600, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/2", IPAddrOut: "10.100.157.1", MAC: "f44e.0584.7ffc", TimeStamp: 0x1035f930400, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/4", IPAddrOut: "10.100.157.9", MAC: "f44e.0584.7ffc", TimeStamp: 0x1039b2dce00, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/7", IPAddrOut: "192.168.161.1", MAC: "f44e.0584.7ffc", TimeStamp: 0xfa86990800, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/1.50", IPAddrOut: "89.1.1.10", MAC: "", TimeStamp: 0x684ee1800, Incomplete: true}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/1.52", IPAddrOut: "89.1.3.10", MAC: "", TimeStamp: 0xee6b2800, Incomplete: true}}}}, CntTotal: 7, VrfNameOut: "default"}}}}}, Code: "200", Input: "show ip arp ", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{TableAdj: []struct {
+						RowAdj []struct {
+							Flags      string   "json:\"flags\" xml:\"flags\""
+							IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
+							IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
+							MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
+							TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
+							Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
+						} "json:\"ROW_adj\" xml:\"ROW_adj\""
+					}{
+
+						{RowAdj: []struct {
+							Flags      string   "json:\"flags\" xml:\"flags\""
+							IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
+							IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
+							MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
+							TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
+							Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
+						}{
+
+							{Flags: "", IntfOut: "Vlan253", IPAddrOut: "7.57.253.1", MAC: "f44e.0584.7ffc", TimeStamp: 0x10058b6c200, Incomplete: false},
+
+							{Flags: "", IntfOut: "Vlan50", IPAddrOut: "10.57.50.3", MAC: "f44e.0584.7ffc", TimeStamp: 0x3f18dbd600, Incomplete: false},
+
+							{Flags: "", IntfOut: "Ethernet1/2", IPAddrOut: "10.100.157.1", MAC: "f44e.0584.7ffc", TimeStamp: 0x1035f930400, Incomplete: false},
+
+							{Flags: "", IntfOut: "Ethernet1/4", IPAddrOut: "10.100.157.9", MAC: "f44e.0584.7ffc", TimeStamp: 0x1039b2dce00, Incomplete: false},
+
+							{Flags: "", IntfOut: "Ethernet1/7", IPAddrOut: "192.168.161.1", MAC: "f44e.0584.7ffc", TimeStamp: 0xfa86990800, Incomplete: false},
+
+							{Flags: "", IntfOut: "Ethernet1/1.50", IPAddrOut: "89.1.1.10", MAC: "", TimeStamp: 0x684ee1800, Incomplete: true},
+
+							{Flags: "", IntfOut: "Ethernet1/1.52", IPAddrOut: "89.1.3.10", MAC: "", TimeStamp: 0xee6b2800, Incomplete: true}}}}, CntTotal: 7, VrfNameOut: "default"}}}}}, Code: "200", Input: "show ip arp ", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},
@@ -247,8 +181,9 @@ func TestParseShowIpArpResultJsonOutput(t *testing.T) {
 					CntTotal   int    "json:\"cnt-total\" xml:\"cnt-total\""
 					VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
 				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{struct {
-				RowVrf []struct {
+			}{
+
+				{RowVrf: []struct {
 					TableAdj []struct {
 						RowAdj []struct {
 							Flags      string   "json:\"flags\" xml:\"flags\""
@@ -261,108 +196,41 @@ func TestParseShowIpArpResultJsonOutput(t *testing.T) {
 					} "json:\"TABLE_adj\" xml:\"TABLE_adj\""
 					CntTotal   int    "json:\"cnt-total\" xml:\"cnt-total\""
 					VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{RowVrf: []struct {
-				TableAdj []struct {
-					RowAdj []struct {
-						Flags      string   "json:\"flags\" xml:\"flags\""
-						IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-						IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-						MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-						TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-						Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-					} "json:\"ROW_adj\" xml:\"ROW_adj\""
-				} "json:\"TABLE_adj\" xml:\"TABLE_adj\""
-				CntTotal   int    "json:\"cnt-total\" xml:\"cnt-total\""
-				VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-			}{struct {
-				TableAdj []struct {
-					RowAdj []struct {
-						Flags      string   "json:\"flags\" xml:\"flags\""
-						IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-						IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-						MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-						TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-						Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-					} "json:\"ROW_adj\" xml:\"ROW_adj\""
-				} "json:\"TABLE_adj\" xml:\"TABLE_adj\""
-				CntTotal   int    "json:\"cnt-total\" xml:\"cnt-total\""
-				VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-			}{TableAdj: []struct {
-				RowAdj []struct {
-					Flags      string   "json:\"flags\" xml:\"flags\""
-					IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-					IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-					MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-					TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-					Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-				} "json:\"ROW_adj\" xml:\"ROW_adj\""
-			}{struct {
-				RowAdj []struct {
-					Flags      string   "json:\"flags\" xml:\"flags\""
-					IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-					IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-					MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-					TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-					Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-				} "json:\"ROW_adj\" xml:\"ROW_adj\""
-			}{RowAdj: []struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Vlan253", IPAddrOut: "7.57.253.1", MAC: "f44e.0584.7ffc", TimeStamp: 0x10058b6c200, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Vlan50", IPAddrOut: "10.57.50.3", MAC: "f44e.0584.7ffc", TimeStamp: 0x3f18dbd600, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/2", IPAddrOut: "10.100.157.1", MAC: "f44e.0584.7ffc", TimeStamp: 0x1035f930400, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/4", IPAddrOut: "10.100.157.9", MAC: "f44e.0584.7ffc", TimeStamp: 0x1039b2dce00, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/7", IPAddrOut: "192.168.161.1", MAC: "f44e.0584.7ffc", TimeStamp: 0xfa86990800, Incomplete: false}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/1.50", IPAddrOut: "89.1.1.10", MAC: "", TimeStamp: 0x684ee1800, Incomplete: true}, struct {
-				Flags      string   "json:\"flags\" xml:\"flags\""
-				IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
-				IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
-				MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
-				TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
-				Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
-			}{Flags: "", IntfOut: "Ethernet1/1.52", IPAddrOut: "89.1.3.10", MAC: "", TimeStamp: 0xee6b2800, Incomplete: true}}}}, CntTotal: 7, VrfNameOut: "default"}}}}}, Code: "200", Input: "show ip arp ", Msg: "Success"},
+				}{
+
+					{TableAdj: []struct {
+						RowAdj []struct {
+							Flags      string   "json:\"flags\" xml:\"flags\""
+							IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
+							IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
+							MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
+							TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
+							Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
+						} "json:\"ROW_adj\" xml:\"ROW_adj\""
+					}{
+
+						{RowAdj: []struct {
+							Flags      string   "json:\"flags\" xml:\"flags\""
+							IntfOut    string   "json:\"intf-out\" xml:\"intf-out\""
+							IPAddrOut  string   "json:\"ip-addr-out\" xml:\"ip-addr-out\""
+							MAC        string   "json:\"mac,omitempty\" xml:\"mac,omitempty\""
+							TimeStamp  Duration "json:\"time-stamp\" xml:\"time-stamp\""
+							Incomplete bool     "json:\"incomplete,omitempty\" xml:\"incomplete,omitempty\""
+						}{
+
+							{Flags: "", IntfOut: "Vlan253", IPAddrOut: "7.57.253.1", MAC: "f44e.0584.7ffc", TimeStamp: 0x10058b6c200, Incomplete: false},
+
+							{Flags: "", IntfOut: "Vlan50", IPAddrOut: "10.57.50.3", MAC: "f44e.0584.7ffc", TimeStamp: 0x3f18dbd600, Incomplete: false},
+
+							{Flags: "", IntfOut: "Ethernet1/2", IPAddrOut: "10.100.157.1", MAC: "f44e.0584.7ffc", TimeStamp: 0x1035f930400, Incomplete: false},
+
+							{Flags: "", IntfOut: "Ethernet1/4", IPAddrOut: "10.100.157.9", MAC: "f44e.0584.7ffc", TimeStamp: 0x1039b2dce00, Incomplete: false},
+
+							{Flags: "", IntfOut: "Ethernet1/7", IPAddrOut: "192.168.161.1", MAC: "f44e.0584.7ffc", TimeStamp: 0xfa86990800, Incomplete: false},
+
+							{Flags: "", IntfOut: "Ethernet1/1.50", IPAddrOut: "89.1.1.10", MAC: "", TimeStamp: 0x684ee1800, Incomplete: true},
+
+							{Flags: "", IntfOut: "Ethernet1/1.52", IPAddrOut: "89.1.3.10", MAC: "", TimeStamp: 0xee6b2800, Incomplete: true}}}}, CntTotal: 7, VrfNameOut: "default"}}}}}, Code: "200", Input: "show ip arp ", Msg: "Success"},
 			shouldFail: false,
 			shouldErr:  false,
 		},

@@ -70,8 +70,9 @@ func TestParseShowIPRouteJsonOutput(t *testing.T) {
 					} "json:\"TABLE_addrf\" xml:\"TABLE_addrf\""
 					VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
 				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{struct {
-				RowVrf []struct {
+			}{
+
+				{RowVrf: []struct {
 					TableAddrf []struct {
 						RowAddrf []struct {
 							TablePrefix []struct {
@@ -96,1897 +97,885 @@ func TestParseShowIPRouteJsonOutput(t *testing.T) {
 						} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
 					} "json:\"TABLE_addrf\" xml:\"TABLE_addrf\""
 					VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{RowVrf: []struct {
-				TableAddrf []struct {
-					RowAddrf []struct {
-						TablePrefix []struct {
-							RowPrefix []struct {
-								TablePath []struct {
-									RowPath []struct {
-										ClientName string   "json:\"clientname\" xml:\"clientname\""
-										IfName     string   "json:\"ifname\" xml:\"ifname\""
-										Metric     int      "json:\"metric\" xml:\"metric\""
-										Pref       int      "json:\"pref\" xml:\"pref\""
-										UBest      bool     "json:\"ubest\" xml:\"ubest\""
-										UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-									} "json:\"ROW_path\" xml:\"ROW_path\""
-								} "json:\"TABLE_path\" xml:\"TABLE_path\""
-								Attached   bool   "json:\"attached\" xml:\"attached\""
-								IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-								MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-								UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-							} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-						} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-						AddRf string "json:\"addrf\" xml:\"addrf\""
-					} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
-				} "json:\"TABLE_addrf\" xml:\"TABLE_addrf\""
-				VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-			}{struct {
-				TableAddrf []struct {
-					RowAddrf []struct {
-						TablePrefix []struct {
-							RowPrefix []struct {
-								TablePath []struct {
-									RowPath []struct {
-										ClientName string   "json:\"clientname\" xml:\"clientname\""
-										IfName     string   "json:\"ifname\" xml:\"ifname\""
-										Metric     int      "json:\"metric\" xml:\"metric\""
-										Pref       int      "json:\"pref\" xml:\"pref\""
-										UBest      bool     "json:\"ubest\" xml:\"ubest\""
-										UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-									} "json:\"ROW_path\" xml:\"ROW_path\""
-								} "json:\"TABLE_path\" xml:\"TABLE_path\""
-								Attached   bool   "json:\"attached\" xml:\"attached\""
-								IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-								MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-								UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-							} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-						} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-						AddRf string "json:\"addrf\" xml:\"addrf\""
-					} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
-				} "json:\"TABLE_addrf\" xml:\"TABLE_addrf\""
-				VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-			}{TableAddrf: []struct {
-				RowAddrf []struct {
-					TablePrefix []struct {
-						RowPrefix []struct {
-							TablePath []struct {
-								RowPath []struct {
-									ClientName string   "json:\"clientname\" xml:\"clientname\""
-									IfName     string   "json:\"ifname\" xml:\"ifname\""
-									Metric     int      "json:\"metric\" xml:\"metric\""
-									Pref       int      "json:\"pref\" xml:\"pref\""
-									UBest      bool     "json:\"ubest\" xml:\"ubest\""
-									UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-								} "json:\"ROW_path\" xml:\"ROW_path\""
-							} "json:\"TABLE_path\" xml:\"TABLE_path\""
-							Attached   bool   "json:\"attached\" xml:\"attached\""
-							IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-							MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-							UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-						} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-					} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-					AddRf string "json:\"addrf\" xml:\"addrf\""
-				} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
-			}{struct {
-				RowAddrf []struct {
-					TablePrefix []struct {
-						RowPrefix []struct {
-							TablePath []struct {
-								RowPath []struct {
-									ClientName string   "json:\"clientname\" xml:\"clientname\""
-									IfName     string   "json:\"ifname\" xml:\"ifname\""
-									Metric     int      "json:\"metric\" xml:\"metric\""
-									Pref       int      "json:\"pref\" xml:\"pref\""
-									UBest      bool     "json:\"ubest\" xml:\"ubest\""
-									UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-								} "json:\"ROW_path\" xml:\"ROW_path\""
-							} "json:\"TABLE_path\" xml:\"TABLE_path\""
-							Attached   bool   "json:\"attached\" xml:\"attached\""
-							IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-							MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-							UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-						} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-					} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-					AddRf string "json:\"addrf\" xml:\"addrf\""
-				} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
-			}{RowAddrf: []struct {
-				TablePrefix []struct {
-					RowPrefix []struct {
-						TablePath []struct {
-							RowPath []struct {
-								ClientName string   "json:\"clientname\" xml:\"clientname\""
-								IfName     string   "json:\"ifname\" xml:\"ifname\""
-								Metric     int      "json:\"metric\" xml:\"metric\""
-								Pref       int      "json:\"pref\" xml:\"pref\""
-								UBest      bool     "json:\"ubest\" xml:\"ubest\""
-								UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-							} "json:\"ROW_path\" xml:\"ROW_path\""
-						} "json:\"TABLE_path\" xml:\"TABLE_path\""
-						Attached   bool   "json:\"attached\" xml:\"attached\""
-						IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-						MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-						UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-					} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-				} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-				AddRf string "json:\"addrf\" xml:\"addrf\""
-			}{struct {
-				TablePrefix []struct {
-					RowPrefix []struct {
-						TablePath []struct {
-							RowPath []struct {
-								ClientName string   "json:\"clientname\" xml:\"clientname\""
-								IfName     string   "json:\"ifname\" xml:\"ifname\""
-								Metric     int      "json:\"metric\" xml:\"metric\""
-								Pref       int      "json:\"pref\" xml:\"pref\""
-								UBest      bool     "json:\"ubest\" xml:\"ubest\""
-								UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-							} "json:\"ROW_path\" xml:\"ROW_path\""
-						} "json:\"TABLE_path\" xml:\"TABLE_path\""
-						Attached   bool   "json:\"attached\" xml:\"attached\""
-						IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-						MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-						UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-					} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-				} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-				AddRf string "json:\"addrf\" xml:\"addrf\""
-			}{TablePrefix: []struct {
-				RowPrefix []struct {
-					TablePath []struct {
-						RowPath []struct {
-							ClientName string   "json:\"clientname\" xml:\"clientname\""
-							IfName     string   "json:\"ifname\" xml:\"ifname\""
-							Metric     int      "json:\"metric\" xml:\"metric\""
-							Pref       int      "json:\"pref\" xml:\"pref\""
-							UBest      bool     "json:\"ubest\" xml:\"ubest\""
-							UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-						} "json:\"ROW_path\" xml:\"ROW_path\""
-					} "json:\"TABLE_path\" xml:\"TABLE_path\""
-					Attached   bool   "json:\"attached\" xml:\"attached\""
-					IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-					MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-					UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-				} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-			}{struct {
-				RowPrefix []struct {
-					TablePath []struct {
-						RowPath []struct {
-							ClientName string   "json:\"clientname\" xml:\"clientname\""
-							IfName     string   "json:\"ifname\" xml:\"ifname\""
-							Metric     int      "json:\"metric\" xml:\"metric\""
-							Pref       int      "json:\"pref\" xml:\"pref\""
-							UBest      bool     "json:\"ubest\" xml:\"ubest\""
-							UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-						} "json:\"ROW_path\" xml:\"ROW_path\""
-					} "json:\"TABLE_path\" xml:\"TABLE_path\""
-					Attached   bool   "json:\"attached\" xml:\"attached\""
-					IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-					MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-					UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-				} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-			}{RowPrefix: []struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "7.57.0.0/16", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Vlan253", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "7.57.253.0/30", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Vlan253", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "7.57.253.2/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}, struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}}}}, Attached: false, IPPrefix: "7.57.255.1/32", MCastNHops: 0, UCastNHops: 2}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Lo0", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d76a994c400}, struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Lo0", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d76a994c400}}}}, Attached: true, IPPrefix: "7.57.255.2/32", MCastNHops: 0, UCastNHops: 2}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "ospf-1", IfName: "Vlan253", Metric: 42, Pref: 110, UBest: true, UpTime: 0x24d5f611ddc00}}}}, Attached: false, IPPrefix: "8.8.8.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "ospf-1", IfName: "Vlan253", Metric: 42, Pref: 110, UBest: true, UpTime: 0x24d5f611ddc00}}}}, Attached: false, IPPrefix: "9.9.9.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "10.0.0.0/8", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "10.57.0.0/16", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Vlan8", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64806b3800}}}}, Attached: true, IPPrefix: "10.57.8.0/22", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Vlan8", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64806b3800}}}}, Attached: true, IPPrefix: "10.57.8.3/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Vlan50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "10.57.50.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Vlan50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "10.57.50.4/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "10.100.90.128/30", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "10.100.90.129/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/2", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.0/30", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/2", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.2/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/4", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.8/30", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/4", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.10/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.2/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.3/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}, struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}}}}, Attached: false, IPPrefix: "33.33.33.33/32", MCastNHops: 0, UCastNHops: 2}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1.50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.1.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1.50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.1.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1.51", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.2.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1.51", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.2.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1.52", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.3.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1.52", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.3.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1.53", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.4.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1.53", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.4.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/5", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: true, IPPrefix: "94.1.1.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/5", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: true, IPPrefix: "94.1.1.96/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/7", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64bc060200}}}}, Attached: true, IPPrefix: "192.168.161.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/7", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64bc060200}}}}, Attached: true, IPPrefix: "192.168.161.2/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{}}}, Attached: true, IPPrefix: "192.168.161.2/32", MCastNHops: 0, UCastNHops: 1}}}}, AddRf: "ipv4"}}}}, VrfNameOut: "default"}}}}}, Code: "200", Input: "show ip route ", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{TableAddrf: []struct {
+						RowAddrf []struct {
+							TablePrefix []struct {
+								RowPrefix []struct {
+									TablePath []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									} "json:\"TABLE_path\" xml:\"TABLE_path\""
+									Attached   bool   "json:\"attached\" xml:\"attached\""
+									IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
+									MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
+									UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
+								} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
+							} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
+							AddRf string "json:\"addrf\" xml:\"addrf\""
+						} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
+					}{
+
+						{RowAddrf: []struct {
+							TablePrefix []struct {
+								RowPrefix []struct {
+									TablePath []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									} "json:\"TABLE_path\" xml:\"TABLE_path\""
+									Attached   bool   "json:\"attached\" xml:\"attached\""
+									IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
+									MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
+									UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
+								} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
+							} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
+							AddRf string "json:\"addrf\" xml:\"addrf\""
+						}{
+
+							{TablePrefix: []struct {
+								RowPrefix []struct {
+									TablePath []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									} "json:\"TABLE_path\" xml:\"TABLE_path\""
+									Attached   bool   "json:\"attached\" xml:\"attached\""
+									IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
+									MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
+									UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
+								} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
+							}{
+
+								{RowPrefix: []struct {
+									TablePath []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									} "json:\"TABLE_path\" xml:\"TABLE_path\""
+									Attached   bool   "json:\"attached\" xml:\"attached\""
+									IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
+									MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
+									UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
+								}{
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "7.57.0.0/16", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Vlan253", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "7.57.253.0/30", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Vlan253", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "7.57.253.2/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600},
+
+											{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}}}}, Attached: false, IPPrefix: "7.57.255.1/32", MCastNHops: 0, UCastNHops: 2},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Lo0", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d76a994c400},
+
+											{ClientName: "direct", IfName: "Lo0", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d76a994c400}}}}, Attached: true, IPPrefix: "7.57.255.2/32", MCastNHops: 0, UCastNHops: 2},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "ospf-1", IfName: "Vlan253", Metric: 42, Pref: 110, UBest: true, UpTime: 0x24d5f611ddc00}}}}, Attached: false, IPPrefix: "8.8.8.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "ospf-1", IfName: "Vlan253", Metric: 42, Pref: 110, UBest: true, UpTime: 0x24d5f611ddc00}}}}, Attached: false, IPPrefix: "9.9.9.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "10.0.0.0/8", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "10.57.0.0/16", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Vlan8", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64806b3800}}}}, Attached: true, IPPrefix: "10.57.8.0/22", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Vlan8", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64806b3800}}}}, Attached: true, IPPrefix: "10.57.8.3/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Vlan50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "10.57.50.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Vlan50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "10.57.50.4/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "10.100.90.128/30", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "10.100.90.129/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/2", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.0/30", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/2", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.2/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/4", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.8/30", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/4", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.10/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.2/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.3/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600},
+
+											{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}}}}, Attached: false, IPPrefix: "33.33.33.33/32", MCastNHops: 0, UCastNHops: 2},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1.50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.1.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1.50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.1.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1.51", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.2.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1.51", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.2.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1.52", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.3.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1.52", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.3.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1.53", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.4.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1.53", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.4.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/5", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: true, IPPrefix: "94.1.1.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/5", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: true, IPPrefix: "94.1.1.96/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/7", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64bc060200}}}}, Attached: true, IPPrefix: "192.168.161.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/7", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64bc060200}}}}, Attached: true, IPPrefix: "192.168.161.2/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{}}}, Attached: true, IPPrefix: "192.168.161.2/32", MCastNHops: 0, UCastNHops: 1}}}}, AddRf: "ipv4"}}}}, VrfNameOut: "default"}}}}}, Code: "200", Input: "show ip route ", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},
@@ -2072,8 +1061,9 @@ func TestParseShowIPRouteResponseJsonOutput(t *testing.T) {
 					} "json:\"TABLE_addrf\" xml:\"TABLE_addrf\""
 					VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
 				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{struct {
-				RowVrf []struct {
+			}{
+
+				{RowVrf: []struct {
 					TableAddrf []struct {
 						RowAddrf []struct {
 							TablePrefix []struct {
@@ -2098,1897 +1088,885 @@ func TestParseShowIPRouteResponseJsonOutput(t *testing.T) {
 						} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
 					} "json:\"TABLE_addrf\" xml:\"TABLE_addrf\""
 					VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{RowVrf: []struct {
-				TableAddrf []struct {
-					RowAddrf []struct {
-						TablePrefix []struct {
-							RowPrefix []struct {
-								TablePath []struct {
-									RowPath []struct {
-										ClientName string   "json:\"clientname\" xml:\"clientname\""
-										IfName     string   "json:\"ifname\" xml:\"ifname\""
-										Metric     int      "json:\"metric\" xml:\"metric\""
-										Pref       int      "json:\"pref\" xml:\"pref\""
-										UBest      bool     "json:\"ubest\" xml:\"ubest\""
-										UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-									} "json:\"ROW_path\" xml:\"ROW_path\""
-								} "json:\"TABLE_path\" xml:\"TABLE_path\""
-								Attached   bool   "json:\"attached\" xml:\"attached\""
-								IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-								MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-								UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-							} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-						} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-						AddRf string "json:\"addrf\" xml:\"addrf\""
-					} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
-				} "json:\"TABLE_addrf\" xml:\"TABLE_addrf\""
-				VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-			}{struct {
-				TableAddrf []struct {
-					RowAddrf []struct {
-						TablePrefix []struct {
-							RowPrefix []struct {
-								TablePath []struct {
-									RowPath []struct {
-										ClientName string   "json:\"clientname\" xml:\"clientname\""
-										IfName     string   "json:\"ifname\" xml:\"ifname\""
-										Metric     int      "json:\"metric\" xml:\"metric\""
-										Pref       int      "json:\"pref\" xml:\"pref\""
-										UBest      bool     "json:\"ubest\" xml:\"ubest\""
-										UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-									} "json:\"ROW_path\" xml:\"ROW_path\""
-								} "json:\"TABLE_path\" xml:\"TABLE_path\""
-								Attached   bool   "json:\"attached\" xml:\"attached\""
-								IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-								MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-								UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-							} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-						} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-						AddRf string "json:\"addrf\" xml:\"addrf\""
-					} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
-				} "json:\"TABLE_addrf\" xml:\"TABLE_addrf\""
-				VrfNameOut string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-			}{TableAddrf: []struct {
-				RowAddrf []struct {
-					TablePrefix []struct {
-						RowPrefix []struct {
-							TablePath []struct {
-								RowPath []struct {
-									ClientName string   "json:\"clientname\" xml:\"clientname\""
-									IfName     string   "json:\"ifname\" xml:\"ifname\""
-									Metric     int      "json:\"metric\" xml:\"metric\""
-									Pref       int      "json:\"pref\" xml:\"pref\""
-									UBest      bool     "json:\"ubest\" xml:\"ubest\""
-									UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-								} "json:\"ROW_path\" xml:\"ROW_path\""
-							} "json:\"TABLE_path\" xml:\"TABLE_path\""
-							Attached   bool   "json:\"attached\" xml:\"attached\""
-							IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-							MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-							UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-						} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-					} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-					AddRf string "json:\"addrf\" xml:\"addrf\""
-				} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
-			}{struct {
-				RowAddrf []struct {
-					TablePrefix []struct {
-						RowPrefix []struct {
-							TablePath []struct {
-								RowPath []struct {
-									ClientName string   "json:\"clientname\" xml:\"clientname\""
-									IfName     string   "json:\"ifname\" xml:\"ifname\""
-									Metric     int      "json:\"metric\" xml:\"metric\""
-									Pref       int      "json:\"pref\" xml:\"pref\""
-									UBest      bool     "json:\"ubest\" xml:\"ubest\""
-									UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-								} "json:\"ROW_path\" xml:\"ROW_path\""
-							} "json:\"TABLE_path\" xml:\"TABLE_path\""
-							Attached   bool   "json:\"attached\" xml:\"attached\""
-							IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-							MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-							UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-						} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-					} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-					AddRf string "json:\"addrf\" xml:\"addrf\""
-				} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
-			}{RowAddrf: []struct {
-				TablePrefix []struct {
-					RowPrefix []struct {
-						TablePath []struct {
-							RowPath []struct {
-								ClientName string   "json:\"clientname\" xml:\"clientname\""
-								IfName     string   "json:\"ifname\" xml:\"ifname\""
-								Metric     int      "json:\"metric\" xml:\"metric\""
-								Pref       int      "json:\"pref\" xml:\"pref\""
-								UBest      bool     "json:\"ubest\" xml:\"ubest\""
-								UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-							} "json:\"ROW_path\" xml:\"ROW_path\""
-						} "json:\"TABLE_path\" xml:\"TABLE_path\""
-						Attached   bool   "json:\"attached\" xml:\"attached\""
-						IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-						MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-						UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-					} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-				} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-				AddRf string "json:\"addrf\" xml:\"addrf\""
-			}{struct {
-				TablePrefix []struct {
-					RowPrefix []struct {
-						TablePath []struct {
-							RowPath []struct {
-								ClientName string   "json:\"clientname\" xml:\"clientname\""
-								IfName     string   "json:\"ifname\" xml:\"ifname\""
-								Metric     int      "json:\"metric\" xml:\"metric\""
-								Pref       int      "json:\"pref\" xml:\"pref\""
-								UBest      bool     "json:\"ubest\" xml:\"ubest\""
-								UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-							} "json:\"ROW_path\" xml:\"ROW_path\""
-						} "json:\"TABLE_path\" xml:\"TABLE_path\""
-						Attached   bool   "json:\"attached\" xml:\"attached\""
-						IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-						MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-						UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-					} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-				} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
-				AddRf string "json:\"addrf\" xml:\"addrf\""
-			}{TablePrefix: []struct {
-				RowPrefix []struct {
-					TablePath []struct {
-						RowPath []struct {
-							ClientName string   "json:\"clientname\" xml:\"clientname\""
-							IfName     string   "json:\"ifname\" xml:\"ifname\""
-							Metric     int      "json:\"metric\" xml:\"metric\""
-							Pref       int      "json:\"pref\" xml:\"pref\""
-							UBest      bool     "json:\"ubest\" xml:\"ubest\""
-							UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-						} "json:\"ROW_path\" xml:\"ROW_path\""
-					} "json:\"TABLE_path\" xml:\"TABLE_path\""
-					Attached   bool   "json:\"attached\" xml:\"attached\""
-					IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-					MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-					UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-				} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-			}{struct {
-				RowPrefix []struct {
-					TablePath []struct {
-						RowPath []struct {
-							ClientName string   "json:\"clientname\" xml:\"clientname\""
-							IfName     string   "json:\"ifname\" xml:\"ifname\""
-							Metric     int      "json:\"metric\" xml:\"metric\""
-							Pref       int      "json:\"pref\" xml:\"pref\""
-							UBest      bool     "json:\"ubest\" xml:\"ubest\""
-							UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-						} "json:\"ROW_path\" xml:\"ROW_path\""
-					} "json:\"TABLE_path\" xml:\"TABLE_path\""
-					Attached   bool   "json:\"attached\" xml:\"attached\""
-					IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-					MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-					UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-				} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
-			}{RowPrefix: []struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "7.57.0.0/16", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Vlan253", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "7.57.253.0/30", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Vlan253", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "7.57.253.2/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}, struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}}}}, Attached: false, IPPrefix: "7.57.255.1/32", MCastNHops: 0, UCastNHops: 2}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Lo0", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d76a994c400}, struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Lo0", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d76a994c400}}}}, Attached: true, IPPrefix: "7.57.255.2/32", MCastNHops: 0, UCastNHops: 2}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "ospf-1", IfName: "Vlan253", Metric: 42, Pref: 110, UBest: true, UpTime: 0x24d5f611ddc00}}}}, Attached: false, IPPrefix: "8.8.8.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "ospf-1", IfName: "Vlan253", Metric: 42, Pref: 110, UBest: true, UpTime: 0x24d5f611ddc00}}}}, Attached: false, IPPrefix: "9.9.9.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "10.0.0.0/8", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "10.57.0.0/16", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Vlan8", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64806b3800}}}}, Attached: true, IPPrefix: "10.57.8.0/22", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Vlan8", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64806b3800}}}}, Attached: true, IPPrefix: "10.57.8.3/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Vlan50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "10.57.50.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Vlan50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "10.57.50.4/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "10.100.90.128/30", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "10.100.90.129/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/2", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.0/30", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/2", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.2/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/4", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.8/30", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/4", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.10/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.2/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.3/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}, struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}}}}, Attached: false, IPPrefix: "33.33.33.33/32", MCastNHops: 0, UCastNHops: 2}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1.50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.1.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1.50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.1.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1.51", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.2.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1.51", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.2.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1.52", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.3.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1.52", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.3.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/1.53", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.4.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/1.53", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.4.1/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/5", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: true, IPPrefix: "94.1.1.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/5", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: true, IPPrefix: "94.1.1.96/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "direct", IfName: "Eth1/7", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64bc060200}}}}, Attached: true, IPPrefix: "192.168.161.0/24", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{ClientName: "local", IfName: "Eth1/7", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64bc060200}}}}, Attached: true, IPPrefix: "192.168.161.2/32", MCastNHops: 0, UCastNHops: 1}, struct {
-				TablePath []struct {
-					RowPath []struct {
-						ClientName string   "json:\"clientname\" xml:\"clientname\""
-						IfName     string   "json:\"ifname\" xml:\"ifname\""
-						Metric     int      "json:\"metric\" xml:\"metric\""
-						Pref       int      "json:\"pref\" xml:\"pref\""
-						UBest      bool     "json:\"ubest\" xml:\"ubest\""
-						UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-					} "json:\"ROW_path\" xml:\"ROW_path\""
-				} "json:\"TABLE_path\" xml:\"TABLE_path\""
-				Attached   bool   "json:\"attached\" xml:\"attached\""
-				IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
-				MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
-				UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
-			}{TablePath: []struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{struct {
-				RowPath []struct {
-					ClientName string   "json:\"clientname\" xml:\"clientname\""
-					IfName     string   "json:\"ifname\" xml:\"ifname\""
-					Metric     int      "json:\"metric\" xml:\"metric\""
-					Pref       int      "json:\"pref\" xml:\"pref\""
-					UBest      bool     "json:\"ubest\" xml:\"ubest\""
-					UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-				} "json:\"ROW_path\" xml:\"ROW_path\""
-			}{RowPath: []struct {
-				ClientName string   "json:\"clientname\" xml:\"clientname\""
-				IfName     string   "json:\"ifname\" xml:\"ifname\""
-				Metric     int      "json:\"metric\" xml:\"metric\""
-				Pref       int      "json:\"pref\" xml:\"pref\""
-				UBest      bool     "json:\"ubest\" xml:\"ubest\""
-				UpTime     Duration "json:\"uptime\" xml:\"uptime\""
-			}{}}}, Attached: true, IPPrefix: "192.168.161.2/32", MCastNHops: 0, UCastNHops: 1}}}}, AddRf: "ipv4"}}}}, VrfNameOut: "default"}}}}}, Code: "200", Input: "show ip route ", Msg: "Success"},
+				}{
+
+					{TableAddrf: []struct {
+						RowAddrf []struct {
+							TablePrefix []struct {
+								RowPrefix []struct {
+									TablePath []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									} "json:\"TABLE_path\" xml:\"TABLE_path\""
+									Attached   bool   "json:\"attached\" xml:\"attached\""
+									IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
+									MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
+									UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
+								} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
+							} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
+							AddRf string "json:\"addrf\" xml:\"addrf\""
+						} "json:\"ROW_addrf\" xml:\"ROW_addrf\""
+					}{
+
+						{RowAddrf: []struct {
+							TablePrefix []struct {
+								RowPrefix []struct {
+									TablePath []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									} "json:\"TABLE_path\" xml:\"TABLE_path\""
+									Attached   bool   "json:\"attached\" xml:\"attached\""
+									IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
+									MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
+									UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
+								} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
+							} "json:\"TABLE_prefix\" xml:\"TABLE_prefix\""
+							AddRf string "json:\"addrf\" xml:\"addrf\""
+						}{
+
+							{TablePrefix: []struct {
+								RowPrefix []struct {
+									TablePath []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									} "json:\"TABLE_path\" xml:\"TABLE_path\""
+									Attached   bool   "json:\"attached\" xml:\"attached\""
+									IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
+									MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
+									UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
+								} "json:\"ROW_prefix\" xml:\"ROW_prefix\""
+							}{
+
+								{RowPrefix: []struct {
+									TablePath []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									} "json:\"TABLE_path\" xml:\"TABLE_path\""
+									Attached   bool   "json:\"attached\" xml:\"attached\""
+									IPPrefix   string "json:\"ipprefix\" xml:\"ipprefix\""
+									MCastNHops int    "json:\"mcast-nhops\" xml:\"mcast-nhops\""
+									UCastNHops int    "json:\"ucast-nhops\" xml:\"ucast-nhops\""
+								}{
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "7.57.0.0/16", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Vlan253", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "7.57.253.0/30", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Vlan253", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "7.57.253.2/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600},
+
+											{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}}}}, Attached: false, IPPrefix: "7.57.255.1/32", MCastNHops: 0, UCastNHops: 2},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Lo0", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d76a994c400},
+
+											{ClientName: "direct", IfName: "Lo0", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d76a994c400}}}}, Attached: true, IPPrefix: "7.57.255.2/32", MCastNHops: 0, UCastNHops: 2},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "ospf-1", IfName: "Vlan253", Metric: 42, Pref: 110, UBest: true, UpTime: 0x24d5f611ddc00}}}}, Attached: false, IPPrefix: "8.8.8.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "ospf-1", IfName: "Vlan253", Metric: 42, Pref: 110, UBest: true, UpTime: 0x24d5f611ddc00}}}}, Attached: false, IPPrefix: "9.9.9.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "10.0.0.0/8", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Null0", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d775c652200}}}}, Attached: false, IPPrefix: "10.57.0.0/16", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Vlan8", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64806b3800}}}}, Attached: true, IPPrefix: "10.57.8.0/22", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Vlan8", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64806b3800}}}}, Attached: true, IPPrefix: "10.57.8.3/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Vlan50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "10.57.50.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Vlan50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d622c5f5400}}}}, Attached: true, IPPrefix: "10.57.50.4/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "10.100.90.128/30", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "10.100.90.129/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/2", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.0/30", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/2", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.2/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/4", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.8/30", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/4", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d656ed66000}}}}, Attached: true, IPPrefix: "10.100.157.10/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.2/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "static", IfName: "Eth1/5", Metric: 0, Pref: 1, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: false, IPPrefix: "17.0.1.3/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600},
+
+											{ClientName: "bgp-65057", IfName: "", Metric: 0, Pref: 20, UBest: true, UpTime: 0x24d4b1f833600}}}}, Attached: false, IPPrefix: "33.33.33.33/32", MCastNHops: 0, UCastNHops: 2},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1.50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.1.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1.50", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.1.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1.51", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.2.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1.51", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.2.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1.52", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.3.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1.52", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.3.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/1.53", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.4.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/1.53", Metric: 0, Pref: 0, UBest: true, UpTime: 0x1fee55abcd000}}}}, Attached: true, IPPrefix: "89.1.4.1/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/5", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: true, IPPrefix: "94.1.1.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/5", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d70d7770a00}}}}, Attached: true, IPPrefix: "94.1.1.96/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "direct", IfName: "Eth1/7", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64bc060200}}}}, Attached: true, IPPrefix: "192.168.161.0/24", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{
+
+											{ClientName: "local", IfName: "Eth1/7", Metric: 0, Pref: 0, UBest: true, UpTime: 0x24d64bc060200}}}}, Attached: true, IPPrefix: "192.168.161.2/32", MCastNHops: 0, UCastNHops: 1},
+
+									{TablePath: []struct {
+										RowPath []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										} "json:\"ROW_path\" xml:\"ROW_path\""
+									}{
+
+										{RowPath: []struct {
+											ClientName string   "json:\"clientname\" xml:\"clientname\""
+											IfName     string   "json:\"ifname\" xml:\"ifname\""
+											Metric     int      "json:\"metric\" xml:\"metric\""
+											Pref       int      "json:\"pref\" xml:\"pref\""
+											UBest      bool     "json:\"ubest\" xml:\"ubest\""
+											UpTime     Duration "json:\"uptime\" xml:\"uptime\""
+										}{}}}, Attached: true, IPPrefix: "192.168.161.2/32", MCastNHops: 0, UCastNHops: 1}}}}, AddRf: "ipv4"}}}}, VrfNameOut: "default"}}}}}, Code: "200", Input: "show ip route ", Msg: "Success"},
 			shouldFail: false,
 			shouldErr:  false,
 		},

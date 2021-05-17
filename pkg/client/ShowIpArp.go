@@ -98,11 +98,17 @@ type ShowIpArpResultFlat struct {
 
 // NewShowIpArpFromString returns instance from an input string.
 func NewShowIpArpFromString(s string) (*ShowIpArpResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowIpArpFromReader(strings.NewReader(s))
 }
 
 // NewShowIpArpFromBytes returns instance from an input byte array.
 func NewShowIpArpFromBytes(s []byte) (*ShowIpArpResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowIpArpFromReader(bytes.NewReader(s))
 }
 
@@ -122,11 +128,17 @@ func NewShowIpArpFromReader(s io.Reader) (*ShowIpArpResponse, error) {
 
 // NewShowIpArpResultFromString returns instance from an input string.
 func NewShowIpArpResultFromString(s string) (*ShowIpArpResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowIpArpResultFromReader(strings.NewReader(s))
 }
 
 // NewShowIpArpResultFromBytes returns instance from an input byte array.
 func NewShowIpArpResultFromBytes(s []byte) (*ShowIpArpResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowIpArpResultFromReader(bytes.NewReader(s))
 }
 

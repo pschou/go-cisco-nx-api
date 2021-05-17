@@ -53,8 +53,9 @@ func TestParseShowInterfaceCountersErrorsJsonOutput(t *testing.T) {
 					EthUndersize int    "json:\"eth_undersize\" xml:\"eth_undersize\""
 					EthOutdisc   int    "json:\"eth_outdisc\" xml:\"eth_outdisc\""
 				} "json:\"ROW_interface\" xml:\"ROW_interface\""
-			}{struct {
-				RowInterface []struct {
+			}{
+
+				{RowInterface: []struct {
 					Interface    string "json:\"interface\" xml:\"interface\""
 					EthAlignErr  int    "json:\"eth_align_err\" xml:\"eth_align_err\""
 					EthFcsErr    int    "json:\"eth_fcs_err\" xml:\"eth_fcs_err\""
@@ -62,24 +63,9 @@ func TestParseShowInterfaceCountersErrorsJsonOutput(t *testing.T) {
 					EthRcvErr    int    "json:\"eth_rcv_err\" xml:\"eth_rcv_err\""
 					EthUndersize int    "json:\"eth_undersize\" xml:\"eth_undersize\""
 					EthOutdisc   int    "json:\"eth_outdisc\" xml:\"eth_outdisc\""
-				} "json:\"ROW_interface\" xml:\"ROW_interface\""
-			}{RowInterface: []struct {
-				Interface    string "json:\"interface\" xml:\"interface\""
-				EthAlignErr  int    "json:\"eth_align_err\" xml:\"eth_align_err\""
-				EthFcsErr    int    "json:\"eth_fcs_err\" xml:\"eth_fcs_err\""
-				EthXmitErr   int    "json:\"eth_xmit_err\" xml:\"eth_xmit_err\""
-				EthRcvErr    int    "json:\"eth_rcv_err\" xml:\"eth_rcv_err\""
-				EthUndersize int    "json:\"eth_undersize\" xml:\"eth_undersize\""
-				EthOutdisc   int    "json:\"eth_outdisc\" xml:\"eth_outdisc\""
-			}{struct {
-				Interface    string "json:\"interface\" xml:\"interface\""
-				EthAlignErr  int    "json:\"eth_align_err\" xml:\"eth_align_err\""
-				EthFcsErr    int    "json:\"eth_fcs_err\" xml:\"eth_fcs_err\""
-				EthXmitErr   int    "json:\"eth_xmit_err\" xml:\"eth_xmit_err\""
-				EthRcvErr    int    "json:\"eth_rcv_err\" xml:\"eth_rcv_err\""
-				EthUndersize int    "json:\"eth_undersize\" xml:\"eth_undersize\""
-				EthOutdisc   int    "json:\"eth_outdisc\" xml:\"eth_outdisc\""
-			}{Interface: "Ethernet1/22", EthAlignErr: 0, EthFcsErr: 0, EthXmitErr: 0, EthRcvErr: 0, EthUndersize: 0, EthOutdisc: 0}}}}}, Code: "200", Input: "show interface eth1/22 status err-vlans", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{Interface: "Ethernet1/22", EthAlignErr: 0, EthFcsErr: 0, EthXmitErr: 0, EthRcvErr: 0, EthUndersize: 0, EthOutdisc: 0}}}}}, Code: "200", Input: "show interface eth1/22 status err-vlans", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},

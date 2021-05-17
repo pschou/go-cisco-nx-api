@@ -66,11 +66,17 @@ type ShowSystemResourcesResultBody struct {
 
 // NewShowSystemResourcesFromString returns instance from an input string.
 func NewShowSystemResourcesFromString(s string) (*ShowSystemResourcesResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowSystemResourcesFromReader(strings.NewReader(s))
 }
 
 // NewShowSystemResourcesFromBytes returns instance from an input byte array.
 func NewShowSystemResourcesFromBytes(s []byte) (*ShowSystemResourcesResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowSystemResourcesFromReader(bytes.NewReader(s))
 }
 
@@ -90,11 +96,17 @@ func NewShowSystemResourcesFromReader(s io.Reader) (*ShowSystemResourcesResponse
 
 // NewShowSystemResourcesResultFromString returns instance from an input string.
 func NewShowSystemResourcesResultFromString(s string) (*ShowSystemResourcesResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowSystemResourcesResultFromReader(strings.NewReader(s))
 }
 
 // NewShowSystemResourcesResultFromBytes returns instance from an input byte array.
 func NewShowSystemResourcesResultFromBytes(s []byte) (*ShowSystemResourcesResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowSystemResourcesResultFromReader(bytes.NewReader(s))
 }
 

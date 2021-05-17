@@ -55,8 +55,9 @@ func TestParseShowPortSecurityAddressJsonOutput(t *testing.T) {
 					NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
 					CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
 				} "json:\"ROW_eth_port_sec_mac_addrs\" xml:\"ROW_eth_port_sec_mac_addrs\""
-			}{struct {
-				RowEthPortSecMacAddrs []struct {
+			}{
+
+				{RowEthPortSecMacAddrs: []struct {
 					IfIndex      string "json:\"if_index\" xml:\"if_index\""
 					VlanID       int    "json:\"vlan_id\" xml:\"vlan_id\""
 					Type         string "json:\"type\" xml:\"type\""
@@ -66,78 +67,19 @@ func TestParseShowPortSecurityAddressJsonOutput(t *testing.T) {
 					RemoteAged   int    "json:\"remote_aged\" xml:\"remote_aged\""
 					NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
 					CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
-				} "json:\"ROW_eth_port_sec_mac_addrs\" xml:\"ROW_eth_port_sec_mac_addrs\""
-			}{RowEthPortSecMacAddrs: []struct {
-				IfIndex      string "json:\"if_index\" xml:\"if_index\""
-				VlanID       int    "json:\"vlan_id\" xml:\"vlan_id\""
-				Type         string "json:\"type\" xml:\"type\""
-				MacAddr      string "json:\"mac_addr\" xml:\"mac_addr\""
-				RemainAge    int    "json:\"remain_age\" xml:\"remain_age\""
-				RemoteLearnt int    "json:\"remote_learnt\" xml:\"remote_learnt\""
-				RemoteAged   int    "json:\"remote_aged\" xml:\"remote_aged\""
-				NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
-				CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
-			}{struct {
-				IfIndex      string "json:\"if_index\" xml:\"if_index\""
-				VlanID       int    "json:\"vlan_id\" xml:\"vlan_id\""
-				Type         string "json:\"type\" xml:\"type\""
-				MacAddr      string "json:\"mac_addr\" xml:\"mac_addr\""
-				RemainAge    int    "json:\"remain_age\" xml:\"remain_age\""
-				RemoteLearnt int    "json:\"remote_learnt\" xml:\"remote_learnt\""
-				RemoteAged   int    "json:\"remote_aged\" xml:\"remote_aged\""
-				NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
-				CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
-			}{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1115", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{0}}, struct {
-				IfIndex      string "json:\"if_index\" xml:\"if_index\""
-				VlanID       int    "json:\"vlan_id\" xml:\"vlan_id\""
-				Type         string "json:\"type\" xml:\"type\""
-				MacAddr      string "json:\"mac_addr\" xml:\"mac_addr\""
-				RemainAge    int    "json:\"remain_age\" xml:\"remain_age\""
-				RemoteLearnt int    "json:\"remote_learnt\" xml:\"remote_learnt\""
-				RemoteAged   int    "json:\"remote_aged\" xml:\"remote_aged\""
-				NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
-				CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
-			}{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1111", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{1}}, struct {
-				IfIndex      string "json:\"if_index\" xml:\"if_index\""
-				VlanID       int    "json:\"vlan_id\" xml:\"vlan_id\""
-				Type         string "json:\"type\" xml:\"type\""
-				MacAddr      string "json:\"mac_addr\" xml:\"mac_addr\""
-				RemainAge    int    "json:\"remain_age\" xml:\"remain_age\""
-				RemoteLearnt int    "json:\"remote_learnt\" xml:\"remote_learnt\""
-				RemoteAged   int    "json:\"remote_aged\" xml:\"remote_aged\""
-				NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
-				CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
-			}{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1112", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{2}}, struct {
-				IfIndex      string "json:\"if_index\" xml:\"if_index\""
-				VlanID       int    "json:\"vlan_id\" xml:\"vlan_id\""
-				Type         string "json:\"type\" xml:\"type\""
-				MacAddr      string "json:\"mac_addr\" xml:\"mac_addr\""
-				RemainAge    int    "json:\"remain_age\" xml:\"remain_age\""
-				RemoteLearnt int    "json:\"remote_learnt\" xml:\"remote_learnt\""
-				RemoteAged   int    "json:\"remote_aged\" xml:\"remote_aged\""
-				NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
-				CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
-			}{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1113", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{3}}, struct {
-				IfIndex      string "json:\"if_index\" xml:\"if_index\""
-				VlanID       int    "json:\"vlan_id\" xml:\"vlan_id\""
-				Type         string "json:\"type\" xml:\"type\""
-				MacAddr      string "json:\"mac_addr\" xml:\"mac_addr\""
-				RemainAge    int    "json:\"remain_age\" xml:\"remain_age\""
-				RemoteLearnt int    "json:\"remote_learnt\" xml:\"remote_learnt\""
-				RemoteAged   int    "json:\"remote_aged\" xml:\"remote_aged\""
-				NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
-				CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
-			}{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1114", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{4}}, struct {
-				IfIndex      string "json:\"if_index\" xml:\"if_index\""
-				VlanID       int    "json:\"vlan_id\" xml:\"vlan_id\""
-				Type         string "json:\"type\" xml:\"type\""
-				MacAddr      string "json:\"mac_addr\" xml:\"mac_addr\""
-				RemainAge    int    "json:\"remain_age\" xml:\"remain_age\""
-				RemoteLearnt int    "json:\"remote_learnt\" xml:\"remote_learnt\""
-				RemoteAged   int    "json:\"remote_aged\" xml:\"remote_aged\""
-				NumElems     []int  "json:\"num_elems\" xml:\"num_elems\""
-				CmdAddrIndex []int  "json:\"cmd_addr_index\" xml:\"cmd_addr_index\""
-			}{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Sticky_Mac", MacAddr: "88F0.31F9.A341", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6, 6}, CmdAddrIndex: []int{5, 6}}}}}}, Code: "200", Input: "show port-security address", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1115", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{0}},
+
+					{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1111", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{1}},
+
+					{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1112", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{2}},
+
+					{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1113", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{3}},
+
+					{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Static_Mac", MacAddr: "0000.1111.1114", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6}, CmdAddrIndex: []int{4}},
+
+					{IfIndex: "Ethernet1/2", VlanID: 1, Type: "Sticky_Mac", MacAddr: "88F0.31F9.A341", RemainAge: 0, RemoteLearnt: 0, RemoteAged: 0, NumElems: []int{6, 6}, CmdAddrIndex: []int{5, 6}}}}}}, Code: "200", Input: "show port-security address", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},

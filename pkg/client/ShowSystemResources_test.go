@@ -50,39 +50,22 @@ func TestParseShowSystemResourcesJsonOutput(t *testing.T) {
 					Kernel float32 "json:\"kernel\" xml:\"kernel\""
 					Idle   float32 "json:\"idle\" xml:\"idle\""
 				} "json:\"ROW_cpu_usage\" xml:\"ROW_cpu_usage\""
-			}{struct {
-				RowCPUUsage []struct {
+			}{
+
+				{RowCPUUsage: []struct {
 					Cpuid  int     "json:\"cpuid\" xml:\"cpuid\""
 					User   float32 "json:\"user\" xml:\"user\""
 					Kernel float32 "json:\"kernel\" xml:\"kernel\""
 					Idle   float32 "json:\"idle\" xml:\"idle\""
-				} "json:\"ROW_cpu_usage\" xml:\"ROW_cpu_usage\""
-			}{RowCPUUsage: []struct {
-				Cpuid  int     "json:\"cpuid\" xml:\"cpuid\""
-				User   float32 "json:\"user\" xml:\"user\""
-				Kernel float32 "json:\"kernel\" xml:\"kernel\""
-				Idle   float32 "json:\"idle\" xml:\"idle\""
-			}{struct {
-				Cpuid  int     "json:\"cpuid\" xml:\"cpuid\""
-				User   float32 "json:\"user\" xml:\"user\""
-				Kernel float32 "json:\"kernel\" xml:\"kernel\""
-				Idle   float32 "json:\"idle\" xml:\"idle\""
-			}{Cpuid: 0, User: 13.13, Kernel: 12.12, Idle: 74.74}, struct {
-				Cpuid  int     "json:\"cpuid\" xml:\"cpuid\""
-				User   float32 "json:\"user\" xml:\"user\""
-				Kernel float32 "json:\"kernel\" xml:\"kernel\""
-				Idle   float32 "json:\"idle\" xml:\"idle\""
-			}{Cpuid: 1, User: 5.1, Kernel: 13.26, Idle: 81.63}, struct {
-				Cpuid  int     "json:\"cpuid\" xml:\"cpuid\""
-				User   float32 "json:\"user\" xml:\"user\""
-				Kernel float32 "json:\"kernel\" xml:\"kernel\""
-				Idle   float32 "json:\"idle\" xml:\"idle\""
-			}{Cpuid: 2, User: 10.2, Kernel: 4.08, Idle: 85.71}, struct {
-				Cpuid  int     "json:\"cpuid\" xml:\"cpuid\""
-				User   float32 "json:\"user\" xml:\"user\""
-				Kernel float32 "json:\"kernel\" xml:\"kernel\""
-				Idle   float32 "json:\"idle\" xml:\"idle\""
-			}{Cpuid: 3, User: 1.01, Kernel: 5.05, Idle: 93.93}}}}}, Code: "200", Input: "show system resources", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{Cpuid: 0, User: 13.13, Kernel: 12.12, Idle: 74.74},
+
+					{Cpuid: 1, User: 5.1, Kernel: 13.26, Idle: 81.63},
+
+					{Cpuid: 2, User: 10.2, Kernel: 4.08, Idle: 85.71},
+
+					{Cpuid: 3, User: 1.01, Kernel: 5.05, Idle: 93.93}}}}}, Code: "200", Input: "show system resources", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},

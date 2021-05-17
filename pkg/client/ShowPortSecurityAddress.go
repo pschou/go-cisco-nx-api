@@ -95,11 +95,17 @@ type ShowPortSecurityAddressResultFlat struct {
 
 // NewShowPortSecurityAddressFromString returns instance from an input string.
 func NewShowPortSecurityAddressFromString(s string) (*ShowPortSecurityAddressResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowPortSecurityAddressFromReader(strings.NewReader(s))
 }
 
 // NewShowPortSecurityAddressFromBytes returns instance from an input byte array.
 func NewShowPortSecurityAddressFromBytes(s []byte) (*ShowPortSecurityAddressResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowPortSecurityAddressFromReader(bytes.NewReader(s))
 }
 
@@ -119,11 +125,17 @@ func NewShowPortSecurityAddressFromReader(s io.Reader) (*ShowPortSecurityAddress
 
 // NewShowPortSecurityAddressResultFromString returns instance from an input string.
 func NewShowPortSecurityAddressResultFromString(s string) (*ShowPortSecurityAddressResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowPortSecurityAddressResultFromReader(strings.NewReader(s))
 }
 
 // NewShowPortSecurityAddressResultFromBytes returns instance from an input byte array.
 func NewShowPortSecurityAddressResultFromBytes(s []byte) (*ShowPortSecurityAddressResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowPortSecurityAddressResultFromReader(bytes.NewReader(s))
 }
 

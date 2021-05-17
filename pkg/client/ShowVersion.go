@@ -80,11 +80,17 @@ type ShowVersionResultBody struct {
 
 // NewShowVersionFromString returns instance from an input string.
 func NewShowVersionFromString(s string) (*ShowVersionResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowVersionFromReader(strings.NewReader(s))
 }
 
 // NewShowVersionFromBytes returns instance from an input byte array.
 func NewShowVersionFromBytes(s []byte) (*ShowVersionResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowVersionFromReader(bytes.NewReader(s))
 }
 
@@ -105,18 +111,18 @@ func NewShowVersionFromReader(s io.Reader) (*ShowVersionResponse, error) {
 
 // NewShowVersionResultFromString returns instance from an input string.
 func NewShowVersionResultFromString(s string) (*ShowVersionResponseResult, error) {
-	if len(s) > 0 {
-		return NewShowVersionResultFromReader(strings.NewReader(s))
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
 	}
-	return nil, fmt.Errorf("missing result")
+	return NewShowVersionResultFromReader(strings.NewReader(s))
 }
 
 // NewShowVersionResultFromBytes returns instance from an input byte array.
 func NewShowVersionResultFromBytes(s []byte) (*ShowVersionResponseResult, error) {
-	if len(s) > 0 {
-		return NewShowVersionResultFromReader(bytes.NewReader(s))
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
 	}
-	return nil, fmt.Errorf("missing result")
+	return NewShowVersionResultFromReader(bytes.NewReader(s))
 }
 
 // NewShowVersionResultFromReader returns instance from an input reader.

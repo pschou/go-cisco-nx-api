@@ -50,24 +50,16 @@ func TestParseShowVpcJsonOutput(t *testing.T) {
 					PeerLinkPortState string "json:\"peer-link-port-state\" xml:\"peer-link-port-state\""
 					PeerUpVlanBitset  string "json:\"peer-up-vlan-bitset\" xml:\"peer-up-vlan-bitset\""
 				} "json:\"ROW_peerlink\" xml:\"ROW_peerlink\""
-			}{struct {
-				RowPeerlink []struct {
+			}{
+
+				{RowPeerlink: []struct {
 					PeerLinkID        string "json:\"peer-link-id\" xml:\"peer-link-id\""
 					PeerlinkIfindex   string "json:\"peerlink-ifindex\" xml:\"peerlink-ifindex\""
 					PeerLinkPortState string "json:\"peer-link-port-state\" xml:\"peer-link-port-state\""
 					PeerUpVlanBitset  string "json:\"peer-up-vlan-bitset\" xml:\"peer-up-vlan-bitset\""
-				} "json:\"ROW_peerlink\" xml:\"ROW_peerlink\""
-			}{RowPeerlink: []struct {
-				PeerLinkID        string "json:\"peer-link-id\" xml:\"peer-link-id\""
-				PeerlinkIfindex   string "json:\"peerlink-ifindex\" xml:\"peerlink-ifindex\""
-				PeerLinkPortState string "json:\"peer-link-port-state\" xml:\"peer-link-port-state\""
-				PeerUpVlanBitset  string "json:\"peer-up-vlan-bitset\" xml:\"peer-up-vlan-bitset\""
-			}{struct {
-				PeerLinkID        string "json:\"peer-link-id\" xml:\"peer-link-id\""
-				PeerlinkIfindex   string "json:\"peerlink-ifindex\" xml:\"peerlink-ifindex\""
-				PeerLinkPortState string "json:\"peer-link-port-state\" xml:\"peer-link-port-state\""
-				PeerUpVlanBitset  string "json:\"peer-up-vlan-bitset\" xml:\"peer-up-vlan-bitset\""
-			}{PeerLinkID: "1", PeerlinkIfindex: "Po100", PeerLinkPortState: "1", PeerUpVlanBitset: "1-501"}}}}, VpcEnd: []string{"End of table", "End of table"}, VpcHdr: "Start of vPC table", VpcNotEs: "vPC complex", TableVpc: []struct {
+				}{
+
+					{PeerLinkID: "1", PeerlinkIfindex: "Po100", PeerLinkPortState: "1", PeerUpVlanBitset: "1-501"}}}}, VpcEnd: []string{"End of table", "End of table"}, VpcHdr: "Start of vPC table", VpcNotEs: "vPC complex", TableVpc: []struct {
 				RowVpc []struct {
 					VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
 					VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
@@ -79,8 +71,9 @@ func TestParseShowVpcJsonOutput(t *testing.T) {
 					UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
 					EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
 				} "json:\"ROW_vpc\" xml:\"ROW_vpc\""
-			}{struct {
-				RowVpc []struct {
+			}{
+
+				{RowVpc: []struct {
 					VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
 					VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
 					VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
@@ -90,138 +83,31 @@ func TestParseShowVpcJsonOutput(t *testing.T) {
 					VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
 					UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
 					EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-				} "json:\"ROW_vpc\" xml:\"ROW_vpc\""
-			}{RowVpc: []struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 1, VpcIfindex: "Po1", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-100,302-501", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 2, VpcIfindex: "Po2", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 3, VpcIfindex: "Po3", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "100", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 4, VpcIfindex: "Po4", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "500", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 5, VpcIfindex: "Po5", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 6, VpcIfindex: "Po6", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 7, VpcIfindex: "Po7", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 8, VpcIfindex: "Po8", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "200", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 9, VpcIfindex: "Po9", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "100", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 10, VpcIfindex: "Po10", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "400", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 30, VpcIfindex: "Po30", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "220", EsAttr: "DF: Invalid"}, struct {
-				VpcID                int    "json:\"vpc-id\" xml:\"vpc-id\""
-				VpcIfindex           string "json:\"vpc-ifindex\" xml:\"vpc-ifindex\""
-				VpcPortState         string "json:\"vpc-port-state\" xml:\"vpc-port-state\""
-				PhyPortIfRemoved     string "json:\"phy-port-if-removed\" xml:\"phy-port-if-removed\""
-				VpcThruPeerlink      string "json:\"vpc-thru-peerlink\" xml:\"vpc-thru-peerlink\""
-				VpcConsistency       string "json:\"vpc-consistency\" xml:\"vpc-consistency\""
-				VpcConsistencyStatus string "json:\"vpc-consistency-status\" xml:\"vpc-consistency-status\""
-				UpVlanBitset         string "json:\"up-vlan-bitset\" xml:\"up-vlan-bitset\""
-				EsAttr               string "json:\"es-attr\" xml:\"es-attr\""
-			}{VpcID: 50, VpcIfindex: "Po50", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"}}}}}, Code: "200", Input: "show vpc", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{VpcID: 1, VpcIfindex: "Po1", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-100,302-501", EsAttr: "DF: Invalid"},
+
+					{VpcID: 2, VpcIfindex: "Po2", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"},
+
+					{VpcID: 3, VpcIfindex: "Po3", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "100", EsAttr: "DF: Invalid"},
+
+					{VpcID: 4, VpcIfindex: "Po4", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "500", EsAttr: "DF: Invalid"},
+
+					{VpcID: 5, VpcIfindex: "Po5", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"},
+
+					{VpcID: 6, VpcIfindex: "Po6", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"},
+
+					{VpcID: 7, VpcIfindex: "Po7", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"},
+
+					{VpcID: 8, VpcIfindex: "Po8", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "200", EsAttr: "DF: Invalid"},
+
+					{VpcID: 9, VpcIfindex: "Po9", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "100", EsAttr: "DF: Invalid"},
+
+					{VpcID: 10, VpcIfindex: "Po10", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "400", EsAttr: "DF: Invalid"},
+
+					{VpcID: 30, VpcIfindex: "Po30", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "220", EsAttr: "DF: Invalid"},
+
+					{VpcID: 50, VpcIfindex: "Po50", VpcPortState: "1", PhyPortIfRemoved: "disabled", VpcThruPeerlink: "0", VpcConsistency: "consistent", VpcConsistencyStatus: "SUCCESS", UpVlanBitset: "1-501", EsAttr: "DF: Invalid"}}}}}, Code: "200", Input: "show vpc", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},

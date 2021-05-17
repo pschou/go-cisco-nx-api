@@ -54,8 +54,9 @@ func TestParseShowNtpPeerStatusJsonOutput(t *testing.T) {
 					Delay    float32 "json:\"delay\" xml:\"delay\""
 					Vrf      string  "json:\"vrf,omitempty\" xml:\"vrf,omitempty\""
 				} "json:\"ROW_peersstatus\" xml:\"ROW_peersstatus\""
-			}{struct {
-				RowPeersstatus []struct {
+			}{
+
+				{RowPeersstatus: []struct {
 					Syncmode string  "json:\"syncmode\" xml:\"syncmode\""
 					Remote   string  "json:\"remote\" xml:\"remote\""
 					Local    string  "json:\"local\" xml:\"local\""
@@ -64,62 +65,17 @@ func TestParseShowNtpPeerStatusJsonOutput(t *testing.T) {
 					Reach    string  "json:\"reach\" xml:\"reach\""
 					Delay    float32 "json:\"delay\" xml:\"delay\""
 					Vrf      string  "json:\"vrf,omitempty\" xml:\"vrf,omitempty\""
-				} "json:\"ROW_peersstatus\" xml:\"ROW_peersstatus\""
-			}{RowPeersstatus: []struct {
-				Syncmode string  "json:\"syncmode\" xml:\"syncmode\""
-				Remote   string  "json:\"remote\" xml:\"remote\""
-				Local    string  "json:\"local\" xml:\"local\""
-				St       int     "json:\"st\" xml:\"st\""
-				Poll     int     "json:\"poll\" xml:\"poll\""
-				Reach    string  "json:\"reach\" xml:\"reach\""
-				Delay    float32 "json:\"delay\" xml:\"delay\""
-				Vrf      string  "json:\"vrf,omitempty\" xml:\"vrf,omitempty\""
-			}{struct {
-				Syncmode string  "json:\"syncmode\" xml:\"syncmode\""
-				Remote   string  "json:\"remote\" xml:\"remote\""
-				Local    string  "json:\"local\" xml:\"local\""
-				St       int     "json:\"st\" xml:\"st\""
-				Poll     int     "json:\"poll\" xml:\"poll\""
-				Reach    string  "json:\"reach\" xml:\"reach\""
-				Delay    float32 "json:\"delay\" xml:\"delay\""
-				Vrf      string  "json:\"vrf,omitempty\" xml:\"vrf,omitempty\""
-			}{Syncmode: "=", Remote: "1.1.1.1", Local: "1.1.1.1", St: 16, Poll: 32, Reach: "0", Delay: 0, Vrf: "default"}, struct {
-				Syncmode string  "json:\"syncmode\" xml:\"syncmode\""
-				Remote   string  "json:\"remote\" xml:\"remote\""
-				Local    string  "json:\"local\" xml:\"local\""
-				St       int     "json:\"st\" xml:\"st\""
-				Poll     int     "json:\"poll\" xml:\"poll\""
-				Reach    string  "json:\"reach\" xml:\"reach\""
-				Delay    float32 "json:\"delay\" xml:\"delay\""
-				Vrf      string  "json:\"vrf,omitempty\" xml:\"vrf,omitempty\""
-			}{Syncmode: "+", Remote: "192:168:1::1", Local: "1::1", St: 16, Poll: 32, Reach: "0", Delay: 0, Vrf: "default"}, struct {
-				Syncmode string  "json:\"syncmode\" xml:\"syncmode\""
-				Remote   string  "json:\"remote\" xml:\"remote\""
-				Local    string  "json:\"local\" xml:\"local\""
-				St       int     "json:\"st\" xml:\"st\""
-				Poll     int     "json:\"poll\" xml:\"poll\""
-				Reach    string  "json:\"reach\" xml:\"reach\""
-				Delay    float32 "json:\"delay\" xml:\"delay\""
-				Vrf      string  "json:\"vrf,omitempty\" xml:\"vrf,omitempty\""
-			}{Syncmode: "*", Remote: "127.127.1.0", Local: "1.1.1.1", St: 2, Poll: 32, Reach: "377", Delay: 0, Vrf: ""}, struct {
-				Syncmode string  "json:\"syncmode\" xml:\"syncmode\""
-				Remote   string  "json:\"remote\" xml:\"remote\""
-				Local    string  "json:\"local\" xml:\"local\""
-				St       int     "json:\"st\" xml:\"st\""
-				Poll     int     "json:\"poll\" xml:\"poll\""
-				Reach    string  "json:\"reach\" xml:\"reach\""
-				Delay    float32 "json:\"delay\" xml:\"delay\""
-				Vrf      string  "json:\"vrf,omitempty\" xml:\"vrf,omitempty\""
-			}{Syncmode: "=", Remote: "192:168:1::2", Local: "1::1", St: 16, Poll: 32, Reach: "0", Delay: 0, Vrf: "default"}, struct {
-				Syncmode string  "json:\"syncmode\" xml:\"syncmode\""
-				Remote   string  "json:\"remote\" xml:\"remote\""
-				Local    string  "json:\"local\" xml:\"local\""
-				St       int     "json:\"st\" xml:\"st\""
-				Poll     int     "json:\"poll\" xml:\"poll\""
-				Reach    string  "json:\"reach\" xml:\"reach\""
-				Delay    float32 "json:\"delay\" xml:\"delay\""
-				Vrf      string  "json:\"vrf,omitempty\" xml:\"vrf,omitempty\""
-			}{Syncmode: "=", Remote: "2.2.2.2", Local: "1.1.1.1", St: 16, Poll: 32, Reach: "0", Delay: 0, Vrf: "management"}}}}}, Code: "200", Input: "show ntp peer-status", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{Syncmode: "=", Remote: "1.1.1.1", Local: "1.1.1.1", St: 16, Poll: 32, Reach: "0", Delay: 0, Vrf: "default"},
+
+					{Syncmode: "+", Remote: "192:168:1::1", Local: "1::1", St: 16, Poll: 32, Reach: "0", Delay: 0, Vrf: "default"},
+
+					{Syncmode: "*", Remote: "127.127.1.0", Local: "1.1.1.1", St: 2, Poll: 32, Reach: "377", Delay: 0, Vrf: ""},
+
+					{Syncmode: "=", Remote: "192:168:1::2", Local: "1::1", St: 16, Poll: 32, Reach: "0", Delay: 0, Vrf: "default"},
+
+					{Syncmode: "=", Remote: "2.2.2.2", Local: "1.1.1.1", St: 16, Poll: 32, Reach: "0", Delay: 0, Vrf: "management"}}}}}, Code: "200", Input: "show ntp peer-status", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},

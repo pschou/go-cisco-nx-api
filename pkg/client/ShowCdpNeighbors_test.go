@@ -53,8 +53,9 @@ func TestParseShowCdpNeighborsJsonOutput(t *testing.T) {
 					PlatformID string   "json:\"platform_id\" xml:\"platform_id\""
 					PortID     string   "json:\"port_id\" xml:\"port_id\""
 				} "json:\"ROW_cdp_neighbor_brief_info\" xml:\"ROW_cdp_neighbor_brief_info\""
-			}{struct {
-				RowCdpNeighborBriefInfo []struct {
+			}{
+
+				{RowCdpNeighborBriefInfo: []struct {
 					Ifindex    int      "json:\"ifindex\" xml:\"ifindex\""
 					DeviceID   string   "json:\"device_id\" xml:\"device_id\""
 					IntfID     string   "json:\"intf_id\" xml:\"intf_id\""
@@ -62,24 +63,9 @@ func TestParseShowCdpNeighborsJsonOutput(t *testing.T) {
 					Capability []string "json:\"capability\" xml:\"capability\""
 					PlatformID string   "json:\"platform_id\" xml:\"platform_id\""
 					PortID     string   "json:\"port_id\" xml:\"port_id\""
-				} "json:\"ROW_cdp_neighbor_brief_info\" xml:\"ROW_cdp_neighbor_brief_info\""
-			}{RowCdpNeighborBriefInfo: []struct {
-				Ifindex    int      "json:\"ifindex\" xml:\"ifindex\""
-				DeviceID   string   "json:\"device_id\" xml:\"device_id\""
-				IntfID     string   "json:\"intf_id\" xml:\"intf_id\""
-				TTL        int      "json:\"ttl\" xml:\"ttl\""
-				Capability []string "json:\"capability\" xml:\"capability\""
-				PlatformID string   "json:\"platform_id\" xml:\"platform_id\""
-				PortID     string   "json:\"port_id\" xml:\"port_id\""
-			}{struct {
-				Ifindex    int      "json:\"ifindex\" xml:\"ifindex\""
-				DeviceID   string   "json:\"device_id\" xml:\"device_id\""
-				IntfID     string   "json:\"intf_id\" xml:\"intf_id\""
-				TTL        int      "json:\"ttl\" xml:\"ttl\""
-				Capability []string "json:\"capability\" xml:\"capability\""
-				PlatformID string   "json:\"platform_id\" xml:\"platform_id\""
-				PortID     string   "json:\"port_id\" xml:\"port_id\""
-			}{Ifindex: 439353856, DeviceID: "EOR-2(FGE18330EZZ)", IntfID: "Ethernet7/2", TTL: 171, Capability: []string{"router", "switch", "IGMP_cnd_filtering", "Supports-STP-Dispute"}, PlatformID: "N9K-C9508", PortID: "Ethernet1/36"}}}}}, Code: "200", Input: "show cdp neighbors interface e7/2", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{Ifindex: 439353856, DeviceID: "EOR-2(FGE18330EZZ)", IntfID: "Ethernet7/2", TTL: 171, Capability: []string{"router", "switch", "IGMP_cnd_filtering", "Supports-STP-Dispute"}, PlatformID: "N9K-C9508", PortID: "Ethernet1/36"}}}}}, Code: "200", Input: "show cdp neighbors interface e7/2", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},

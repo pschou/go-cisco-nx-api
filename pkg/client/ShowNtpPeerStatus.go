@@ -92,11 +92,17 @@ func (d *ShowNtpPeerStatusResponse) Flat() (out []ShowNtpPeerStatusResultFlat) {
 
 // NewShowNtpPeerStatusFromString returns instance from an input string.
 func NewShowNtpPeerStatusFromString(s string) (*ShowNtpPeerStatusResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowNtpPeerStatusFromReader(strings.NewReader(s))
 }
 
 // NewShowNtpPeerStatusFromBytes returns instance from an input byte array.
 func NewShowNtpPeerStatusFromBytes(s []byte) (*ShowNtpPeerStatusResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowNtpPeerStatusFromReader(bytes.NewReader(s))
 }
 
@@ -116,11 +122,17 @@ func NewShowNtpPeerStatusFromReader(s io.Reader) (*ShowNtpPeerStatusResponse, er
 
 // NewShowNtpPeerStatusResultFromString returns instance from an input string.
 func NewShowNtpPeerStatusResultFromString(s string) (*ShowNtpPeerStatusResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowNtpPeerStatusResultFromReader(strings.NewReader(s))
 }
 
 // NewShowNtpPeerStatusResultFromBytes returns instance from an input byte array.
 func NewShowNtpPeerStatusResultFromBytes(s []byte) (*ShowNtpPeerStatusResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowNtpPeerStatusResultFromReader(bytes.NewReader(s))
 }
 

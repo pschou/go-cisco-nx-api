@@ -227,11 +227,17 @@ func (d *ShowInterfaceTransceiverDetailsResponseResult) Flat() (out []ShowInterf
 
 // NewShowInterfaceTransceiverDetailsFromString returns instance from an input string.
 func NewShowInterfaceTransceiverDetailsFromString(s string) (*ShowInterfaceTransceiverDetailsResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowInterfaceTransceiverDetailsFromReader(strings.NewReader(s))
 }
 
 // NewShowInterfaceTransceiverDetailsFromBytes returns instance from an input byte array.
 func NewShowInterfaceTransceiverDetailsFromBytes(s []byte) (*ShowInterfaceTransceiverDetailsResponse, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowInterfaceTransceiverDetailsFromReader(bytes.NewReader(s))
 }
 
@@ -251,11 +257,17 @@ func NewShowInterfaceTransceiverDetailsFromReader(s io.Reader) (*ShowInterfaceTr
 
 // NewShowInterfaceTransceiverDetailsResultFromString returns instance from an input string.
 func NewShowInterfaceTransceiverDetailsResultFromString(s string) (*ShowInterfaceTransceiverDetailsResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowInterfaceTransceiverDetailsResultFromReader(strings.NewReader(s))
 }
 
 // NewShowInterfaceTransceiverDetailsResultFromBytes returns instance from an input byte array.
 func NewShowInterfaceTransceiverDetailsResultFromBytes(s []byte) (*ShowInterfaceTransceiverDetailsResponseResult, error) {
+	if len(s) == 0 {
+		return nil, fmt.Errorf("missing result")
+	}
 	return NewShowInterfaceTransceiverDetailsResultFromReader(bytes.NewReader(s))
 }
 

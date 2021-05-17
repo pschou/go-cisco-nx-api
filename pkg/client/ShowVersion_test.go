@@ -47,15 +47,13 @@ func TestParseShowVersionResponseJsonOutput(t *testing.T) {
 				RowPackageList []struct {
 					PackageID string "json:\"package_id\" xml:\"package_id\""
 				} "json:\"ROW_package_list\" xml:\"ROW_package_list\""
-			}{struct {
-				RowPackageList []struct {
+			}{
+
+				{RowPackageList: []struct {
 					PackageID string "json:\"package_id\" xml:\"package_id\""
-				} "json:\"ROW_package_list\" xml:\"ROW_package_list\""
-			}{RowPackageList: []struct {
-				PackageID string "json:\"package_id\" xml:\"package_id\""
-			}{struct {
-				PackageID string "json:\"package_id\" xml:\"package_id\""
-			}{PackageID: ""}}}}}, Code: "200", Input: "show version", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", ShowVersion: "1.0"}},
+				}{
+
+					{PackageID: ""}}}}}, Code: "200", Input: "show version", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", ShowVersion: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},
@@ -118,15 +116,13 @@ func TestParseShowVersionResponseResultJsonOutput(t *testing.T) {
 				RowPackageList []struct {
 					PackageID string "json:\"package_id\" xml:\"package_id\""
 				} "json:\"ROW_package_list\" xml:\"ROW_package_list\""
-			}{struct {
-				RowPackageList []struct {
+			}{
+
+				{RowPackageList: []struct {
 					PackageID string "json:\"package_id\" xml:\"package_id\""
-				} "json:\"ROW_package_list\" xml:\"ROW_package_list\""
-			}{RowPackageList: []struct {
-				PackageID string "json:\"package_id\" xml:\"package_id\""
-			}{struct {
-				PackageID string "json:\"package_id\" xml:\"package_id\""
-			}{PackageID: ""}}}}}, Code: "200", Input: "show version", Msg: "Success"},
+				}{
+
+					{PackageID: ""}}}}}, Code: "200", Input: "show version", Msg: "Success"},
 			shouldFail: false,
 			shouldErr:  false,
 		},

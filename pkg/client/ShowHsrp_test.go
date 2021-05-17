@@ -92,8 +92,9 @@ func TestParseShowHsrpJsonOutput(t *testing.T) {
 					ShActiveRouterAddrV6  string "json:\"sh_active_router_addr_v6,omitempty\" xml:\"sh_active_router_addr_v6,omitempty\""
 					ShStandbyRouterAddrV6 string "json:\"sh_standby_router_addr_v6,omitempty\" xml:\"sh_standby_router_addr_v6,omitempty\""
 				} "json:\"ROW_grp_detail\" xml:\"ROW_grp_detail\""
-			}{struct {
-				RowGrpDetail []struct {
+			}{
+
+				{RowGrpDetail: []struct {
 					ShIfIndex                string "json:\"sh_if_index\" xml:\"sh_if_index\""
 					ShGroupNum               int    "json:\"sh_group_num\" xml:\"sh_group_num\""
 					ShGroupType              string "json:\"sh_group_type\" xml:\"sh_group_type\""
@@ -140,165 +141,25 @@ func TestParseShowHsrpJsonOutput(t *testing.T) {
 					} "json:\"TABLE_grp_vip_sec,omitempty\" xml:\"TABLE_grp_vip_sec,omitempty\""
 					ShActiveRouterAddrV6  string "json:\"sh_active_router_addr_v6,omitempty\" xml:\"sh_active_router_addr_v6,omitempty\""
 					ShStandbyRouterAddrV6 string "json:\"sh_standby_router_addr_v6,omitempty\" xml:\"sh_standby_router_addr_v6,omitempty\""
-				} "json:\"ROW_grp_detail\" xml:\"ROW_grp_detail\""
-			}{RowGrpDetail: []struct {
-				ShIfIndex                string "json:\"sh_if_index\" xml:\"sh_if_index\""
-				ShGroupNum               int    "json:\"sh_group_num\" xml:\"sh_group_num\""
-				ShGroupType              string "json:\"sh_group_type\" xml:\"sh_group_type\""
-				ShGroupVersion           string "json:\"sh_group_version\" xml:\"sh_group_version\""
-				ShGroupState             string "json:\"sh_group_state\" xml:\"sh_group_state\""
-				ShPrio                   int    "json:\"sh_prio\" xml:\"sh_prio\""
-				ShCfgPrio                int    "json:\"sh_cfg_prio\" xml:\"sh_cfg_prio\""
-				ShFwdLowerThreshold      int    "json:\"sh_fwd_lower_threshold\" xml:\"sh_fwd_lower_threshold\""
-				ShFwdUpperThreshold      int    "json:\"sh_fwd_upper_threshold\" xml:\"sh_fwd_upper_threshold\""
-				ShCanForward             string "json:\"sh_can_forward\" xml:\"sh_can_forward\""
-				ShPreempt                string "json:\"sh_preempt\" xml:\"sh_preempt\""
-				ShCurHello               int    "json:\"sh_cur_hello\" xml:\"sh_cur_hello\""
-				ShCurHelloAttr           string "json:\"sh_cur_hello_attr\" xml:\"sh_cur_hello_attr\""
-				ShCfgHello               int    "json:\"sh_cfg_hello\" xml:\"sh_cfg_hello\""
-				ShCfgHelloAttr           string "json:\"sh_cfg_hello_attr\" xml:\"sh_cfg_hello_attr\""
-				ShActiveHello            string "json:\"sh_active_hello\" xml:\"sh_active_hello\""
-				ShCurHold                int    "json:\"sh_cur_hold\" xml:\"sh_cur_hold\""
-				ShCurHoldAttr            string "json:\"sh_cur_hold_attr\" xml:\"sh_cur_hold_attr\""
-				ShCfgHold                int    "json:\"sh_cfg_hold\" xml:\"sh_cfg_hold\""
-				ShCfgHoldAttr            string "json:\"sh_cfg_hold_attr\" xml:\"sh_cfg_hold_attr\""
-				ShVip                    string "json:\"sh_vip,omitempty\" xml:\"sh_vip,omitempty\""
-				ShVipAttr                string "json:\"sh_vip_attr\" xml:\"sh_vip_attr\""
-				ShActiveRouterAddr       string "json:\"sh_active_router_addr,omitempty\" xml:\"sh_active_router_addr,omitempty\""
-				ShActiveRouterPrio       int    "json:\"sh_active_router_prio\" xml:\"sh_active_router_prio\""
-				ShActiveRouterTimer      string "json:\"sh_active_router_timer\" xml:\"sh_active_router_timer\""
-				ShStandbyRouterAddr      string "json:\"sh_standby_router_addr,omitempty\" xml:\"sh_standby_router_addr,omitempty\""
-				ShStandbyRouterPrio      int    "json:\"sh_standby_router_prio\" xml:\"sh_standby_router_prio\""
-				ShAuthenticationType     string "json:\"sh_authentication_type\" xml:\"sh_authentication_type\""
-				ShAuthenticationData     string "json:\"sh_authentication_data\" xml:\"sh_authentication_data\""
-				ShVmac                   string "json:\"sh_vmac\" xml:\"sh_vmac\""
-				ShVmacAttr               string "json:\"sh_vmac_attr\" xml:\"sh_vmac_attr\""
-				ShNumOfStateChanges      int    "json:\"sh_num_of_state_changes\" xml:\"sh_num_of_state_changes\""
-				ShLastStateChange        int    "json:\"sh_last_state_change\" xml:\"sh_last_state_change\""
-				ShNumOfTotalStateChanges int    "json:\"sh_num_of_total_state_changes\" xml:\"sh_num_of_total_state_changes\""
-				ShLastTotalStateChange   int    "json:\"sh_last_total_state_change\" xml:\"sh_last_total_state_change\""
-				ShNumTrackObj            int    "json:\"sh_num_track_obj\" xml:\"sh_num_track_obj\""
-				ShIPRedundName           string "json:\"sh_ip_redund_name\" xml:\"sh_ip_redund_name\""
-				ShIPRedundNameAttr       string "json:\"sh_ip_redund_name_attr\" xml:\"sh_ip_redund_name_attr\""
-				ShVipV6                  string "json:\"sh_vip_v6,omitempty\" xml:\"sh_vip_v6,omitempty\""
-				TableGrpVipSec           []struct {
-					RowGrpVipSec []struct {
-						ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
-					} "json:\"ROW_grp_vip_sec\" xml:\"ROW_grp_vip_sec\""
-				} "json:\"TABLE_grp_vip_sec,omitempty\" xml:\"TABLE_grp_vip_sec,omitempty\""
-				ShActiveRouterAddrV6  string "json:\"sh_active_router_addr_v6,omitempty\" xml:\"sh_active_router_addr_v6,omitempty\""
-				ShStandbyRouterAddrV6 string "json:\"sh_standby_router_addr_v6,omitempty\" xml:\"sh_standby_router_addr_v6,omitempty\""
-			}{struct {
-				ShIfIndex                string "json:\"sh_if_index\" xml:\"sh_if_index\""
-				ShGroupNum               int    "json:\"sh_group_num\" xml:\"sh_group_num\""
-				ShGroupType              string "json:\"sh_group_type\" xml:\"sh_group_type\""
-				ShGroupVersion           string "json:\"sh_group_version\" xml:\"sh_group_version\""
-				ShGroupState             string "json:\"sh_group_state\" xml:\"sh_group_state\""
-				ShPrio                   int    "json:\"sh_prio\" xml:\"sh_prio\""
-				ShCfgPrio                int    "json:\"sh_cfg_prio\" xml:\"sh_cfg_prio\""
-				ShFwdLowerThreshold      int    "json:\"sh_fwd_lower_threshold\" xml:\"sh_fwd_lower_threshold\""
-				ShFwdUpperThreshold      int    "json:\"sh_fwd_upper_threshold\" xml:\"sh_fwd_upper_threshold\""
-				ShCanForward             string "json:\"sh_can_forward\" xml:\"sh_can_forward\""
-				ShPreempt                string "json:\"sh_preempt\" xml:\"sh_preempt\""
-				ShCurHello               int    "json:\"sh_cur_hello\" xml:\"sh_cur_hello\""
-				ShCurHelloAttr           string "json:\"sh_cur_hello_attr\" xml:\"sh_cur_hello_attr\""
-				ShCfgHello               int    "json:\"sh_cfg_hello\" xml:\"sh_cfg_hello\""
-				ShCfgHelloAttr           string "json:\"sh_cfg_hello_attr\" xml:\"sh_cfg_hello_attr\""
-				ShActiveHello            string "json:\"sh_active_hello\" xml:\"sh_active_hello\""
-				ShCurHold                int    "json:\"sh_cur_hold\" xml:\"sh_cur_hold\""
-				ShCurHoldAttr            string "json:\"sh_cur_hold_attr\" xml:\"sh_cur_hold_attr\""
-				ShCfgHold                int    "json:\"sh_cfg_hold\" xml:\"sh_cfg_hold\""
-				ShCfgHoldAttr            string "json:\"sh_cfg_hold_attr\" xml:\"sh_cfg_hold_attr\""
-				ShVip                    string "json:\"sh_vip,omitempty\" xml:\"sh_vip,omitempty\""
-				ShVipAttr                string "json:\"sh_vip_attr\" xml:\"sh_vip_attr\""
-				ShActiveRouterAddr       string "json:\"sh_active_router_addr,omitempty\" xml:\"sh_active_router_addr,omitempty\""
-				ShActiveRouterPrio       int    "json:\"sh_active_router_prio\" xml:\"sh_active_router_prio\""
-				ShActiveRouterTimer      string "json:\"sh_active_router_timer\" xml:\"sh_active_router_timer\""
-				ShStandbyRouterAddr      string "json:\"sh_standby_router_addr,omitempty\" xml:\"sh_standby_router_addr,omitempty\""
-				ShStandbyRouterPrio      int    "json:\"sh_standby_router_prio\" xml:\"sh_standby_router_prio\""
-				ShAuthenticationType     string "json:\"sh_authentication_type\" xml:\"sh_authentication_type\""
-				ShAuthenticationData     string "json:\"sh_authentication_data\" xml:\"sh_authentication_data\""
-				ShVmac                   string "json:\"sh_vmac\" xml:\"sh_vmac\""
-				ShVmacAttr               string "json:\"sh_vmac_attr\" xml:\"sh_vmac_attr\""
-				ShNumOfStateChanges      int    "json:\"sh_num_of_state_changes\" xml:\"sh_num_of_state_changes\""
-				ShLastStateChange        int    "json:\"sh_last_state_change\" xml:\"sh_last_state_change\""
-				ShNumOfTotalStateChanges int    "json:\"sh_num_of_total_state_changes\" xml:\"sh_num_of_total_state_changes\""
-				ShLastTotalStateChange   int    "json:\"sh_last_total_state_change\" xml:\"sh_last_total_state_change\""
-				ShNumTrackObj            int    "json:\"sh_num_track_obj\" xml:\"sh_num_track_obj\""
-				ShIPRedundName           string "json:\"sh_ip_redund_name\" xml:\"sh_ip_redund_name\""
-				ShIPRedundNameAttr       string "json:\"sh_ip_redund_name_attr\" xml:\"sh_ip_redund_name_attr\""
-				ShVipV6                  string "json:\"sh_vip_v6,omitempty\" xml:\"sh_vip_v6,omitempty\""
-				TableGrpVipSec           []struct {
-					RowGrpVipSec []struct {
-						ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
-					} "json:\"ROW_grp_vip_sec\" xml:\"ROW_grp_vip_sec\""
-				} "json:\"TABLE_grp_vip_sec,omitempty\" xml:\"TABLE_grp_vip_sec,omitempty\""
-				ShActiveRouterAddrV6  string "json:\"sh_active_router_addr_v6,omitempty\" xml:\"sh_active_router_addr_v6,omitempty\""
-				ShStandbyRouterAddrV6 string "json:\"sh_standby_router_addr_v6,omitempty\" xml:\"sh_standby_router_addr_v6,omitempty\""
-			}{ShIfIndex: "Ethernet4/1", ShGroupNum: 1, ShGroupType: "v4", ShGroupVersion: "v2", ShGroupState: "Active", ShPrio: 100, ShCfgPrio: 100, ShFwdLowerThreshold: 90, ShFwdUpperThreshold: 100, ShCanForward: "enabled", ShPreempt: "enabled", ShCurHello: 1, ShCurHelloAttr: "sec", ShCfgHello: 1, ShCfgHelloAttr: "sec", ShActiveHello: "0.544000", ShCurHold: 3, ShCurHoldAttr: "sec", ShCfgHold: 3, ShCfgHoldAttr: "sec", ShVip: "4.4.4.100", ShVipAttr: "config", ShActiveRouterAddr: "4.4.4.2", ShActiveRouterPrio: 100, ShActiveRouterTimer: "0.000000", ShStandbyRouterAddr: "4.4.4.1", ShStandbyRouterPrio: 50, ShAuthenticationType: "md5", ShAuthenticationData: "hsrp", ShVmac: "1234.1234.1234", ShVmacAttr: "Configured MAC", ShNumOfStateChanges: 5, ShLastStateChange: 114, ShNumOfTotalStateChanges: 7, ShLastTotalStateChange: 114, ShNumTrackObj: 0, ShIPRedundName: "hsrp-Eth4/1-1", ShIPRedundNameAttr: "Default", ShVipV6: "", TableGrpVipSec: []struct {
-				RowGrpVipSec []struct {
-					ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
-				} "json:\"ROW_grp_vip_sec\" xml:\"ROW_grp_vip_sec\""
-			}(nil), ShActiveRouterAddrV6: "", ShStandbyRouterAddrV6: ""}, struct {
-				ShIfIndex                string "json:\"sh_if_index\" xml:\"sh_if_index\""
-				ShGroupNum               int    "json:\"sh_group_num\" xml:\"sh_group_num\""
-				ShGroupType              string "json:\"sh_group_type\" xml:\"sh_group_type\""
-				ShGroupVersion           string "json:\"sh_group_version\" xml:\"sh_group_version\""
-				ShGroupState             string "json:\"sh_group_state\" xml:\"sh_group_state\""
-				ShPrio                   int    "json:\"sh_prio\" xml:\"sh_prio\""
-				ShCfgPrio                int    "json:\"sh_cfg_prio\" xml:\"sh_cfg_prio\""
-				ShFwdLowerThreshold      int    "json:\"sh_fwd_lower_threshold\" xml:\"sh_fwd_lower_threshold\""
-				ShFwdUpperThreshold      int    "json:\"sh_fwd_upper_threshold\" xml:\"sh_fwd_upper_threshold\""
-				ShCanForward             string "json:\"sh_can_forward\" xml:\"sh_can_forward\""
-				ShPreempt                string "json:\"sh_preempt\" xml:\"sh_preempt\""
-				ShCurHello               int    "json:\"sh_cur_hello\" xml:\"sh_cur_hello\""
-				ShCurHelloAttr           string "json:\"sh_cur_hello_attr\" xml:\"sh_cur_hello_attr\""
-				ShCfgHello               int    "json:\"sh_cfg_hello\" xml:\"sh_cfg_hello\""
-				ShCfgHelloAttr           string "json:\"sh_cfg_hello_attr\" xml:\"sh_cfg_hello_attr\""
-				ShActiveHello            string "json:\"sh_active_hello\" xml:\"sh_active_hello\""
-				ShCurHold                int    "json:\"sh_cur_hold\" xml:\"sh_cur_hold\""
-				ShCurHoldAttr            string "json:\"sh_cur_hold_attr\" xml:\"sh_cur_hold_attr\""
-				ShCfgHold                int    "json:\"sh_cfg_hold\" xml:\"sh_cfg_hold\""
-				ShCfgHoldAttr            string "json:\"sh_cfg_hold_attr\" xml:\"sh_cfg_hold_attr\""
-				ShVip                    string "json:\"sh_vip,omitempty\" xml:\"sh_vip,omitempty\""
-				ShVipAttr                string "json:\"sh_vip_attr\" xml:\"sh_vip_attr\""
-				ShActiveRouterAddr       string "json:\"sh_active_router_addr,omitempty\" xml:\"sh_active_router_addr,omitempty\""
-				ShActiveRouterPrio       int    "json:\"sh_active_router_prio\" xml:\"sh_active_router_prio\""
-				ShActiveRouterTimer      string "json:\"sh_active_router_timer\" xml:\"sh_active_router_timer\""
-				ShStandbyRouterAddr      string "json:\"sh_standby_router_addr,omitempty\" xml:\"sh_standby_router_addr,omitempty\""
-				ShStandbyRouterPrio      int    "json:\"sh_standby_router_prio\" xml:\"sh_standby_router_prio\""
-				ShAuthenticationType     string "json:\"sh_authentication_type\" xml:\"sh_authentication_type\""
-				ShAuthenticationData     string "json:\"sh_authentication_data\" xml:\"sh_authentication_data\""
-				ShVmac                   string "json:\"sh_vmac\" xml:\"sh_vmac\""
-				ShVmacAttr               string "json:\"sh_vmac_attr\" xml:\"sh_vmac_attr\""
-				ShNumOfStateChanges      int    "json:\"sh_num_of_state_changes\" xml:\"sh_num_of_state_changes\""
-				ShLastStateChange        int    "json:\"sh_last_state_change\" xml:\"sh_last_state_change\""
-				ShNumOfTotalStateChanges int    "json:\"sh_num_of_total_state_changes\" xml:\"sh_num_of_total_state_changes\""
-				ShLastTotalStateChange   int    "json:\"sh_last_total_state_change\" xml:\"sh_last_total_state_change\""
-				ShNumTrackObj            int    "json:\"sh_num_track_obj\" xml:\"sh_num_track_obj\""
-				ShIPRedundName           string "json:\"sh_ip_redund_name\" xml:\"sh_ip_redund_name\""
-				ShIPRedundNameAttr       string "json:\"sh_ip_redund_name_attr\" xml:\"sh_ip_redund_name_attr\""
-				ShVipV6                  string "json:\"sh_vip_v6,omitempty\" xml:\"sh_vip_v6,omitempty\""
-				TableGrpVipSec           []struct {
-					RowGrpVipSec []struct {
-						ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
-					} "json:\"ROW_grp_vip_sec\" xml:\"ROW_grp_vip_sec\""
-				} "json:\"TABLE_grp_vip_sec,omitempty\" xml:\"TABLE_grp_vip_sec,omitempty\""
-				ShActiveRouterAddrV6  string "json:\"sh_active_router_addr_v6,omitempty\" xml:\"sh_active_router_addr_v6,omitempty\""
-				ShStandbyRouterAddrV6 string "json:\"sh_standby_router_addr_v6,omitempty\" xml:\"sh_standby_router_addr_v6,omitempty\""
-			}{ShIfIndex: "Ethernet4/1", ShGroupNum: 1, ShGroupType: "v6", ShGroupVersion: "v2", ShGroupState: "Active", ShPrio: 101, ShCfgPrio: 101, ShFwdLowerThreshold: 1, ShFwdUpperThreshold: 101, ShCanForward: "enabled", ShPreempt: "enabled", ShCurHello: 1, ShCurHelloAttr: "sec", ShCfgHello: 1, ShCfgHelloAttr: "sec", ShActiveHello: "0.950000", ShCurHold: 3, ShCurHoldAttr: "sec", ShCfgHold: 3, ShCfgHoldAttr: "sec", ShVip: "", ShVipAttr: "config", ShActiveRouterAddr: "", ShActiveRouterPrio: 101, ShActiveRouterTimer: "0.000000", ShStandbyRouterAddr: "", ShStandbyRouterPrio: 50, ShAuthenticationType: "md5", ShAuthenticationData: "hsrp", ShVmac: "0005.73a0.0001", ShVmacAttr: "Default MAC", ShNumOfStateChanges: 2, ShLastStateChange: 106, ShNumOfTotalStateChanges: 9, ShLastTotalStateChange: 106, ShNumTrackObj: 0, ShIPRedundName: "hsrp-Eth4/1-1-V6", ShIPRedundNameAttr: "Default", ShVipV6: "fe80::5:73ff:fea0:1", TableGrpVipSec: []struct {
-				RowGrpVipSec []struct {
-					ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
-				} "json:\"ROW_grp_vip_sec\" xml:\"ROW_grp_vip_sec\""
-			}{struct {
-				RowGrpVipSec []struct {
-					ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
-				} "json:\"ROW_grp_vip_sec\" xml:\"ROW_grp_vip_sec\""
-			}{RowGrpVipSec: []struct {
-				ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
-			}{struct {
-				ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
-			}{ShVipSec: "0.0.0.64"}}}}, ShActiveRouterAddrV6: "fe80::da67:d9ff:fe0d:cc1", ShStandbyRouterAddrV6: "fe80::da67:d9ff:fe0d:a6c1"}}}}}, Code: "200", Input: "show hsrp", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{ShIfIndex: "Ethernet4/1", ShGroupNum: 1, ShGroupType: "v4", ShGroupVersion: "v2", ShGroupState: "Active", ShPrio: 100, ShCfgPrio: 100, ShFwdLowerThreshold: 90, ShFwdUpperThreshold: 100, ShCanForward: "enabled", ShPreempt: "enabled", ShCurHello: 1, ShCurHelloAttr: "sec", ShCfgHello: 1, ShCfgHelloAttr: "sec", ShActiveHello: "0.544000", ShCurHold: 3, ShCurHoldAttr: "sec", ShCfgHold: 3, ShCfgHoldAttr: "sec", ShVip: "4.4.4.100", ShVipAttr: "config", ShActiveRouterAddr: "4.4.4.2", ShActiveRouterPrio: 100, ShActiveRouterTimer: "0.000000", ShStandbyRouterAddr: "4.4.4.1", ShStandbyRouterPrio: 50, ShAuthenticationType: "md5", ShAuthenticationData: "hsrp", ShVmac: "1234.1234.1234", ShVmacAttr: "Configured MAC", ShNumOfStateChanges: 5, ShLastStateChange: 114, ShNumOfTotalStateChanges: 7, ShLastTotalStateChange: 114, ShNumTrackObj: 0, ShIPRedundName: "hsrp-Eth4/1-1", ShIPRedundNameAttr: "Default", ShVipV6: "", TableGrpVipSec: []struct {
+						RowGrpVipSec []struct {
+							ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
+						} "json:\"ROW_grp_vip_sec\" xml:\"ROW_grp_vip_sec\""
+					}(nil), ShActiveRouterAddrV6: "", ShStandbyRouterAddrV6: ""},
+
+					{ShIfIndex: "Ethernet4/1", ShGroupNum: 1, ShGroupType: "v6", ShGroupVersion: "v2", ShGroupState: "Active", ShPrio: 101, ShCfgPrio: 101, ShFwdLowerThreshold: 1, ShFwdUpperThreshold: 101, ShCanForward: "enabled", ShPreempt: "enabled", ShCurHello: 1, ShCurHelloAttr: "sec", ShCfgHello: 1, ShCfgHelloAttr: "sec", ShActiveHello: "0.950000", ShCurHold: 3, ShCurHoldAttr: "sec", ShCfgHold: 3, ShCfgHoldAttr: "sec", ShVip: "", ShVipAttr: "config", ShActiveRouterAddr: "", ShActiveRouterPrio: 101, ShActiveRouterTimer: "0.000000", ShStandbyRouterAddr: "", ShStandbyRouterPrio: 50, ShAuthenticationType: "md5", ShAuthenticationData: "hsrp", ShVmac: "0005.73a0.0001", ShVmacAttr: "Default MAC", ShNumOfStateChanges: 2, ShLastStateChange: 106, ShNumOfTotalStateChanges: 9, ShLastTotalStateChange: 106, ShNumTrackObj: 0, ShIPRedundName: "hsrp-Eth4/1-1-V6", ShIPRedundNameAttr: "Default", ShVipV6: "fe80::5:73ff:fea0:1", TableGrpVipSec: []struct {
+						RowGrpVipSec []struct {
+							ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
+						} "json:\"ROW_grp_vip_sec\" xml:\"ROW_grp_vip_sec\""
+					}{
+
+						{RowGrpVipSec: []struct {
+							ShVipSec string "json:\"sh_vip_sec\" xml:\"sh_vip_sec\""
+						}{
+
+							{ShVipSec: "0.0.0.64"}}}}, ShActiveRouterAddrV6: "fe80::da67:d9ff:fe0d:cc1", ShStandbyRouterAddrV6: "fe80::da67:d9ff:fe0d:a6c1"}}}}}, Code: "200", Input: "show hsrp", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},

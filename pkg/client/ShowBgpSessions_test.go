@@ -66,8 +66,9 @@ func TestParseBGPShowSessionsJsonOutput(t *testing.T) {
 					VrfEstablishedPeers int    "json:\"vrfestablishedpeers\" xml:\"vrfestablishedpeers\""
 					VrfPeers            int    "json:\"vrfpeers\" xml:\"vrfpeers\""
 				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{struct {
-				RowVrf []struct {
+			}{
+
+				{RowVrf: []struct {
 					TableNeighbor []struct {
 						RowNeighbor []struct {
 							ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
@@ -88,186 +89,53 @@ func TestParseBGPShowSessionsJsonOutput(t *testing.T) {
 					VrfNameOut          string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
 					VrfEstablishedPeers int    "json:\"vrfestablishedpeers\" xml:\"vrfestablishedpeers\""
 					VrfPeers            int    "json:\"vrfpeers\" xml:\"vrfpeers\""
-				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{RowVrf: []struct {
-				TableNeighbor []struct {
-					RowNeighbor []struct {
-						ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-						LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-						LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-						LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-						LocalPort             int      "json:\"localport\" xml:\"localport\""
-						NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-						NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-						NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-						RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-						RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-						State                 string   "json:\"state\" xml:\"state\""
-					} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
-				} "json:\"TABLE_neighbor\" xml:\"TABLE_neighbor\""
-				LocalAS             int    "json:\"local-as\" xml:\"local-as\""
-				RouterID            string "json:\"router-id\" xml:\"router-id\""
-				VrfNameOut          string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-				VrfEstablishedPeers int    "json:\"vrfestablishedpeers\" xml:\"vrfestablishedpeers\""
-				VrfPeers            int    "json:\"vrfpeers\" xml:\"vrfpeers\""
-			}{struct {
-				TableNeighbor []struct {
-					RowNeighbor []struct {
-						ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-						LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-						LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-						LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-						LocalPort             int      "json:\"localport\" xml:\"localport\""
-						NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-						NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-						NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-						RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-						RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-						State                 string   "json:\"state\" xml:\"state\""
-					} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
-				} "json:\"TABLE_neighbor\" xml:\"TABLE_neighbor\""
-				LocalAS             int    "json:\"local-as\" xml:\"local-as\""
-				RouterID            string "json:\"router-id\" xml:\"router-id\""
-				VrfNameOut          string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-				VrfEstablishedPeers int    "json:\"vrfestablishedpeers\" xml:\"vrfestablishedpeers\""
-				VrfPeers            int    "json:\"vrfpeers\" xml:\"vrfpeers\""
-			}{TableNeighbor: []struct {
-				RowNeighbor []struct {
-					ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-					LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-					LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-					LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-					LocalPort             int      "json:\"localport\" xml:\"localport\""
-					NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-					NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-					NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-					RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-					RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-					State                 string   "json:\"state\" xml:\"state\""
-				} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
-			}{struct {
-				RowNeighbor []struct {
-					ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-					LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-					LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-					LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-					LocalPort             int      "json:\"localport\" xml:\"localport\""
-					NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-					NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-					NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-					RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-					RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-					State                 string   "json:\"state\" xml:\"state\""
-				} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
-			}{RowNeighbor: []struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.101.1", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 37989, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xee6b2800, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.102.3", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 888, RemotePort: 46134, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.102.4", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 43271, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.103.10", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 999, RemotePort: 35158, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdb4f6bb000, LastRead: 0xb2d05e000, LastWrite: 0x737be7600, LocalPort: 179, NeighborID: "19.0.103.20", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 41777, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdf44b31a00, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "19.0.200.200", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 0, RemotePort: 0, State: "Idle"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdff7837800, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "fec0::1002", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 0, State: "Idle"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdff7837800, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "fec0::2002", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 888, RemotePort: 0, State: "Idle"}}}}, LocalAS: 333, RouterID: "19.0.0.6", VrfNameOut: "default", VrfEstablishedPeers: 5, VrfPeers: 8}}}}, LocalAS: 333, TotalEstablishedPeers: 5, TotalPeers: 9}, Code: "200", Input: "show bgp sessions", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
+				}{
+
+					{TableNeighbor: []struct {
+						RowNeighbor []struct {
+							ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
+							LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
+							LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
+							LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
+							LocalPort             int      "json:\"localport\" xml:\"localport\""
+							NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
+							NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
+							NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
+							RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
+							RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
+							State                 string   "json:\"state\" xml:\"state\""
+						} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
+					}{
+
+						{RowNeighbor: []struct {
+							ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
+							LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
+							LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
+							LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
+							LocalPort             int      "json:\"localport\" xml:\"localport\""
+							NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
+							NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
+							NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
+							RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
+							RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
+							State                 string   "json:\"state\" xml:\"state\""
+						}{
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.101.1", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 37989, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xee6b2800, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.102.3", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 888, RemotePort: 46134, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.102.4", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 43271, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.103.10", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 999, RemotePort: 35158, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdb4f6bb000, LastRead: 0xb2d05e000, LastWrite: 0x737be7600, LocalPort: 179, NeighborID: "19.0.103.20", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 41777, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdf44b31a00, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "19.0.200.200", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 0, RemotePort: 0, State: "Idle"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdff7837800, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "fec0::1002", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 0, State: "Idle"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdff7837800, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "fec0::2002", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 888, RemotePort: 0, State: "Idle"}}}}, LocalAS: 333, RouterID: "19.0.0.6", VrfNameOut: "default", VrfEstablishedPeers: 5, VrfPeers: 8}}}}, LocalAS: 333, TotalEstablishedPeers: 5, TotalPeers: 9}, Code: "200", Input: "show bgp sessions", Msg: "Success"}}, Sid: "eoc", Type: "cli_show", Version: "1.0"}},
 			shouldFail: false,
 			shouldErr:  false,
 		},
@@ -349,8 +217,9 @@ func TestParseBGPShowSessionsResultJsonOutput(t *testing.T) {
 					VrfEstablishedPeers int    "json:\"vrfestablishedpeers\" xml:\"vrfestablishedpeers\""
 					VrfPeers            int    "json:\"vrfpeers\" xml:\"vrfpeers\""
 				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{struct {
-				RowVrf []struct {
+			}{
+
+				{RowVrf: []struct {
 					TableNeighbor []struct {
 						RowNeighbor []struct {
 							ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
@@ -371,186 +240,53 @@ func TestParseBGPShowSessionsResultJsonOutput(t *testing.T) {
 					VrfNameOut          string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
 					VrfEstablishedPeers int    "json:\"vrfestablishedpeers\" xml:\"vrfestablishedpeers\""
 					VrfPeers            int    "json:\"vrfpeers\" xml:\"vrfpeers\""
-				} "json:\"ROW_vrf\" xml:\"ROW_vrf\""
-			}{RowVrf: []struct {
-				TableNeighbor []struct {
-					RowNeighbor []struct {
-						ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-						LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-						LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-						LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-						LocalPort             int      "json:\"localport\" xml:\"localport\""
-						NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-						NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-						NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-						RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-						RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-						State                 string   "json:\"state\" xml:\"state\""
-					} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
-				} "json:\"TABLE_neighbor\" xml:\"TABLE_neighbor\""
-				LocalAS             int    "json:\"local-as\" xml:\"local-as\""
-				RouterID            string "json:\"router-id\" xml:\"router-id\""
-				VrfNameOut          string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-				VrfEstablishedPeers int    "json:\"vrfestablishedpeers\" xml:\"vrfestablishedpeers\""
-				VrfPeers            int    "json:\"vrfpeers\" xml:\"vrfpeers\""
-			}{struct {
-				TableNeighbor []struct {
-					RowNeighbor []struct {
-						ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-						LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-						LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-						LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-						LocalPort             int      "json:\"localport\" xml:\"localport\""
-						NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-						NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-						NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-						RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-						RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-						State                 string   "json:\"state\" xml:\"state\""
-					} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
-				} "json:\"TABLE_neighbor\" xml:\"TABLE_neighbor\""
-				LocalAS             int    "json:\"local-as\" xml:\"local-as\""
-				RouterID            string "json:\"router-id\" xml:\"router-id\""
-				VrfNameOut          string "json:\"vrf-name-out\" xml:\"vrf-name-out\""
-				VrfEstablishedPeers int    "json:\"vrfestablishedpeers\" xml:\"vrfestablishedpeers\""
-				VrfPeers            int    "json:\"vrfpeers\" xml:\"vrfpeers\""
-			}{TableNeighbor: []struct {
-				RowNeighbor []struct {
-					ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-					LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-					LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-					LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-					LocalPort             int      "json:\"localport\" xml:\"localport\""
-					NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-					NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-					NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-					RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-					RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-					State                 string   "json:\"state\" xml:\"state\""
-				} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
-			}{struct {
-				RowNeighbor []struct {
-					ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-					LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-					LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-					LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-					LocalPort             int      "json:\"localport\" xml:\"localport\""
-					NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-					NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-					NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-					RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-					RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-					State                 string   "json:\"state\" xml:\"state\""
-				} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
-			}{RowNeighbor: []struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.101.1", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 37989, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xee6b2800, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.102.3", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 888, RemotePort: 46134, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.102.4", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 43271, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.103.10", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 999, RemotePort: 35158, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdb4f6bb000, LastRead: 0xb2d05e000, LastWrite: 0x737be7600, LocalPort: 179, NeighborID: "19.0.103.20", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 41777, State: "Established"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdf44b31a00, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "19.0.200.200", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 0, RemotePort: 0, State: "Idle"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdff7837800, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "fec0::1002", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 0, State: "Idle"}, struct {
-				ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
-				LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
-				LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
-				LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
-				LocalPort             int      "json:\"localport\" xml:\"localport\""
-				NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
-				NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
-				NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
-				RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
-				RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
-				State                 string   "json:\"state\" xml:\"state\""
-			}{ConnectionsDropped: 0, LastFlap: 0x1dfdff7837800, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "fec0::2002", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 888, RemotePort: 0, State: "Idle"}}}}, LocalAS: 333, RouterID: "19.0.0.6", VrfNameOut: "default", VrfEstablishedPeers: 5, VrfPeers: 8}}}}, LocalAS: 333, TotalEstablishedPeers: 5, TotalPeers: 9}, Code: "200", Input: "show bgp sessions", Msg: "Success"},
+				}{
+
+					{TableNeighbor: []struct {
+						RowNeighbor []struct {
+							ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
+							LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
+							LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
+							LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
+							LocalPort             int      "json:\"localport\" xml:\"localport\""
+							NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
+							NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
+							NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
+							RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
+							RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
+							State                 string   "json:\"state\" xml:\"state\""
+						} "json:\"ROW_neighbor\" xml:\"ROW_neighbor\""
+					}{
+
+						{RowNeighbor: []struct {
+							ConnectionsDropped    int      "json:\"connectionsdropped\" xml:\"connectionsdropped\""
+							LastFlap              Duration "json:\"lastflap\" xml:\"lastflap\""
+							LastRead              Duration "json:\"lastread,omitempty\" xml:\"lastread,omitempty\""
+							LastWrite             Duration "json:\"lastwrite,omitempty\" xml:\"lastwrite,omitempty\""
+							LocalPort             int      "json:\"localport\" xml:\"localport\""
+							NeighborID            string   "json:\"neighbor-id\" xml:\"neighbor-id\""
+							NotificationsReceived int      "json:\"notificationsreceived\" xml:\"notificationsreceived\""
+							NotificationsSent     int      "json:\"notificationssent\" xml:\"notificationssent\""
+							RemoteAS              int      "json:\"remoteas\" xml:\"remoteas\""
+							RemotePort            int      "json:\"remoteport\" xml:\"remoteport\""
+							State                 string   "json:\"state\" xml:\"state\""
+						}{
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.101.1", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 37989, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xee6b2800, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.102.3", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 888, RemotePort: 46134, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.102.4", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 43271, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdc023c0e00, LastRead: 0xbdfd63e00, LastWrite: 0x7ea8ed400, LocalPort: 179, NeighborID: "19.0.103.10", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 999, RemotePort: 35158, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdb4f6bb000, LastRead: 0xb2d05e000, LastWrite: 0x737be7600, LocalPort: 179, NeighborID: "19.0.103.20", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 41777, State: "Established"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdf44b31a00, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "19.0.200.200", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 0, RemotePort: 0, State: "Idle"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdff7837800, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "fec0::1002", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 333, RemotePort: 0, State: "Idle"},
+
+							{ConnectionsDropped: 0, LastFlap: 0x1dfdff7837800, LastRead: 0x0, LastWrite: 0x0, LocalPort: 0, NeighborID: "fec0::2002", NotificationsReceived: 0, NotificationsSent: 0, RemoteAS: 888, RemotePort: 0, State: "Idle"}}}}, LocalAS: 333, RouterID: "19.0.0.6", VrfNameOut: "default", VrfEstablishedPeers: 5, VrfPeers: 8}}}}, LocalAS: 333, TotalEstablishedPeers: 5, TotalPeers: 9}, Code: "200", Input: "show bgp sessions", Msg: "Success"},
 			shouldFail: false,
 			shouldErr:  false,
 		},
