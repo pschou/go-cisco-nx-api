@@ -14,6 +14,22 @@ func TestDuration(t *testing.T) {
 		t.Fatalf("Failed Duration parse test %d != 648125e9", d)
 	}
 
+	err = d.UnmarshalText([]byte("P1MT4M31S"))
+	if err != nil {
+		t.Fatalf("Failed parse Duration %v", err)
+	}
+	if uint64(d) != 2592271e9 {
+		t.Fatalf("Failed Duration parse test %d != 2592271e9", d)
+	}
+
+	err = d.UnmarshalText([]byte("1w2d"))
+	if err != nil {
+		t.Fatalf("Failed parse Duration %v", err)
+	}
+	if uint64(d) != 777600e9 {
+		t.Fatalf("Failed Duration parse test %d != 777600e9", d)
+	}
+
 	err = d.UnmarshalText([]byte("PT4M31S"))
 	if err != nil {
 		t.Fatalf("Failed parse Duration %v", err)
