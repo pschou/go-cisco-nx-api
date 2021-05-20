@@ -44,19 +44,19 @@ type ShowIpArpDetailVrfAllResponseResult struct {
 type ShowIpArpDetailVrfAllResultBody struct {
 	TableVrf []struct {
 		RowVrf []struct {
-			VrfNameOut string `json:"vrf-name-out"`
-			CntTotal   int    `json:"cnt-total"`
+			VrfNameOut string `json:"vrf-name-out" xml:"vrf-name-out"`
+			CntTotal   int    `json:"cnt-total" xml:"cnt-total"`
 			TableAdj   []struct {
 				RowAdj []struct {
-					IntfOut   string    `json:"intf-out"`
-					IPAddrOut string    `json:"ip-addr-out"`
-					TimeStamp TimeStamp `json:"time-stamp"`
-					Mac       string    `json:"mac"`
-					PhyIntf   string    `json:"phy-intf"`
-				} `json:"ROW_adj"`
-			} `json:"TABLE_adj"`
-		} `json:"ROW_vrf"`
-	} `json:"TABLE_vrf"`
+					IntfOut   string    `json:"intf-out" xml:"intf-out"`
+					IPAddrOut string    `json:"ip-addr-out" xml:"ip-addr-out"`
+					TimeStamp TimeStamp `json:"time-stamp" xml:"time-stamp"`
+					Mac       string    `json:"mac" xml:"mac"`
+					PhyIntf   string    `json:"phy-intf" xml:"phy-intf"`
+				} `json:"ROW_adj" xml:"ROW_adj"`
+			} `json:"TABLE_adj" xml:"TABLE_adj"`
+		} `json:"ROW_vrf" xml:"ROW_vrf"`
+	} `json:"TABLE_vrf" xml:"TABLE_vrf"`
 }
 
 // NewShowIpArpDetailVrfAllFromString returns instance from an input string.
